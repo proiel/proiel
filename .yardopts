@@ -1,0 +1,5 @@
+--readme README.md
+--title 'PROIEL documentation'
+--charset utf-8
+--markup markdown
+'lib/**/*.rb' - '*.md'
