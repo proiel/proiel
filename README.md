@@ -1,5 +1,12 @@
 # PROIEL treebank utility library
 
+## Status
+
+[![Gem Version](https://badge.fury.io/rb/proiel.svg)](http://badge.fury.io/rb/proiel)
+[![Build Status](https://secure.travis-ci.org/proiel/proiel.svg?branch=master)](http://travis-ci.org/proiel/proiel?branch=master)
+
+## Description
+
 This is a utility library for reading and manipulating treebanks that use the
 PROIEL annotation scheme and the PROIEL XML-based interchange format.
 
