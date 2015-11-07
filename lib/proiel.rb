@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015-2017 Marius L. Jøhndal
+# Copyright (c) 2015-2018 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -33,8 +33,10 @@ require 'proiel/source'
 require 'proiel/div'
 require 'proiel/sentence'
 require 'proiel/token'
+require 'proiel/dictionary'
+require 'proiel/lemma'
 require 'proiel/visualization'
 require 'proiel/chronology'
 require 'proiel/valency'
-require 'proiel/dictionary'
+require 'proiel/dictionary/builder'
 require 'proiel/alignment'

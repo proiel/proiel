@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proiel export-time="2015-07-19T00:32:45+02:00" schema-version="3.0">
+  <annotation>
+    <relations>
+      <value tag="pred" summary="predicate" primary="true" secondary="true"/>
+    </relations>
+    <parts-of-speech>
+      <value tag="V-" summary="verb"/>
+    </parts-of-speech>
+    <morphology>
+      <field tag="person">
+        <value tag="3" summary="third person"/>
+      </field>
+      <field tag="number">
+        <value tag="s" summary="singular"/>
+      </field>
+      <field tag="tense">
+        <value tag="p" summary="present"/>
+      </field>
+      <field tag="mood">
+        <value tag="i" summary="indicative"/>
+      </field>
+      <field tag="voice">
+        <value tag="a" summary="active"/>
+      </field>
+      <field tag="gender">
+        <value tag="m" summary="masculine"/>
+      </field>
+      <field tag="case">
+        <value tag="n" summary="nominative"/>
+      </field>
+      <field tag="degree">
+        <value tag="p" summary="positive"/>
+      </field>
+      <field tag="strength">
+        <value tag="w" summary="weak"/>
+      </field>
+      <field tag="inflection">
+        <value tag="i" summary="inflecting"/>
+      </field>
+    </morphology>
+    <information-statuses>
+      <value tag="new" summary="new"/>
+    </information-statuses>
+  </annotation>
+  <source id="caes-gal" language="non" dialect="swe" alignment-id="cic-att">
+    <title>Commentarii belli Gallici</title>
+    <alternative-title>Commentarii belli Gallici</alternative-title>
+    <author>Caesar</author>
+    <citation-part>Caes. Gal.</citation-part>
+    <principal></principal>
+    <funder></funder>
+    <distributor></distributor>
+    <distributor-address></distributor-address>
+    <date></date>
+    <license>CC BY-NC-SA 3.0</license>
+    <license-url>http://creativecommons.org/licenses/by-nc-sa/3.0/us/</license-url>
+    <reference-system>book, chapter, section</reference-system>
+    <editor></editor>
+    <annotator></annotator>
+    <reviewer></reviewer>
+    <electronic-text-editor></electronic-text-editor>
+    <electronic-text-title></electronic-text-title>
+    <electronic-text-publisher></electronic-text-publisher>
+    <electronic-text-place></electronic-text-place>
+    <electronic-text-original-url></electronic-text-original-url>
+    <electronic-text-license></electronic-text-license>
+    <printed-text-editor></printed-text-editor>
+    <printed-text-title></printed-text-title>
+    <printed-text-publisher></printed-text-publisher>
+    <printed-text-place></printed-text-place>
+    <printed-text-date></printed-text-date>
+    <chronology-composition>30 BC-20 BC</chronology-composition>
+    <chronology-manuscript>c. 1050</chronology-manuscript>
+    <note originator="someone">A note</note>
+    <note originator="someone">A note</note>
+    <link type="perseus-catalog" target="urn:cts:latinLit:phi0448.phi001"/>
+    <div id="123">
+      <title>Caes. Gal. 1.1</title>
+      <tag attribute="genre" value="narrative" target-id="caes-gal" target-type="source"/>
+      <note originator="someone">A note</note>
+      <note originator="someone">Another note</note>
+      <link type="perseus-catalog" target="urn:cts:latinLit:phi0448.phi001"/>
+      <sentence id="52548" status="reviewed" presentation-after=" " alignment-id="52548" annotated-by="john" reviewed-by="mary" annotated-at="2016-06-04T16:35:30+01:00" reviewed-at="2016-06-04T16:35:30+01:00">
+        <tag attribute="genre" value="narrative" target-id="caes-gal" target-type="source"/>
+        <note originator="someone">A note</note>
+        <note originator="someone">Another note</note>
+        <link type="perseus-catalog" target="urn:cts:latinLit:phi0448.phi001"/>
+        <token id="680721" form="est" citation-part="1.1.1" lemma="sum" part-of-speech="V-" morphology="3spia----i" relation="pred" presentation-after=" ">
+          <tag attribute="genre" value="narrative" target-id="caes-gal" target-type="source"/>
+          <note originator="someone">A note</note>
+          <note originator="someone">Another note</note>
+          <link type="perseus-catalog" target="urn:cts:latinLit:phi0448.phi001"/>
+        </token>
+      </sentence>
+    </div>
+  </source>
+  <dictionary language="non" dialect="swe">
+    <tag attribute="genre" value="narrative" target-id="caes-gal" target-type="source"/>
+    <note originator="someone">A note</note>
+    <note originator="someone">Another note</note>
+    <link type="perseus-catalog" target="urn:cts:latinLit:phi0448.phi001"/>
+    <sources>
+      <source idref="afnik" license="CC SA-BY-NC 4.0" n="10"/>
+      <source idref="avv"/>
+      <source idref="birchbark" license=""/>
+    </sources>
+    <lemmata n="4">
+      <lemma form="а" part-of-speech="C-" n="2971">
+        <tag attribute="genre" value="narrative" target-id="caes-gal" target-type="source"/>
+        <note originator="someone">A note</note>
+        <note originator="someone">Another note</note>
+        <link type="perseus-catalog" target="urn:cts:latinLit:phi0448.phi001"/>
+        <distribution>
+          <source idref="afnik" n="404"/>
+          <source idref="avv" n="349"/>
+          <source idref="birchbark" n="51"/>
+          <source idref="const" n="57"/>
+          <source idref="domo" n="634"/>
+          <source idref="drac" n="23"/>
+          <source idref="kiev-hyp" n="13"/>
+          <source idref="lav" n="524"/>
+          <source idref="luk-koloc" n="3"/>
+          <source idref="mst" n="3"/>
+          <source idref="nov-sin" n="137"/>
+          <source idref="novgorod-jaroslav" n="25"/>
+          <source idref="pskov" n="65"/>
+          <source idref="pskov-ivan" n="5"/>
+          <source idref="pvl-hyp" n="24"/>
+          <source idref="rig-smol1281" n="2"/>
+          <source idref="riga-goth" n="25"/>
+          <source idref="rusprav" n="216"/>
+          <source idref="sergrad" n="48"/>
+          <source idref="smol-pol-lit" n="11"/>
+          <source idref="suz-lav" n="275"/>
+          <source idref="usp-sbor" n="49"/>
+          <source idref="ust-vlad" n="6"/>
+          <source idref="varlaam" n="3"/>
+          <source idref="vest-kur" n="19"/>
+        </distribution>
+        <homographs>
+          <homograph lemma="а" part-of-speech="F-"/>
+          <homograph lemma="а" part-of-speech="Ne"/>
+        </homographs>
+        <paradigm>
+          <slot1 morphology="---------n">
+            <slot2 form="a" n="2"/>
+            <slot2 form="А" n="74"/>
+            <slot2 form="а" n="2893"/>
+            <slot2 form="а." n="2"/>
+          </slot1>
+        </paradigm>
+      </lemma>
+      <lemma form="благодарити" part-of-speech="V-">
+        <tag attribute="genre" value="narrative" target-id="caes-gal" target-type="source"/>
+        <note originator="someone">A note</note>
+        <note originator="someone">Another note</note>
+        <link type="perseus-catalog" target="urn:cts:latinLit:phi0448.phi001"/>
+        <distribution>
+          <source idref="const" n="6"/>
+          <source idref="sergrad" n="8"/>
+          <source idref="suz-lav" n="1"/>
+          <source idref="usp-sbor" n="4"/>
+        </distribution>
+        <glosses>
+          <gloss language="eng">thank</gloss>
+          <gloss language="rus">благодарить</gloss>
+        </glosses>
+        <paradigm>
+          <slot1 morphology="--pna----i">
+            <slot2 form="бл҃годарити" n="1"/>
+          </slot1>
+          <slot1 morphology="-pppama-si">
+            <slot2 form="бл҃годарѧща" n="1"/>
+          </slot1>
+          <slot1 morphology="-pppamn-si">
+            <slot2 form="бл҃годарѧще" n="2"/>
+          </slot1>
+          <slot1 morphology="-sppamn-si">
+            <slot2 form="бл҃года" n="1"/>
+            <slot2 form="бл҃годарѧ" n="2"/>
+          </slot1>
+          <slot1 morphology="1ppia----i">
+            <slot2 form="бл҃годарим" n="1"/>
+          </slot1>
+          <slot1 morphology="1spia----i">
+            <slot2 form="бл҃годарю" n="4"/>
+          </slot1>
+          <slot1 morphology="3paia----i">
+            <slot2 form="бл҃годариша" n="2"/>
+            <slot2 form="б҃лгодариша" n="1"/>
+          </slot1>
+          <slot1 morphology="3siia----i">
+            <slot2 form="бл҃годарѧше" n="3"/>
+            <slot2 form="бл҃годарꙗше" n="1"/>
+          </slot1>
+        </paradigm>
+        <valency>
+          <frame>
+            <arguments>
+            </arguments>
+            <tokens flags="a" n="3">
+              <token idref="2188272"/>
+              <token idref="2193938"/>
+              <token idref="2175703"/>
+            </tokens>
+          </frame>
+          <frame>
+            <arguments>
+              <argument relation="obj" case="a"/>
+            </arguments>
+            <tokens flags="a" n="4">
+              <token idref="2185961"/>
+              <token idref="2188457"/>
+              <token idref="2217926"/>
+              <token idref="2160424"/>
+            </tokens>
+          </frame>
+          <frame>
+            <arguments>
+              <argument relation="obj" case="g"/>
+            </arguments>
+            <tokens flags="a" n="7">
+              <token idref="2187815"/>
+              <token idref="2188856"/>
+              <token idref="2208666"/>
+              <token idref="2216294"/>
+              <token idref="2224257"/>
+              <token idref="2282515"/>
+              <token idref="2184884"/>
+            </tokens>
+          </frame>
+          <frame>
+            <arguments>
+              <argument relation="obj" case="g"/>
+              <argument relation="obl" lemma="въ" case="l" part-of-speech="R-"/>
+            </arguments>
+            <tokens flags="a" n="1">
+              <token idref="2218509"/>
+            </tokens>
+          </frame>
+          <frame>
+            <arguments>
+              <argument relation="obj" case="g"/>
+              <argument relation="obl" lemma="за" case="a" part-of-speech="R-"/>
+            </arguments>
+            <tokens flags="a" n="1">
+              <token idref="2205964"/>
+            </tokens>
+          </frame>
+          <frame>
+            <arguments>
+              <argument relation="obj" case="g"/>
+              <argument relation="obl" lemma="о" case="l" part-of-speech="R-"/>
+            </arguments>
+            <tokens flags="a" n="2">
+              <token idref="2205995"/>
+              <token idref="2216503"/>
+            </tokens>
+          </frame>
+          <frame>
+            <arguments>
+              <argument relation="obl" lemma="о" case="l" part-of-speech="R-"/>
+            </arguments>
+            <tokens flags="a" n="1">
+              <token idref="2161666"/>
+            </tokens>
+          </frame>
+        </valency>
+      </lemma>
+      <lemma form="благодарьныи" part-of-speech="A-" n="4">
+        <tag attribute="genre" value="narrative" target-id="caes-gal" target-type="source"/>
+        <note originator="someone">A note</note>
+        <note originator="someone">Another note</note>
+        <link type="perseus-catalog" target="urn:cts:latinLit:phi0448.phi001"/>
+        <distribution>
+          <source idref="avv" n="1"/>
+          <source idref="domo" n="1"/>
+          <source idref="sergrad" n="2"/>
+        </distribution>
+        <glosses>
+          <gloss language="eng">thanksgiving, grateful</gloss>
+          <gloss language="rus">благодарственный, благодарный</gloss>
+        </glosses>
+        <paradigm>
+          <slot1 morphology="-p---fapwi">
+            <slot2 form="бл҃годарныѧ" n="2"/>
+          </slot1>
+          <slot1 morphology="-p---napwi">
+            <slot2 form="блг҃одарная" n="1"/>
+          </slot1>
+          <slot1 morphology="-s---fapwi">
+            <slot2 form="бл҃годарнѹю" n="1"/>
+          </slot1>
+        </paradigm>
+      </lemma>
+      <lemma form="болумышьти" part-of-speech="F-" n="1">
+        <distribution>
+          <source idref="afnik" n="1"/>
+        </distribution>
+        <paradigm>
+          <slot1 morphology="---------n">
+            <slot2 form="бол꙽мышьти" n="1"/>
+          </slot1>
+        </paradigm>
+      </lemma>
+    </lemmata>
+  </dictionary>
+</proiel>

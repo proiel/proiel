@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015-2016 Marius L. Jøhndal
+# Copyright (c) 2015-2018 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -7,12 +7,125 @@ module PROIEL
   module PROIELXML
     # @api private
     module Reader
+      class DictionarySource
+        include SAXMachine
+
+        attribute :idref, required: true
+        attribute :license, required: false
+        attribute :n, required: false
+      end
+
+      class DictionaryGloss
+        include SAXMachine
+
+        attribute :language, required: true
+        value :gloss
+      end
+
+      class DictionaryHomograph
+        include SAXMachine
+
+        attribute :lemma, required: true
+        attribute :'part-of-speech', as: :part_of_speech, required: true
+      end
+
+      class DictionarySlot2
+        include SAXMachine
+
+        attribute :form, required: true
+        attribute :n, required: true
+      end
+
+      class DictionarySlot1
+        include SAXMachine
+
+        elements :slot2, as: :slot2s, class: DictionarySlot2
+
+        attribute :morphology, required: true
+      end
+
+      class DictionaryArgument
+        include SAXMachine
+
+        attribute :relation, required: true
+        attribute :lemma, required: false
+        attribute :'part-of-speech', as: :part_of_speech, required: false
+        attribute :mood, required: false
+        attribute :case, required: false
+      end
+
+      class DictionaryToken
+        include SAXMachine
+
+        attribute :idref, required: true
+      end
+
+      class DictionaryTokens
+        include SAXMachine
+
+        elements :token, as: :tokens, class: DictionaryToken
+
+        attribute :flags, required: false
+        attribute :n, required: false
+      end
+
+      class DictionaryFrame
+        include SAXMachine
+
+        # We skip the intermediate grouping elements 'arguments' but not 'tokens', since it has attributes
+        elements :argument, as: :arguments, class: DictionaryArgument
+        elements :tokens, class: DictionaryTokens
+      end
+
+      class DictionaryLemma
+        include SAXMachine
+
+        attribute :form, required: true
+        attribute :'part-of-speech', as: :part_of_speech, required: true
+        attribute :n, required: false
+
+        # We skip the intermediate grouping elements 'distribution', 'glosses', 'homographs', 'paradigms' and 'valency'
+        elements :source, as: :distribution, class: DictionarySource
+        elements :gloss, as: :glosses, class: DictionaryGloss
+        elements :homograph, as: :homographs, class: DictionaryHomograph
+        elements :slot1, as: :paradigms, class: DictionarySlot1
+        elements :frame, as: :valency, class: DictionaryFrame
+      end
+
+      # Parsing class for `dictionary` elements.
+      class Dictionary
+        include SAXMachine
+
+        attribute :language, required: true
+        attribute :dialect, required: false
+
+        # We skip the intermediate grouping elements 'sources' and 'lemmata'
+        elements :source, as: :sources, class: DictionarySource
+        elements :lemma, as: :lemmata, class: DictionaryLemma
+      end
+
       # Parsing class for `slash` elements.
       class Slash
         include SAXMachine
 
         attribute :'target-id', as: :target_id, class: Integer, required: true
         attribute :relation, required: true
+      end
+
+      # Parsing class for `semantic-tag` elements.
+      class SemanticTag
+        include SAXMachine
+
+        attribute :attribute, required: true
+        attribute :value, required: true
+      end
+
+      # Parsing class for `note` elements.
+      class Note
+        include SAXMachine
+
+        attribute :originator, required: true
+        value :content
       end
 
       # Parsing class for `token` elements.
@@ -37,6 +150,8 @@ module PROIEL
         attribute :'foreign-ids', as: :foreign_ids
 
         elements :slash, as: :slashes, class: Slash
+        elements :'semantic-tag', as: :semantic_tags, class: SemanticTag
+        elements :note, as: :notes, class: Note
       end
 
       # Parsing class for `sentence` elements.
@@ -54,6 +169,7 @@ module PROIEL
         attribute :'presentation-after', as: :presentation_after
 
         elements :token, as: :tokens, class: Token
+        elements :note, as: :notes, class: Note
       end
 
       # Parsing class for `div` elements.
@@ -67,6 +183,7 @@ module PROIEL
 
         element :title
         elements :sentence, as: :sentences, class: Sentence
+        elements :note, as: :notes, class: Note
       end
 
       # Parsing class for `source` elements.
@@ -76,8 +193,10 @@ module PROIEL
         attribute :id, required: true
         attribute :'alignment-id', as: :alignment_id, class: String, required: false
         attribute :language, required: true
+        attribute :dialect, required: false
 
         element :title
+        element :alternative_title
         element :author
         element :citation_part
         element :principal
@@ -107,7 +226,11 @@ module PROIEL
         element :printed_text_publisher
         element :printed_text_place
         element :printed_text_date
+        element :chronology_composition
+        element :chronology_manuscript
+
         elements :div, as: :divs, class: Div
+        elements :note, as: :notes, class: Note
       end
 
       # Parsing class for `relations/value` elements.
@@ -174,6 +297,25 @@ module PROIEL
         attribute :summary, required: true
       end
 
+      # Parsing class for `lemma` elements.
+      class Lemma
+        include SAXMachine
+
+        attribute :form, required: true
+        attribute :'part-of-speech', as: :part_of_speech, required: true
+        attribute :gloss, required: false
+
+        elements :'semantic-tag', as: :semantic_tags, class: SemanticTag
+        elements :note, as: :notes, class: Note
+      end
+
+      # Parsing class for `dictionary` elements.
+      class Dictionary
+        include SAXMachine
+
+        elements :lemma, as: :lemmas, class: Lemma
+      end
+
       # Parsing class for `information_statuses` elements.
       class InformationStatuses
         include SAXMachine
@@ -189,6 +331,7 @@ module PROIEL
         element :parts_of_speech, as: :parts_of_speech, class: PartsOfSpeech
         element :morphology, class: Morphology
         element :information_statuses, as: :information_statuses, class: InformationStatuses
+        element :dictionary, as: :dictionary, class: Dictionary
       end
 
       # Parsing class for `proiel` elements.
@@ -199,6 +342,7 @@ module PROIEL
         attribute :'schema-version', as: :schema_version, required: true
 
         elements :source, as: :sources, class: Source
+        elements :dictionary, as: :dictionaries, class: Dictionary
         element :annotation, class: Annotation
       end
 

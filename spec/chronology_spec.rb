@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2016-2017 Marius L. Jøhndal
+# Copyright (c) 2016-2018 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -85,6 +85,7 @@ describe PROIEL::Chronology do
     expect(PROIEL::Chronology.midpoint('c. 1050-c. 1100')).to eq 1075
     expect(PROIEL::Chronology.midpoint('c. 30 BC-c. 20 BC')).to eq -25
 
+    # FIXME
     #expect(PROIEL::Chronology.midpoint('c. 10 BC-c. 10')).to eq -0.5
   end
 
@@ -93,5 +94,17 @@ describe PROIEL::Chronology do
     expect(PROIEL::Chronology.parse('1st c.')).to eq [1, 100]
     expect(PROIEL::Chronology.parse('1st c. BC')).to eq [-100, -1]
   end
-end
 
+  it 'can be loaded from a PROIEL XML > 3.0 file' do
+    tb = PROIEL::Treebank.new()
+    tb.load_from_xml(test_file('data/proielxml-3.0-skeleton.xml'))
+
+    o = tb.sources.first.chronology_composition
+    expect(o).to eql('30 BC-20 BC')
+    expect(PROIEL::Chronology.midpoint(o)).to eq -25
+
+    o = tb.sources.first.chronology_manuscript
+    expect(o).to eql('c. 1050')
+    expect(PROIEL::Chronology.midpoint(o)).to eq 1050
+  end
+end

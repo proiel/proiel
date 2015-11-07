@@ -5,8 +5,8 @@
 #++
 
 # Methods for synthesising and manipulating dictionaries from treebank data.
-module PROIEL::Dictionary
-  class Builder
+module PROIEL
+  class DictionaryBuilder
     attr_reader :license
     attr_reader :language
     attr_reader :sources

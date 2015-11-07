@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2018 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -23,9 +23,13 @@ module PROIEL
     # @return [Array<Source>] sources in the treebank
     attr_reader :sources
 
+    # @return [Array<Dictionary>] dictionaries in the treebank
+    attr_reader :dictionaries
+
     # Available metadata elements for sources.
     METADATA_ELEMENTS = %i(
       title
+      alternative_title
       author
       citation_part
       principal
@@ -55,6 +59,8 @@ module PROIEL
       printed_text_publisher
       printed_text_place
       printed_text_date
+      chronology_composition
+      chronology_manuscript
     )
 
     # Creates a new treebank object.
@@ -62,6 +68,7 @@ module PROIEL
       @annotation_schema = nil
       @schema_version = nil
       @sources = []
+      @dictionaries = []
 
       @source_index = {}
       @div_index = {}
@@ -85,12 +92,18 @@ module PROIEL
         tf = PROIELXML::Reader.parse_io(f)
 
         tf.proiel.sources.each do |s|
-          @sources << Source.new(self, s.id, tf.proiel.export_time, s.language,
+          @sources << Source.new(self, s.id, tf.proiel.export_time, s.language, s.dialect,
                                  bundle_metadata(s), s.alignment_id) do |source|
             build_divs(s, source)
           end
 
-          index_objects!(@sources.last)
+          index_source_objects!(@sources.last)
+        end
+
+        tf.proiel.dictionaries.each do |s|
+          @dictionaries << Dictionary.new(self, tf.proiel.export_time, s.language, s.dialect, s)
+
+          index_dictionary_objects!(@dictionaries.last)
         end
 
         annotation_schema = AnnotationSchema.new(tf.proiel.annotation)
@@ -198,7 +211,7 @@ module PROIEL
       end
     end
 
-    def index_objects!(source)
+    def index_source_objects!(source)
       @source_index[source.id] = source
 
       source.divs.each do |div|
@@ -212,6 +225,10 @@ module PROIEL
           end
         end
       end
+    end
+
+    def index_dictionary_objects!(dictionary)
+      # TODO
     end
   end
 end

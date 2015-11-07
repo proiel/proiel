@@ -264,7 +264,7 @@ describe PROIEL::Token do
 
     treebank = PROIEL::Treebank.new
 
-    source = PROIEL::Source.new(treebank, 'foobar', DateTime.now.to_s, 'lat', nil, nil) do |source|
+    source = PROIEL::Source.new(treebank, 'foobar', DateTime.now.to_s, 'lat', nil, nil, nil) do |source|
       [PROIEL::Div.new(source, 0, nil, nil, nil, nil) do |div|
         [PROIEL::Sentence.new(div, 1, :unannotated, nil, nil, nil, nil, nil, nil, nil) do |sentence|
           u = PROIEL::Token.new(sentence, 5, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [], nil)
@@ -279,7 +279,7 @@ describe PROIEL::Token do
     end
 
     treebank.sources << source
-    treebank.send(:index_objects!, source)
+    treebank.send(:index_source_objects!, source)
 
     expect(x.common_ancestors(y, inclusive: false)).to eql([z, u])
     expect(x.common_ancestors(w, inclusive: false)).to eql([z, u])

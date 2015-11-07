@@ -34,18 +34,27 @@ describe PROIEL::Source do
   end
 
   it 'has an inspect method' do
-    t = PROIEL::Source.new(nil, 'foobar', DateTime.now.to_s, nil, nil, nil)
+    t = PROIEL::Source.new(nil, 'foobar', DateTime.now.to_s, nil, nil, nil, nil)
     expect(t.inspect).to eql('#<PROIEL::Source @id="foobar">')
   end
 
-  it 'provides id, language and metadata access' do
+  it 'provides id, language, dialect and metadata access' do
     tb = PROIEL::Treebank.new()
-    tb.load_from_xml(test_file('dummy-proiel-xml-2.0.xml'))
+    tb.load_from_xml(test_file('data/proielxml-3.0-skeleton.xml'))
 
     expect(tb.sources.count).to eql(1)
-    expect(tb.sources.first.class).to eql(PROIEL::Source)
     expect(tb.sources.first.divs.count).to eql(1)
-    expect(tb.sources.first.divs.first.class).to eql(PROIEL::Div)
+
+    s = tb.sources.first
+    d = tb.sources.first.divs.first
+
+    expect(s.class).to eql(PROIEL::Source)
+    expect(s.id).to eql('caes-gal')
+    expect(s.language).to eql('non')
+    expect(s.dialect).to eql('swe')
+
+    expect(d.class).to eql(PROIEL::Div)
+    expect(d.id).to eql(123)
   end
 
   it 'provides access to parent object' do

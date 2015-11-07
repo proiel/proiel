@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proiel export-time="2015-07-19T00:32:45+02:00" schema-version="2.1">
+  <source id="caes-gal" language="lat">
+    <title>Commentarii belli Gallici</title>
+    <author>Caesar</author>
+    <citation-part>Caes. Gal.</citation-part>
+    <div>
+      <title>Caes. Gal. 1.1</title>
+      <sentence>
+        <token></token>
+      </sentence>
+    </div>
+  </source>
+</proiel>

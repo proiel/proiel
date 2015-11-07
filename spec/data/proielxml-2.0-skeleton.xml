@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proiel export-time="2015-07-19T00:32:45+02:00" schema-version="2.0">
+  <annotation>
+    <relations>
+      <value tag="pred" summary="predicate" primary="true" secondary="true"/>
+    </relations>
+    <parts-of-speech>
+      <value tag="V-" summary="verb"/>
+    </parts-of-speech>
+    <morphology>
+      <field tag="person">
+        <value tag="3" summary="third person"/>
+      </field>
+      <field tag="number">
+        <value tag="s" summary="singular"/>
+      </field>
+      <field tag="tense">
+        <value tag="p" summary="present"/>
+      </field>
+      <field tag="mood">
+        <value tag="i" summary="indicative"/>
+      </field>
+      <field tag="voice">
+        <value tag="a" summary="active"/>
+      </field>
+      <field tag="gender">
+        <value tag="m" summary="masculine"/>
+      </field>
+      <field tag="case">
+        <value tag="n" summary="nominative"/>
+      </field>
+      <field tag="degree">
+        <value tag="p" summary="positive"/>
+      </field>
+      <field tag="strength">
+        <value tag="w" summary="weak"/>
+      </field>
+      <field tag="inflection">
+        <value tag="i" summary="inflecting"/>
+      </field>
+    </morphology>
+    <information-statuses>
+      <value tag="new" summary="new"/>
+    </information-statuses>
+  </annotation>
+  <source id="caes-gal" language="lat">
+    <title>Commentarii belli Gallici</title>
+    <author>Caesar</author>
+    <citation-part>Caes. Gal.</citation-part>
+    <principal></principal>
+    <funder></funder>
+    <distributor></distributor>
+    <distributor-address></distributor-address>
+    <date></date>
+    <license>CC BY-NC-SA 3.0</license>
+    <license-url>http://creativecommons.org/licenses/by-nc-sa/3.0/us/</license-url>
+    <reference-system>book, chapter, section</reference-system>
+    <editor></editor>
+    <annotator></annotator>
+    <reviewer></reviewer>
+    <electronic-text-editor></electronic-text-editor>
+    <electronic-text-title></electronic-text-title>
+    <electronic-text-publisher></electronic-text-publisher>
+    <electronic-text-place></electronic-text-place>
+    <electronic-text-original-url></electronic-text-original-url>
+    <electronic-text-license></electronic-text-license>
+    <printed-text-editor></printed-text-editor>
+    <printed-text-title></printed-text-title>
+    <printed-text-publisher></printed-text-publisher>
+    <printed-text-place></printed-text-place>
+    <printed-text-date></printed-text-date>
+    <div>
+      <title>Caes. Gal. 1.1</title>
+      <sentence id="52548" status="reviewed" presentation-after=" ">
+        <token id="680721" form="est" citation-part="1.1.1" lemma="sum" part-of-speech="V-" morphology="3spia----i" relation="pred" presentation-after=" "/>
+      </sentence>
+    </div>
+  </source>
+</proiel>

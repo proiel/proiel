@@ -15,6 +15,9 @@ module PROIEL
     # @return [String] language of the source as an ISO 639-3 language tag
     attr_reader :language
 
+    # @return [String] dialect of the source
+    attr_reader :dialect
+
     # @return [DateTime] export time for the source
     attr_reader :export_time
 
@@ -26,7 +29,7 @@ module PROIEL
     attr_reader :alignment_id
 
     # Creates a new source object.
-    def initialize(parent, id, export_time, language, metadata, alignment_id, &block)
+    def initialize(parent, id, export_time, language, dialect, metadata, alignment_id, &block)
       @treebank = parent
       @id = id.freeze
 
@@ -34,6 +37,7 @@ module PROIEL
       @export_time = export_time.nil? ? nil : DateTime.parse(export_time).freeze
 
       @language = language.freeze
+      @dialect = dialect ? dialect.freeze : nil
       @metadata = metadata.freeze
 
       raise ArgumentError, 'string or nil expected' unless alignment_id.nil? or alignment_id.is_a?(String)
