@@ -99,6 +99,12 @@ module PROIEL
 
       # Checks the referential integrity of the PROIEL XML file.
       #
+      # Referential integrity checks includes checking that
+      #   - object IDs are valid and unique,
+      #   - references to objects refer to objects that are defined,
+      #   - annotation tags are defined in the annotation schema,
+      #   - non-tag fields have values that do not conflict with other fields.
+      #
       # If inconsistencies are found, error messages will be appended to `errors`.
       #
       # @return [true, false]
@@ -154,6 +160,13 @@ module PROIEL
           end
         end
 
+        # Pass 5: check non-tag fields for whitespace/NULL consistency
+        tb.sources.each do |source|
+          source.tokens.each do |token|
+            check_presentation_and_form(errors, token)
+          end
+        end
+
         # Decide if there were any errors
         if errors.empty?
           true
@@ -180,6 +193,23 @@ module PROIEL
           # Everything is fine...
         else
           errors << "Token #{token.id}: #{attribute_name} is null"
+        end
+      end
+
+      def check_presentation_and_form(errors, token)
+        if token.form.nil?
+          errors << "Token #{token.id}: 'form' field is null but not an empty token" unless token.is_empty?
+        else
+          errors << "Token #{token.id}: 'form' field is not null but an empty token" if token.is_empty?
+
+          case token.form
+          when /^\s+/
+            errors << "Token #{token.id}: initial whitespace in 'form' field"
+          when /\s+$/
+            errors << "Token #{token.id}: final whitespace in 'form' field"
+          when ''
+            errors << "Token #{token.id}: 'form' field is blank"
+          end
         end
       end
     end
