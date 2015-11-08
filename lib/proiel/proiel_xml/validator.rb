@@ -203,9 +203,9 @@ module PROIEL
           errors << "Token #{token.id}: 'form' field is not null but an empty token" if token.is_empty?
 
           case token.form
-          when /^\s+/
+          when /^[[:space:]]/ # use [:space:] notation to include more exotic Unicode whitespace
             errors << "Token #{token.id}: initial whitespace in 'form' field"
-          when /\s+$/
+          when /[[:space:]]$/ # use [:space:] notation to include more exotic Unicode whitespace
             errors << "Token #{token.id}: final whitespace in 'form' field"
           when ''
             errors << "Token #{token.id}: 'form' field is blank"
