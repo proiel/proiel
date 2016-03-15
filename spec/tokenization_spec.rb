@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2016 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -35,5 +35,21 @@ describe PROIEL::Tokenization do
     expect(PROIEL::Tokenization.split_form("nolanguage", "urbeque")).to eql(["u", "", "r", "", "b", "", "e", "", "q", "", "u", "", "e"])
     expect(PROIEL::Tokenization.split_form("nolanguage", "a")).to eql(["a"])
     expect(PROIEL::Tokenization.split_form("nolanguage", "")).to eql([""])
+  end
+
+  it "splits a sequence with words in Latin script into words" do
+    expect(PROIEL::Tokenization.split_form('lat', 'foobar is not barfoo, but  bar is foo!')).to eq ["foobar", " ", "is", " ", "not", " ", "barfoo", ", ", "but", "  ", "bar", " ", "is", " ", "foo", "!"]
+  end
+
+  it "splits a sequence with words in non-Latin script into words" do
+    expect(PROIEL::Tokenization.split_form('grc', 'παρ’ ἀλλήλων, τὸ')).to eq ["παρ", "’ ", "ἀλλήλων", ", ", "τὸ"]
+  end
+
+  it "splits a single word in Latin script by character when no language-specific rule matches" do
+    expect(PROIEL::Tokenization.split_form('XXX', 'foobar')).to eq ["f", "", "o", "", "o", "", "b", "", "a", "", "r"]
+  end
+
+  it "splits a single word in non-Latin script by character when no language-specific rule matches" do
+    expect(PROIEL::Tokenization.split_form('XXX', 'μέχρι')).to eq ["μ", "", "έ", "", "χ", "", "ρ", "", "ι"]
   end
 end

@@ -73,9 +73,9 @@ module PROIEL
       raise ArgumentError, 'invalid language tag' unless language_tag.is_a?(String)
       raise ArgumentError, 'invalid form' unless form.is_a?(String)
 
-      if form[/\W+/]
+      if form[/[^[:word:]]+/]
         # Split on any non-word character like a space or punctuation
-        form.split(/(\W+)/)
+        form.split(/([^[:word:]]+)/)
       elsif @@regexes.key?(language_tag) and form[@@regexes[language_tag]]
         # Apply language-specific pattern
         form.match(@@regexes[language_tag]).captures
