@@ -74,7 +74,7 @@ module PROIEL
                    alignment_id)
       @sentence = parent
 
-      raise ArgumentError, 'integer expected' unless id.is_a?(Integer)
+      raise ArgumentError, 'integer expected' unless id.is_a?(Integer) or id.nil?
       @id = id
 
       raise ArgumentError, 'integer or nil expected' unless head_id.nil? or head_id.is_a?(Integer)

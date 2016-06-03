@@ -35,7 +35,7 @@ module PROIEL
     def initialize(parent, id, title, presentation_before, presentation_after, alignment_id, &block)
       @source = parent
 
-      raise ArgumentError, 'integer expected' unless id.is_a?(Integer)
+      raise ArgumentError, 'integer expected' unless id.is_a?(Integer) or id.nil?
       @id = id
 
       raise ArgumentError, 'string or nil expected' unless title.nil? or title.is_a?(String)

@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2016 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -22,10 +22,17 @@ module PROIEL
 
     # Creates a new annotation schema object.
     def initialize(xml_object)
-      @part_of_speech_tags = make_part_of_speech_tags(xml_object).freeze
-      @relation_tags = make_relation_tags(xml_object).freeze
-      @morphology_tags = make_morphology_tags(xml_object).freeze
-      @information_status_tags = make_information_status_tags(xml_object).freeze
+      if xml_object
+        @part_of_speech_tags = make_part_of_speech_tags(xml_object).freeze
+        @relation_tags = make_relation_tags(xml_object).freeze
+        @morphology_tags = make_morphology_tags(xml_object).freeze
+        @information_status_tags = make_information_status_tags(xml_object).freeze
+      else
+        @part_of_speech_tags = {}
+        @relation_tags = {}
+        @morphology_tags = {}
+        @information_status_tags = {}
+      end
     end
 
     # @return [Hash<String,RelationTagDefinition>] definition of primary relation tags

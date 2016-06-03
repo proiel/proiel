@@ -42,7 +42,7 @@ module PROIEL
     def initialize(parent, id, status, presentation_before, presentation_after, alignment_id, annotated_by, reviewed_by, annotated_at, reviewed_at, &block)
       @div = parent
 
-      raise ArgumentError, 'integer expected' unless id.is_a?(Integer)
+      raise ArgumentError, "integer expected #{id.inspect}" unless id.is_a?(Integer) or id.nil?
       @id = id
 
       raise ArgumentError, 'string or symbol expected' unless status.is_a?(String) or status.is_a?(Symbol)

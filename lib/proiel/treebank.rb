@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2016 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -67,6 +67,8 @@ module PROIEL
       @div_index = {}
       @sentence_index = {}
       @token_index = {}
+
+      @generated_ids = { div: 0, sentence: 0, token: 0 }
     end
 
     # Loads one or more PROIEL XML files.
@@ -160,6 +162,11 @@ module PROIEL
 
     private
 
+    def make_id(actual_id, level)
+      @generated_ids[level] += 1
+      actual_id || @generated_ids[level]
+    end
+
     def bundle_metadata(s)
       METADATA_ELEMENTS.map { |f| [f, s.send(f)] }.to_h
     end
@@ -167,8 +174,10 @@ module PROIEL
     def build_divs(s, source)
       # For PROIEL XML 2.0 we generate an ID, for PROIEL XML >= 2.1 we respect the ID
       # from the XML file.
-      s.divs.each_with_index.map do |d, i|
-        Div.new(source, d.id || i + 1, d.title, d.presentation_before,
+      s.divs.each_with_index.map do |d|
+        Div.new(source,
+                make_id(d.id, :div),
+                d.title, d.presentation_before,
                 d.presentation_after, d.alignment_id) do |div|
           build_sentences(d, div)
         end
@@ -177,7 +186,8 @@ module PROIEL
 
     def build_sentences(d, div)
       d.sentences.map do |e|
-        Sentence.new(div, e.id, e.status, e.presentation_before,
+        Sentence.new(div,
+                     make_id(e.id, :sentence), e.status, e.presentation_before,
                      e.presentation_after, e.alignment_id,
                      e.annotated_by, e.reviewed_by, e.annotated_at,
                      e.reviewed_at) do |sentence|
@@ -188,7 +198,9 @@ module PROIEL
 
     def build_tokens(e, sentence)
       e.tokens.map do |t|
-        Token.new(sentence, t.id, t.head_id, t.form, t.lemma,
+        Token.new(sentence,
+                  make_id(t.id, :token),
+                  t.head_id, t.form, t.lemma,
                   t.part_of_speech, t.morphology, t.relation,
                   t.empty_token_sort, t.citation_part,
                   t.presentation_before, t.presentation_after,
