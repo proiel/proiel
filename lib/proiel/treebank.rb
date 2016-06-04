@@ -86,7 +86,7 @@ module PROIEL
 
         tf.proiel.sources.each do |s|
           @sources << Source.new(self, s.id, tf.proiel.export_time, s.language,
-                                 bundle_metadata(s)) do |source|
+                                 bundle_metadata(s), s.alignment_id) do |source|
             build_divs(s, source)
           end
 
@@ -165,10 +165,11 @@ module PROIEL
     end
 
     def build_divs(s, source)
-      # FIXME: for PROIEL XML > 2.0, we should respect d.id
+      # For PROIEL XML 2.0 we generate an ID, for PROIEL XML >= 2.1 we respect the ID
+      # from the XML file.
       s.divs.each_with_index.map do |d, i|
-        Div.new(source, i + 1, d.title, d.presentation_before,
-                d.presentation_after) do |div|
+        Div.new(source, d.id || i + 1, d.title, d.presentation_before,
+                d.presentation_after, d.alignment_id) do |div|
           build_sentences(d, div)
         end
       end
@@ -177,7 +178,9 @@ module PROIEL
     def build_sentences(d, div)
       d.sentences.map do |e|
         Sentence.new(div, e.id, e.status, e.presentation_before,
-                     e.presentation_after) do |sentence|
+                     e.presentation_after, e.alignment_id,
+                     e.annotated_by, e.reviewed_by, e.annotated_at,
+                     e.reviewed_at) do |sentence|
           build_tokens(e, sentence)
         end
       end
@@ -191,7 +194,7 @@ module PROIEL
                   t.presentation_before, t.presentation_after,
                   t.antecedent_id, t.information_status,
                   t.contrast_group, t.foreign_ids,
-                  t.slashes)
+                  t.slashes, t.alignment_id)
       end
     end
 

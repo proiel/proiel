@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2016 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -28,8 +28,11 @@ module PROIEL
     # @return [nil, String] presentation material after form
     attr_reader :presentation_after
 
+    # @return [nil, String] ID of the div that this div is aligned to
+    attr_reader :alignment_id
+
     # Creates a new div object.
-    def initialize(parent, id, title, presentation_before, presentation_after, &block)
+    def initialize(parent, id, title, presentation_before, presentation_after, alignment_id, &block)
       @source = parent
 
       raise ArgumentError, 'integer expected' unless id.is_a?(Integer)
@@ -43,6 +46,9 @@ module PROIEL
 
       raise ArgumentError, 'string or nil expected' unless presentation_after.nil? or presentation_after.is_a?(String)
       @presentation_after = presentation_after.freeze
+
+      raise ArgumentError, 'integer or nil expected' unless alignment_id.nil? or alignment_id.is_a?(Integer)
+      @alignment_id = alignment_id
 
       @children = block.call(self) if block_given?
     end

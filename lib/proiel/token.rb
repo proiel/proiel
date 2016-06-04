@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2016 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -63,11 +63,15 @@ module PROIEL
     # @return [Array<Array<String,Fixnum>>] secondary edges as an array of pairs of relation tag and target token ID
     attr_reader :slashes
 
+    # @return [nil, Integer] ID of the sentence that this sentence is aligned to
+    attr_reader :alignment_id
+
     # Creates a new token object.
     def initialize(parent, id, head_id, form, lemma, part_of_speech,
                    morphology, relation, empty_token_sort, citation_part,
                    presentation_before, presentation_after, antecedent_id,
-                   information_status, contrast_group, foreign_ids, slashes)
+                   information_status, contrast_group, foreign_ids, slashes,
+                   alignment_id)
       @sentence = parent
 
       raise ArgumentError, 'integer expected' unless id.is_a?(Integer)
@@ -117,6 +121,9 @@ module PROIEL
 
       raise ArgumentError, 'array expected' unless slashes.is_a?(Array)
       @slashes = slashes.map { |s| [s.relation.freeze, s.target_id] }
+
+      raise ArgumentError, 'integer or nil expected' unless alignment_id.nil? or alignment_id.is_a?(Integer)
+      @alignment_id = alignment_id
     end
 
     # @return [Div] parent div object

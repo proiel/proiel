@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2016 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -16,7 +16,7 @@ describe PROIEL::Sentence do
   end
 
   it 'has an inspect method' do
-    t = PROIEL::Sentence.new(nil, 123, :unannotated, nil, nil)
+    t = PROIEL::Sentence.new(nil, 123, :unannotated, nil, nil, nil, nil, nil, nil, nil)
     expect(t.inspect).to eql('#<PROIEL::Sentence @id=123>')
   end
 
@@ -117,4 +117,19 @@ describe PROIEL::Sentence do
 
     expect(sentence.language).to eql('lat')
   end
+
+  it 'provides access to {annotated,reviewed}_{by,at}' do
+    tb = PROIEL::Treebank.new()
+    tb.load_from_xml(test_file('dummy-proiel-xml-2.1.xml'))
+
+    source = tb.sources.first
+    div = source.divs.first
+    sentence = div.sentences.first
+
+    expect(sentence.annotated_by).to eql('john')
+    expect(sentence.reviewed_by).to eql('mary')
+    expect(sentence.annotated_at).to eql(DateTime.xmlschema("2016-06-04T16:35:30+01:00"))
+    expect(sentence.reviewed_at).to eql(DateTime.xmlschema("2016-06-04T16:35:30+01:00"))
+  end
+
 end

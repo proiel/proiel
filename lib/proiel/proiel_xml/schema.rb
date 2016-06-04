@@ -16,7 +16,7 @@ module PROIEL
       # @return [String] schema version number
       #
       def self.current_proiel_xml_schema_version
-        '2.0'
+        '2.1'
       end
 
       # Invalid PROIEL XML schema version error.
@@ -39,6 +39,8 @@ module PROIEL
           case doc.root.attr('schema-version')
           when '2.0'
             '2.0'
+          when '2.1'
+            '2.1'
           when NilClass
             '1.0'
           else
@@ -68,7 +70,7 @@ module PROIEL
       # @raise ArgumentError
       #
       def self.proiel_xml_schema_filename(schema_version)
-        if schema_version == '1.0' or schema_version == '2.0'
+        if schema_version == '1.0' or schema_version == '2.0' or schema_version == '2.1'
           File.join(File.dirname(__FILE__),
                     "proiel-#{schema_version}",
                     "proiel-#{schema_version}.xsd")

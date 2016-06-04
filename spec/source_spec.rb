@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2016 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -34,7 +34,7 @@ describe PROIEL::Source do
   end
 
   it 'has an inspect method' do
-    t = PROIEL::Source.new(nil, 'foobar', DateTime.now.to_s, nil, nil)
+    t = PROIEL::Source.new(nil, 'foobar', DateTime.now.to_s, nil, nil, nil)
     expect(t.inspect).to eql('#<PROIEL::Source @id="foobar">')
   end
 

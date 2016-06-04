@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2016 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -20,8 +20,12 @@ describe PROIEL::PROIELXML::Schema do
     expect { PROIEL::PROIELXML::Schema.proiel_xml_schema_filename('X.0') }.to raise_error(ArgumentError)
   end
 
-  it 'detects PROIEL XML 2.0 file' do
+  it 'detects a PROIEL XML 2.0 file' do
     expect(PROIEL::PROIELXML::Schema.check_schema_version_of_xml_file(File.join(File.dirname(__FILE__), 'dummy-proiel-xml-2.0.xml'))).to eql('2.0')
+  end
+
+  it 'detects a PROIEL XML 2.1 file' do
+    expect(PROIEL::PROIELXML::Schema.check_schema_version_of_xml_file(File.join(File.dirname(__FILE__), 'dummy-proiel-xml-2.1.xml'))).to eql('2.1')
   end
 
   it 'treats a PROIEL XML file without a schema version as a PROIEL XML 1.0 file' do

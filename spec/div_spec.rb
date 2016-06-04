@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2016 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -25,7 +25,7 @@ describe PROIEL::Div do
   end
 
   it 'has an inspect method' do
-    t = PROIEL::Div.new(nil, 123, nil, nil, nil)
+    t = PROIEL::Div.new(nil, 123, nil, nil, nil, nil)
     expect(t.inspect).to eql('#<PROIEL::Div @id=123>')
   end
 

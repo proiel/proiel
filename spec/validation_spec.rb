@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2016 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -45,5 +45,13 @@ describe PROIEL::PROIELXML::Validator do
 
     expect(@v.errors.length).to eql(1)
     expect(@v.errors.first).to eql('Token 1171944: antecedent_id references an unknown token')
+  end
+
+  it 'reports errors when it detects alignment IDs on divs, sentences or tokens without alignment IDs on sources' do
+    @v = PROIEL::PROIELXML::Validator.new(File.join(File.dirname(__FILE__), 'proiel-xml-with-alignment-id-inconsistency.xml'))
+    @v.valid?
+
+    expect(@v.errors.length).to eql(1)
+    expect(@v.errors.first).to eql('Alignment ID(s) on divs, sentences or tokens without alignment ID on source')
   end
 end

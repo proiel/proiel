@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2016 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -20,6 +20,7 @@ module PROIEL
         include SAXMachine
 
         attribute :id, class: Integer, required: true
+        attribute :'alignment-id', as: :alignment_id, class: Integer, required: false
         attribute :'head-id', as: :head_id, class: Integer
         attribute :form
         attribute :lemma
@@ -43,7 +44,12 @@ module PROIEL
         include SAXMachine
 
         attribute :id, class: Integer, required: true
+        attribute :'alignment-id', as: :alignment_id, class: Integer, required: false
         attribute :status, class: Symbol, default: :unannotated
+        attribute :'annotated-by', as: :annotated_by, required: false
+        attribute :'reviewed-by', as: :reviewed_by, required: false
+        attribute :'annotated-at', as: :annotated_at, required: false
+        attribute :'reviewed-at', as: :reviewed_at, required: false
         attribute :'presentation-before', as: :presentation_before
         attribute :'presentation-after', as: :presentation_after
 
@@ -54,7 +60,8 @@ module PROIEL
       class Div
         include SAXMachine
 
-        attribute :id
+        attribute :id, class: Integer, required: false
+        attribute :'alignment-id', as: :alignment_id, class: Integer, required: false
         attribute :'presentation-before', as: :presentation_before
         attribute :'presentation-after', as: :presentation_after
 
@@ -67,6 +74,7 @@ module PROIEL
         include SAXMachine
 
         attribute :id, required: true
+        attribute :'alignment-id', as: :alignment_id, required: false
         attribute :language, required: true
 
         element :title

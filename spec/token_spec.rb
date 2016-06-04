@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2016 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -8,7 +8,7 @@ require 'spec_helper'
 describe PROIEL::Token do
   it 'has an inspect method' do
     t = PROIEL::Token.new(nil, 123, nil, nil, nil, nil, nil, nil, nil, nil, nil,
-                          nil, nil, nil, nil, nil, [])
+                          nil, nil, nil, nil, nil, [], nil)
     expect(t.inspect).to eql('#<PROIEL::Token @id=123>')
   end
 
@@ -106,7 +106,7 @@ describe PROIEL::Token do
   end
 
   it 'returns POS as a string and as a hash' do
-    t = PROIEL::Token.new(nil, 1, nil, nil, nil, 'Pk', nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [])
+    t = PROIEL::Token.new(nil, 1, nil, nil, nil, 'Pk', nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [], nil)
 
     expect(t.pos).to eql('Pk')
     expect(t.part_of_speech).to eql('Pk')
@@ -115,7 +115,7 @@ describe PROIEL::Token do
   end
 
   it 'returns morphology as a string and as a hash' do
-    t = PROIEL::Token.new(nil, 1, nil, nil, nil, nil, '3spia----i', nil, nil, nil, nil, nil, nil, nil, nil, nil, [])
+    t = PROIEL::Token.new(nil, 1, nil, nil, nil, nil, '3spia----i', nil, nil, nil, nil, nil, nil, nil, nil, nil, [], nil)
 
     expect(t.morphology).to eql('3spia----i')
     expect(t.morphology_hash[:person]).to eql('3')
@@ -124,8 +124,8 @@ describe PROIEL::Token do
   end
 
   it 'distinguishes empty tokens and tokens with content' do
-    s = PROIEL::Token.new(nil, 1, nil, nil, nil, nil, nil, nil, 'C-', nil, nil, nil, nil, nil, nil, nil, [])
-    t = PROIEL::Token.new(nil, 1, nil, 'form', nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [])
+    s = PROIEL::Token.new(nil, 1, nil, nil, nil, nil, nil, nil, 'C-', nil, nil, nil, nil, nil, nil, nil, [], nil)
+    t = PROIEL::Token.new(nil, 1, nil, 'form', nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [], nil)
 
     expect(s.is_empty?).to eql(true)
     expect(s.has_content?).to eql(false)
@@ -135,8 +135,8 @@ describe PROIEL::Token do
   end
 
   it 'distinguishes headed and root tokens' do
-    s = PROIEL::Token.new(nil, 1, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [])
-    t = PROIEL::Token.new(nil, 1, 2, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [])
+    s = PROIEL::Token.new(nil, 1, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [], nil)
+    t = PROIEL::Token.new(nil, 1, 2, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [], nil)
 
     expect(s.is_root?).to eql(true)
     expect(t.is_root?).to eql(false)
@@ -258,14 +258,14 @@ describe PROIEL::Token do
 
     treebank = PROIEL::Treebank.new
 
-    source = PROIEL::Source.new(treebank, 'foobar', DateTime.now.to_s, 'lat', nil) do |source|
-      [PROIEL::Div.new(source, 0, nil, nil, nil) do |div|
-        [PROIEL::Sentence.new(div, 1, :unannotated, nil, nil) do |sentence|
-          u = PROIEL::Token.new(sentence, 5, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [])
-          z = PROIEL::Token.new(sentence, 3, u.id, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [])
-          y = PROIEL::Token.new(sentence, 2, z.id, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [])
-          w = PROIEL::Token.new(sentence, 4, z.id, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [])
-          x = PROIEL::Token.new(sentence, 1, w.id, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [])
+    source = PROIEL::Source.new(treebank, 'foobar', DateTime.now.to_s, 'lat', nil, nil) do |source|
+      [PROIEL::Div.new(source, 0, nil, nil, nil, nil) do |div|
+        [PROIEL::Sentence.new(div, 1, :unannotated, nil, nil, nil, nil, nil, nil, nil) do |sentence|
+          u = PROIEL::Token.new(sentence, 5, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [], nil)
+          z = PROIEL::Token.new(sentence, 3, u.id, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [], nil)
+          y = PROIEL::Token.new(sentence, 2, z.id, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [], nil)
+          w = PROIEL::Token.new(sentence, 4, z.id, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [], nil)
+          x = PROIEL::Token.new(sentence, 1, w.id, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, [], nil)
 
           [x, y, z, w, u]
         end]

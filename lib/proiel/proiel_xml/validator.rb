@@ -145,6 +145,16 @@ module PROIEL
         # Pass 3: verify that all features are defined
         # TBD
 
+        # Pass 4: alignment_id on div, sentence or token requires an alignment_id on source
+        tb.sources.each do |source|
+          if source.alignment_id.nil?
+            if source.divs.any?(&:alignment_id) or source.sentences.any?(&:alignment_id) or source.tokens.any?(&:alignment_id)
+              errors << "Alignment ID(s) on divs, sentences or tokens without alignment ID on source"
+            end
+          end
+        end
+
+        # Decide if there were any errors
         if errors.empty?
           true
         else

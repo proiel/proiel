@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2016 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -23,8 +23,23 @@ module PROIEL
     # @return [nil, String] presentation material after sentence
     attr_reader :presentation_after
 
+    # @return [nil, Integer] ID of the sentence that this sentence is aligned to
+    attr_reader :alignment_id
+
+    # @return [nil, String] annotator of sentence
+    attr_reader :annotated_by
+
+    # @return [nil, String] reviewer of sentence
+    attr_reader :reviewed_by
+
+    # @return [nil, DateTime] time of annotation
+    attr_reader :annotated_at
+
+    # @return [nil, DateTime] time of reviewed
+    attr_reader :reviewed_at
+
     # Creates a new sentence object.
-    def initialize(parent, id, status, presentation_before, presentation_after, &block)
+    def initialize(parent, id, status, presentation_before, presentation_after, alignment_id, annotated_by, reviewed_by, annotated_at, reviewed_at, &block)
       @div = parent
 
       raise ArgumentError, 'integer expected' unless id.is_a?(Integer)
@@ -38,6 +53,21 @@ module PROIEL
 
       raise ArgumentError, 'string or nil expected' unless presentation_after.nil? or presentation_after.is_a?(String)
       @presentation_after = presentation_after.freeze
+
+      raise ArgumentError, 'integer or nil expected' unless alignment_id.nil? or alignment_id.is_a?(Integer)
+      @alignment_id = alignment_id
+
+      raise ArgumentError, 'XML schema date time or nil expected' unless annotated_at.nil? or PROIEL::Utilities.xmlschema_datetime?(annotated_at)
+      @annotated_at = annotated_at ? DateTime.xmlschema(annotated_at).freeze : nil
+
+      raise ArgumentError, 'XML schema date time or nil expected' unless reviewed_at.nil? or PROIEL::Utilities.xmlschema_datetime?(reviewed_at)
+      @reviewed_at = reviewed_at ? DateTime.xmlschema(reviewed_at).freeze : nil
+
+      raise ArgumentError, 'string or nil expected' unless annotated_by.nil? or annotated_by.is_a?(String)
+      @annotated_by = annotated_by.freeze
+
+      raise ArgumentError, 'string or nil expected' unless reviewed_by.nil? or reviewed_by.is_a?(String)
+      @reviewed_by = reviewed_by.freeze
 
       @children = block.call(self) if block_given?
     end

@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2016 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -9,7 +9,7 @@ module PROIEL
     # @return [String] ID of the source
     attr_reader :id
 
-    # @return [Treebank] treebank that the div belongs to
+    # @return [Treebank] treebank that this source belongs to
     attr_reader :treebank
 
     # @return [String] language of the source as an ISO 639-3 language tag
@@ -22,13 +22,20 @@ module PROIEL
     # @see PROIEL::Treebank::METADATA_ELEMENTS
     attr_reader :metadata
 
+    # @return [nil, String] ID of the source that this source is aligned to
+    attr_reader :alignment_id
+
     # Creates a new source object.
-    def initialize(parent, id, export_time, language, metadata, &block)
+    def initialize(parent, id, export_time, language, metadata, alignment_id, &block)
       @treebank = parent
       @id = id.freeze
       @export_time = DateTime.parse(export_time).freeze
       @language = language.freeze
       @metadata = metadata.freeze
+
+      raise ArgumentError, 'string or nil expected' unless alignment_id.nil? or alignment_id.is_a?(String)
+      @alignment_id = alignment_id.freeze
+
       @children = block.call(self) if block_given?
     end
 
