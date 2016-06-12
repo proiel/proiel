@@ -59,6 +59,8 @@ module PROIEL
       form and form.length > 1
     end
 
+    WORD_PATTERN = /([^[\u{E000}-\u{F8FF}][[:word:]]]+)/
+
     # Splits a token form using the tokenization patterns that apply for a
     # the specified language. Tokenization patterns must already have been
     # loaded.
@@ -73,9 +75,9 @@ module PROIEL
       raise ArgumentError, 'invalid language tag' unless language_tag.is_a?(String)
       raise ArgumentError, 'invalid form' unless form.is_a?(String)
 
-      if form[/[^[:word:]]+/]
+      if form[WORD_PATTERN]
         # Split on any non-word character like a space or punctuation
-        form.split(/([^[:word:]]+)/)
+        form.split(WORD_PATTERN)
       elsif @@regexes.key?(language_tag) and form[@@regexes[language_tag]]
         # Apply language-specific pattern
         form.match(@@regexes[language_tag]).captures

@@ -52,4 +52,8 @@ describe PROIEL::Tokenization do
   it "splits a single word in non-Latin script by character when no language-specific rule matches" do
     expect(PROIEL::Tokenization.split_form('XXX', 'μέχρι')).to eq ["μ", "", "έ", "", "χ", "", "ρ", "", "ι"]
   end
+
+  it "splits a single word with PUA characters" do
+    expect(PROIEL::Tokenization.split_form('XXX', 'LÚ.MEŠṢARIPUTI')).to eq ['LÚ', '.', 'MEŠṢARIPUTI']
+  end
 end
