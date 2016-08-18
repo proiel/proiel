@@ -29,7 +29,10 @@ module PROIEL
     def initialize(parent, id, export_time, language, metadata, alignment_id, &block)
       @treebank = parent
       @id = id.freeze
-      @export_time = DateTime.parse(export_time).freeze
+
+      raise ArgumentError, 'string or nil expected' unless export_time.nil? or export_time.is_a?(String)
+      @export_time = export_time.nil? ? nil : DateTime.parse(export_time).freeze
+
       @language = language.freeze
       @metadata = metadata.freeze
 
