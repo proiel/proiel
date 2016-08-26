@@ -1,0 +1,1 @@
+require 'proiel/visualization/graphviz'
