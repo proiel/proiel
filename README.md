@@ -12,7 +12,7 @@ PROIEL annotation scheme and the PROIEL XML-based interchange format.
 
 ## Installation
 
-To install this library you need Ruby 2.1 or newer.
+This library requires Ruby >= 2.1. Install as
 
 ```shell
 gem install proiel
@@ -35,7 +35,7 @@ bundle
 ```
 
 To download a sample treebank, initialize a new git repository and add the
-[PROIEL treebank](http://proiel.github.io) as a submodule:
+[PROIEL treebank](https://proiel.github.io) as a submodule:
 
 ```shell
 git init
