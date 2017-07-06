@@ -19,8 +19,8 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.1'
 
   spec.add_dependency 'json', '~> 1.8'
-  spec.add_dependency 'nokogiri', '~> 1.6.6'
-  spec.add_dependency 'sax-machine', '~> 1.3.2'
+  spec.add_dependency 'nokogiri', '~> 1.6'
+  spec.add_dependency 'sax-machine', '~> 1.3'
   spec.add_dependency 'memoist', '~> 0.12'
 
   spec.add_development_dependency 'bundler', '~> 1.15'
