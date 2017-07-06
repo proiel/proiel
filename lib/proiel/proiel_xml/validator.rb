@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015 Marius L. Jøhndal
+# Copyright (c) 2015-2017 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -16,9 +16,11 @@ module PROIEL
       # Creates a new validator for a PROIEL XML file.
       #
       # @param filename [String] name of PROIEL XML file to validate
+      # @param aligned_filename [NilClass, String] name of PROIEL XML file to validate alignments against
       #
-      def initialize(filename)
+      def initialize(filename, aligned_filename = nil)
         @filename = filename
+        @aligned_filename = aligned_filename
         @errors = []
       end
 
@@ -154,6 +156,27 @@ module PROIEL
           end
         end
 
+        # Pass 5: if div is aligned, sentences and tokens within should belong
+        # to aligned div(s); if sentence aligned, tokens within should belong
+        # to aligned sentence(s). Skip if no alignment_id on source (see pass
+        # 4) or if aligned source not available.
+        if @aligned_filename
+          aligned_tb = PROIEL::Treebank.new
+          aligned_tb.load_from_xml(@aligned_filename)
+
+          tb.sources.each do |source|
+            if source.alignment_id
+              aligned_source = aligned_tb.find_source(source.alignment_id)
+
+              if aligned_source
+                check_alignment_integrity(errors, source, aligned_source)
+              else
+                errors << "Aligned source not available in treebank"
+              end
+            end
+          end
+        end
+
         # Decide if there were any errors
         if errors.empty?
           true
@@ -180,6 +203,52 @@ module PROIEL
           # Everything is fine...
         else
           errors << "Token #{token.id}: #{attribute_name} is null"
+        end
+      end
+
+      def check_alignment_integrity(errors, source, aligned_source)
+        source.divs.each do |div|
+          target_sentences =
+            div.sentences.map do |sentence|
+              target_tokens =
+                sentence.tokens.select(&:alignment_id).map do |token|
+                  # Check that target token exists in aligned source
+                  aligned_token = aligned_source.treebank.find_token(token.alignment_id)
+
+                  if aligned_token
+                    aligned_token
+                  else
+                    errors << "Token #{token.id}: aligned to token #{aligned_source.id}:#{token.alignment_id} which does not exist"
+                    nil
+                  end
+                end
+
+              inferred_target_sentences = target_tokens.compact.map(&:sentence).sort_by(&:id).uniq
+
+              if sentence.alignment_id
+                a = sentence.alignment_id.to_s.split(',').sort.join(',')
+                i = inferred_target_sentences.map(&:id).sort.join(',')
+
+                # FIXME: handle i.empty? case, in which we have to use a and check that the objects exist
+                if a != i
+                  errors << "Sentence #{sentence.id}: aligned to sentence #{aligned_source.id}:#{a} but inferred alignment is #{aligned_source.id}:#{i}"
+                end
+              end
+
+              inferred_target_sentences
+            end
+
+          inferred_target_divs = target_sentences.flatten.compact.map(&:div).uniq
+
+          if div.alignment_id
+            a = div.alignment_id.to_s.split(',').sort.join(',')
+            i = inferred_target_divs.map(&:id).sort.join(',')
+
+            # FIXME: handle i.empty? case, in which we have to use a and check that the objects exist
+            if a != i
+              errors << "Div #{div.id}: aligned to div #{aligned_source.id}:#{a} but inferred alignment is #{aligned_source.id}:#{i}"
+            end
+          end
         end
       end
     end
