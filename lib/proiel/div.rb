@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015-2016 Marius L. Jøhndal
+# Copyright (c) 2015-2017 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -134,6 +134,22 @@ module PROIEL
           end
         end
       end
+    end
+
+    # Returns the aligned div if any.
+    #
+    # @return [Div, NilClass] aligned div
+    def alignment(aligned_source)
+      alignment_id ? aligned_source.treebank.find_div(alignment_id) : nil
+    end
+
+    # Returns inferred aligned divs if any.
+    #
+    # @return [Array<Div>] inferred aligned divs
+    def inferred_alignment(aligned_source)
+      sentences.map do |sentence|
+        sentence.inferred_alignment(aligned_source)
+      end.flatten.compact.map(&:div).uniq
     end
   end
 end

@@ -217,5 +217,21 @@ module PROIEL
     def tokens
       @children.to_enum
     end
+
+    # Returns the aligned sentence if any.
+    #
+    # @return [Sentence, NilClass] aligned sentence
+    def alignment(aligned_source)
+      alignment_id ? aligned_source.treebank.find_sentence(alignment_id) : nil
+    end
+
+    # Returns inferred aligned sentences if any.
+    #
+    # @return [Array<Sentence>] inferred aligned sentences
+    def inferred_alignment(aligned_source)
+      tokens.select(&:alignment_id).map do |token|
+        token.alignment(aligned_source)
+      end.flatten.compact.map(&:sentence).uniq
+    end
   end
 end

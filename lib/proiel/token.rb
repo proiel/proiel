@@ -394,6 +394,13 @@ module PROIEL
       common_ancestors(other_token, inclusive: inclusive).first
     end
 
+    # Returns the aligned token if any.
+    #
+    # @return [Token, NilClass] aligned token
+    def alignment(aligned_source)
+      alignment_id ? aligned_source.treebank.find_token(alignment_id) : nil
+    end
+
     private
 
     # FIXME: extract this from the header of the PROIEL XML file instead and
