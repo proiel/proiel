@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proiel export-time="2017-07-06T18:47:07+02:00" schema-version="2.1">
+  <annotation>
+    <relations>
+      <value tag="adnom" summary="adnominal" primary="true" secondary="true"/>
+      <value tag="adv" summary="adverbial" primary="true" secondary="true"/>
+      <value tag="ag" summary="agens" primary="true" secondary="true"/>
+      <value tag="apos" summary="apposition" primary="true" secondary="true"/>
+      <value tag="arg" summary="argument (object or oblique)" primary="true" secondary="true"/>
+      <value tag="atr" summary="attribute" primary="true" secondary="true"/>
+      <value tag="aux" summary="auxiliary" primary="true" secondary="true"/>
+      <value tag="comp" summary="complement" primary="true" secondary="true"/>
+      <value tag="expl" summary="expletive" primary="true" secondary="true"/>
+      <value tag="narg" summary="adnominal argument" primary="true" secondary="true"/>
+      <value tag="nonsub" summary="non-subject (object, oblique or adverbial)" primary="true" secondary="true"/>
+      <value tag="obj" summary="object" primary="true" secondary="true"/>
+      <value tag="obl" summary="oblique" primary="true" secondary="true"/>
+      <value tag="parpred" summary="parenthetical predication" primary="true" secondary="true"/>
+      <value tag="part" summary="partitive" primary="true" secondary="true"/>
+      <value tag="per" summary="peripheral (oblique or adverbial)" primary="true" secondary="true"/>
+      <value tag="pid" summary="Predicate identity" primary="false" secondary="true"/>
+      <value tag="pred" summary="predicate" primary="true" secondary="true"/>
+      <value tag="rel" summary="apposition or attribute" primary="true" secondary="true"/>
+      <value tag="sub" summary="subject" primary="true" secondary="true"/>
+      <value tag="voc" summary="vocative" primary="true" secondary="true"/>
+      <value tag="xadv" summary="open adverbial complement" primary="true" secondary="true"/>
+      <value tag="xobj" summary="open objective complement" primary="true" secondary="true"/>
+      <value tag="xsub" summary="external subject" primary="false" secondary="true"/>
+    </relations>
+    <parts-of-speech>
+      <value tag="A-" summary="adjective"/>
+      <value tag="Df" summary="adverb"/>
+      <value tag="S-" summary="article"/>
+      <value tag="Ma" summary="cardinal numeral"/>
+      <value tag="Nb" summary="common noun"/>
+      <value tag="C-" summary="conjunction"/>
+      <value tag="Pd" summary="demonstrative pronoun"/>
+      <value tag="F-" summary="foreign word"/>
+      <value tag="Px" summary="indefinite pronoun"/>
+      <value tag="N-" summary="infinitive marker"/>
+      <value tag="I-" summary="interjection"/>
+      <value tag="Du" summary="interrogative adverb"/>
+      <value tag="Pi" summary="interrogative pronoun"/>
+      <value tag="Mo" summary="ordinal numeral"/>
+      <value tag="Pp" summary="personal pronoun"/>
+      <value tag="Pk" summary="personal reflexive pronoun"/>
+      <value tag="Ps" summary="possessive pronoun"/>
+      <value tag="Pt" summary="possessive reflexive pronoun"/>
+      <value tag="R-" summary="preposition"/>
+      <value tag="Ne" summary="proper noun"/>
+      <value tag="Py" summary="quantifier"/>
+      <value tag="Pc" summary="reciprocal pronoun"/>
+      <value tag="Dq" summary="relative adverb"/>
+      <value tag="Pr" summary="relative pronoun"/>
+      <value tag="G-" summary="subjunction"/>
+      <value tag="V-" summary="verb"/>
+      <value tag="X-" summary="unassigned"/>
+    </parts-of-speech>
+    <morphology>
+      <field tag="person">
+        <value tag="1" summary="first person"/>
+        <value tag="2" summary="second person"/>
+        <value tag="3" summary="third person"/>
+        <value tag="x" summary="uncertain person"/>
+      </field>
+      <field tag="number">
+        <value tag="s" summary="singular"/>
+        <value tag="d" summary="dual"/>
+        <value tag="p" summary="plural"/>
+        <value tag="x" summary="uncertain number"/>
+      </field>
+      <field tag="tense">
+        <value tag="p" summary="present"/>
+        <value tag="i" summary="imperfect"/>
+        <value tag="r" summary="perfect"/>
+        <value tag="s" summary="resultative"/>
+        <value tag="a" summary="aorist"/>
+        <value tag="u" summary="past"/>
+        <value tag="l" summary="pluperfect"/>
+        <value tag="f" summary="future"/>
+        <value tag="t" summary="future perfect"/>
+        <value tag="x" summary="uncertain tense"/>
+      </field>
+      <field tag="mood">
+        <value tag="i" summary="indicative"/>
+        <value tag="s" summary="subjunctive"/>
+        <value tag="m" summary="imperative"/>
+        <value tag="o" summary="optative"/>
+        <value tag="n" summary="infinitive"/>
+        <value tag="p" summary="participle"/>
+        <value tag="d" summary="gerund"/>
+        <value tag="g" summary="gerundive"/>
+        <value tag="u" summary="supine"/>
+        <value tag="x" summary="uncertain mood"/>
+        <value tag="y" summary="finiteness unspecified"/>
+        <value tag="e" summary="indicative or subjunctive"/>
+        <value tag="f" summary="indicative or imperative"/>
+        <value tag="h" summary="subjunctive or imperative"/>
+        <value tag="t" summary="finite"/>
+      </field>
+      <field tag="voice">
+        <value tag="a" summary="active"/>
+        <value tag="m" summary="middle"/>
+        <value tag="p" summary="passive"/>
+        <value tag="e" summary="middle or passive"/>
+        <value tag="x" summary="unspecified"/>
+      </field>
+      <field tag="gender">
+        <value tag="m" summary="masculine"/>
+        <value tag="f" summary="feminine"/>
+        <value tag="n" summary="neuter"/>
+        <value tag="p" summary="masculine or feminine"/>
+        <value tag="o" summary="masculine or neuter"/>
+        <value tag="r" summary="feminine or neuter"/>
+        <value tag="q" summary="masculine, feminine or neuter"/>
+        <value tag="x" summary="uncertain gender"/>
+      </field>
+      <field tag="case">
+        <value tag="n" summary="nominative"/>
+        <value tag="a" summary="accusative"/>
+        <value tag="o" summary="oblique"/>
+        <value tag="g" summary="genitive"/>
+        <value tag="c" summary="genitive or dative"/>
+        <value tag="e" summary="accusative or dative"/>
+        <value tag="d" summary="dative"/>
+        <value tag="b" summary="ablative"/>
+        <value tag="i" summary="instrumental"/>
+        <value tag="l" summary="locative"/>
+        <value tag="v" summary="vocative"/>
+        <value tag="x" summary="uncertain case"/>
+        <value tag="z" summary="no case"/>
+      </field>
+      <field tag="degree">
+        <value tag="p" summary="positive"/>
+        <value tag="c" summary="comparative"/>
+        <value tag="s" summary="superlative"/>
+        <value tag="x" summary="uncertain degree"/>
+        <value tag="z" summary="no degree"/>
+      </field>
+      <field tag="strength">
+        <value tag="w" summary="weak"/>
+        <value tag="s" summary="strong"/>
+        <value tag="t" summary="weak or strong"/>
+      </field>
+      <field tag="inflection">
+        <value tag="n" summary="non-inflecting"/>
+        <value tag="i" summary="inflecting"/>
+      </field>
+    </morphology>
+    <information-statuses>
+      <value tag="new" summary="new"/>
+      <value tag="kind" summary="kind"/>
+      <value tag="acc_gen" summary="acc-gen"/>
+      <value tag="acc_sit" summary="acc-sit"/>
+      <value tag="acc_inf" summary="acc-inf"/>
+      <value tag="old" summary="old"/>
+      <value tag="old_inact" summary="old-inact"/>
+      <value tag="no_info_status" summary="annotatable (undecided)"/>
+      <value tag="info_unannotatable" summary="unannotatable"/>
+      <value tag="quant" summary="quantifier restriction"/>
+      <value tag="non_spec" summary="non-specific"/>
+      <value tag="non_spec_inf" summary="inferred from non-specific"/>
+      <value tag="non_spec_old" summary="non-specific old"/>
+    </information-statuses>
+  </annotation>
+  <source id="greek-nt" language="grc">
+    <title>The Greek New Testament</title>
+    <citation-part>GNT</citation-part>
+    <principal>Dag Trygve Truslew Haug</principal>
+    <funder>Research Council of Norway</funder>
+    <distributor>Department of Philosophy, Classics, History of Arts and Ideas</distributor>
+    <distributor-address>PO Box 1020 Blindern, N-0315 Oslo</distributor-address>
+    <date>06 July 2017</date>
+    <license>CC BY-NC-SA 3.0</license>
+    <license-url>http://creativecommons.org/licenses/by-nc-sa/3.0/us/</license-url>
+    <reference-system>Standard biblical reference system</reference-system>
+    <editor>Dag Haug</editor>
+    <annotator>Dagmar Wodtko (7570 sentences), Marek Majer (760 sentences), Bergthora Aegisdottir (696 sentences), Pål Rykkja Gilbert (643 sentences), Michael Frotscher (365 sentences), Dag Haug (346 sentences), Eirik Welo (342 sentences), Per Kristen Teigen (301 sentences), Hanne Eckhoff (222 sentences), David Sobey (217 sentences), Þorsteinn Vilhjálmsson (153 sentences), Corinna Scheungraber (120 sentences), Angelika Müth (96 sentences), Jana Beck (41 sentences), Sergej Munkvold (4 sentences), and Dag Haug (1 sentence)</annotator>
+    <reviewer>Dag Haug (4936 sentences), Marek Majer (4145 sentences), Þorsteinn Vilhjálmsson (1095 sentences), Eirik Welo (941 sentences), and Hanne Eckhoff (387 sentences)</reviewer>
+    <electronic-text-editor>Ulrik Sandborg-Petersen</electronic-text-editor>
+    <electronic-text-title>Tischendorf 8th GNT with morphology and lemmatization</electronic-text-title>
+    <electronic-text-version>2.0 (Tischendorf-2.0.zip with MD5 sum f1732e0f66d9ca9565de4dc48e5b2b2b)</electronic-text-version>
+    <electronic-text-publisher>Ulrik Sandborg-Petersen</electronic-text-publisher>
+    <electronic-text-date>19 January 2008</electronic-text-date>
+    <electronic-text-original-url>https://github.com/morphgnt/tischendorf</electronic-text-original-url>
+    <electronic-text-license>Public domain</electronic-text-license>
+    <electronic-text-license-url>http://en.wikipedia.org/wiki/Public_domain</electronic-text-license-url>
+    <printed-text-editor>Constantin von Tischendorf</printed-text-editor>
+    <printed-text-title>Novum Testamentum Graece</printed-text-title>
+    <printed-text-edition>Editio octava critica maior</printed-text-edition>
+    <printed-text-publisher>Gieseche &amp; Devrient</printed-text-publisher>
+    <printed-text-place>Leipzig</printed-text-place>
+    <printed-text-date>1869</printed-text-date>
+    <div id="76">
+      <title>Matthew 1</title>
+      <sentence id="14671" status="reviewed" presentation-after=" ">
+        <token id="266690" form="Βίβλος" citation-part="MATT 1.1" lemma="βίβλος" part-of-speech="Nb" morphology="-s---fn--i" head-id="287650" relation="xobj" presentation-after=" ">
+          <slash target-id="287650" relation="xsub"/>
+        </token>
+        <token id="266691" form="γενέσεως" citation-part="MATT 1.1" lemma="γένεσις" part-of-speech="Nb" morphology="-s---fg--i" head-id="266690" relation="atr" information-status="new" presentation-after=" "/>
+        <token id="266692" form="Ἰησοῦ" citation-part="MATT 1.1" lemma="Ἰησοῦς" part-of-speech="Ne" morphology="-s---mg--i" head-id="266691" relation="atr" information-status="acc_gen" presentation-after=" "/>
+        <token id="266693" form="Χριστοῦ" citation-part="MATT 1.1" lemma="Χριστός" part-of-speech="Ne" morphology="-s---mg--i" head-id="266692" relation="apos" presentation-after=" "/>
+        <token id="266694" form="υἱοῦ" citation-part="MATT 1.1" lemma="υἱός" part-of-speech="Nb" morphology="-s---mg--i" head-id="266692" relation="apos" presentation-after=" "/>
+        <token id="266695" form="Δαυεὶδ" citation-part="MATT 1.1" lemma="Δαυίδ" part-of-speech="Ne" morphology="---------n" head-id="266694" relation="atr" information-status="acc_gen" presentation-after=" "/>
+        <token id="266696" form="υἱοῦ" citation-part="MATT 1.1" lemma="υἱός" part-of-speech="Nb" morphology="-s---mg--i" head-id="266695" relation="apos" presentation-after=" "/>
+        <token id="266697" form="Ἀβραάμ" citation-part="MATT 1.1" lemma="Ἀβραάμ" part-of-speech="Ne" morphology="---------n" head-id="266696" relation="atr" information-status="acc_gen" presentation-after="."/>
+        <token id="287650" empty-token-sort="V" citation-part="MATT 1.1" relation="pred"/>
+      </sentence>
+      <sentence id="47587" status="reviewed" presentation-after=" ">
+        <token id="266699" form="Ἀβραὰμ" citation-part="MATT 1.2" lemma="Ἀβραάμ" part-of-speech="Ne" morphology="---------n" head-id="266700" relation="sub" antecedent-id="266697" information-status="old" presentation-after=" "/>
+        <token id="266700" form="ἐγέννησεν" citation-part="MATT 1.2" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266701" form="τὸν" citation-part="MATT 1.2" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266702" relation="aux" presentation-after=" "/>
+        <token id="266702" form="Ἰσαάκ" citation-part="MATT 1.2" lemma="Ἰσαάκ" part-of-speech="Ne" morphology="---------n" head-id="266700" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47588" status="reviewed" presentation-after=" ">
+        <token id="266704" form="Ἰσαὰκ" citation-part="MATT 1.2" lemma="Ἰσαάκ" part-of-speech="Ne" morphology="---------n" head-id="266706" relation="sub" antecedent-id="266702" information-status="old" presentation-after=" "/>
+        <token id="266705" form="δὲ" citation-part="MATT 1.2" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266706" relation="aux" presentation-after=" "/>
+        <token id="266706" form="ἐγέννησεν" citation-part="MATT 1.2" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266707" form="τὸν" citation-part="MATT 1.2" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266708" relation="aux" presentation-after=" "/>
+        <token id="266708" form="Ἰακώβ" citation-part="MATT 1.2" lemma="Ἰακώβ" part-of-speech="Ne" morphology="---------n" head-id="266706" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47589" status="reviewed" presentation-after=" ">
+        <token id="266710" form="Ἰακὼβ" citation-part="MATT 1.2" lemma="Ἰακώβ" part-of-speech="Ne" morphology="---------n" head-id="266712" relation="sub" antecedent-id="266708" information-status="old" presentation-after=" "/>
+        <token id="266711" form="δὲ" citation-part="MATT 1.2" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266712" relation="aux" presentation-after=" "/>
+        <token id="266712" form="ἐγέννησεν" citation-part="MATT 1.2" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266713" form="τὸν" citation-part="MATT 1.2" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266714" relation="aux" presentation-after=" "/>
+        <token id="266714" form="Ἰούδαν" citation-part="MATT 1.2" lemma="Ἰούδας" part-of-speech="Ne" morphology="-s---ma--i" head-id="266715" relation="obj" information-status="acc_gen" presentation-after=" "/>
+        <token id="266715" form="καὶ" citation-part="MATT 1.2" lemma="καί" part-of-speech="C-" morphology="---------n" head-id="266712" relation="obj" presentation-after=" "/>
+        <token id="266716" form="τοὺς" citation-part="MATT 1.2" lemma="ὁ" part-of-speech="S-" morphology="-p---ma--i" head-id="266717" relation="aux" presentation-after=" "/>
+        <token id="266717" form="ἀδελφοὺς" citation-part="MATT 1.2" lemma="ἀδελφός" part-of-speech="Nb" morphology="-p---ma--i" head-id="266715" relation="obj" information-status="new" presentation-after=" "/>
+        <token id="266718" form="αὐτοῦ" citation-part="MATT 1.2" lemma="αὐτός" part-of-speech="Pp" morphology="3s---mg--i" head-id="266717" relation="atr" antecedent-id="266714" information-status="old" presentation-after=","/>
+      </sentence>
+      <sentence id="47590" status="reviewed" presentation-after=" ">
+        <token id="266720" form="Ἰούδας" citation-part="MATT 1.3" lemma="Ἰούδας" part-of-speech="Ne" morphology="-s---mn--i" head-id="266722" relation="sub" antecedent-id="266718" information-status="old" presentation-after=" "/>
+        <token id="266721" form="δὲ" citation-part="MATT 1.3" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266722" relation="aux" presentation-after=" "/>
+        <token id="266722" form="ἐγέννησεν" citation-part="MATT 1.3" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266723" form="τὸν" citation-part="MATT 1.3" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266724" relation="aux" presentation-after=" "/>
+        <token id="266724" form="Φάρες" citation-part="MATT 1.3" lemma="Φάρες" part-of-speech="Ne" morphology="---------n" head-id="266725" relation="obj" information-status="acc_gen" presentation-after=" "/>
+        <token id="266725" form="καὶ" citation-part="MATT 1.3" lemma="καί" part-of-speech="C-" morphology="---------n" head-id="266722" relation="obj" presentation-after=" "/>
+        <token id="266726" form="τὸν" citation-part="MATT 1.3" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266727" relation="aux" presentation-after=" "/>
+        <token id="266727" form="Ζάρα" citation-part="MATT 1.3" lemma="Ζάρα" part-of-speech="Ne" morphology="---------n" head-id="266725" relation="obj" information-status="acc_gen" presentation-after=" "/>
+        <token id="266728" form="ἐκ" citation-part="MATT 1.3" lemma="ἐκ" part-of-speech="R-" morphology="---------n" head-id="266722" relation="obl" information-status="info_unannotatable" presentation-after=" "/>
+        <token id="266729" form="τῆς" citation-part="MATT 1.3" lemma="ὁ" part-of-speech="S-" morphology="-s---fg--i" head-id="266730" relation="aux" presentation-after=" "/>
+        <token id="266730" form="Θαμάρ" citation-part="MATT 1.3" lemma="Θαμάρ" part-of-speech="Ne" morphology="---------n" head-id="266728" relation="obl" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47591" status="reviewed" presentation-after=" ">
+        <token id="266732" form="Φάρες" citation-part="MATT 1.3" lemma="Φάρες" part-of-speech="Ne" morphology="---------n" head-id="266734" relation="sub" antecedent-id="266724" information-status="old" presentation-after=" "/>
+        <token id="266733" form="δὲ" citation-part="MATT 1.3" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266734" relation="aux" presentation-after=" "/>
+        <token id="266734" form="ἐγέννησεν" citation-part="MATT 1.3" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266735" form="τὸν" citation-part="MATT 1.3" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266736" relation="aux" presentation-after=" "/>
+        <token id="266736" form="Ἑσρώμ" citation-part="MATT 1.3" lemma="Ἑσρώμ" part-of-speech="Ne" morphology="---------n" head-id="266734" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47592" status="reviewed" presentation-after=" ">
+        <token id="266738" form="Ἑσρὼμ" citation-part="MATT 1.3" lemma="Ἑσρώμ" part-of-speech="Ne" morphology="---------n" head-id="266740" relation="sub" antecedent-id="266736" information-status="old" presentation-after=" "/>
+        <token id="266739" form="δὲ" citation-part="MATT 1.3" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266740" relation="aux" presentation-after=" "/>
+        <token id="266740" form="ἐγέννησεν" citation-part="MATT 1.3" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266741" form="τὸν" citation-part="MATT 1.3" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266742" relation="aux" presentation-after=" "/>
+        <token id="266742" form="Ἀράμ" citation-part="MATT 1.3" lemma="Ἀράμ" part-of-speech="Ne" morphology="---------n" head-id="266740" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47593" status="reviewed" presentation-after=" ">
+        <token id="266744" form="Ἀρὰμ" citation-part="MATT 1.4" lemma="Ἀράμ" part-of-speech="Ne" morphology="---------n" head-id="266746" relation="sub" antecedent-id="266742" information-status="old" presentation-after=" "/>
+        <token id="266745" form="δὲ" citation-part="MATT 1.4" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266746" relation="aux" presentation-after=" "/>
+        <token id="266746" form="ἐγέννησεν" citation-part="MATT 1.4" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266747" form="τὸν" citation-part="MATT 1.4" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266748" relation="aux" presentation-after=" "/>
+        <token id="266748" form="Ἀμιναδάβ" citation-part="MATT 1.4" lemma="Ἀμιναδάβ" part-of-speech="Ne" morphology="---------n" head-id="266746" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47594" status="reviewed" presentation-after=" ">
+        <token id="266750" form="Ἀμιναδὰβ" citation-part="MATT 1.4" lemma="Ἀμιναδάβ" part-of-speech="Ne" morphology="---------n" head-id="266752" relation="sub" antecedent-id="266748" information-status="old" presentation-after=" "/>
+        <token id="266751" form="δὲ" citation-part="MATT 1.4" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266752" relation="aux" presentation-after=" "/>
+        <token id="266752" form="ἐγέννησεν" citation-part="MATT 1.4" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266753" form="τὸν" citation-part="MATT 1.4" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266754" relation="aux" presentation-after=" "/>
+        <token id="266754" form="Ναασσών" citation-part="MATT 1.4" lemma="Ναασσών" part-of-speech="Ne" morphology="---------n" head-id="266752" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47595" status="reviewed" presentation-after=" ">
+        <token id="266756" form="Ναασσὼν" citation-part="MATT 1.4" lemma="Ναασσών" part-of-speech="Ne" morphology="---------n" head-id="266758" relation="sub" antecedent-id="266754" information-status="old" presentation-after=" "/>
+        <token id="266757" form="δὲ" citation-part="MATT 1.4" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266758" relation="aux" presentation-after=" "/>
+        <token id="266758" form="ἐγέννησεν" citation-part="MATT 1.4" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266759" form="τὸν" citation-part="MATT 1.4" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266760" relation="aux" presentation-after=" "/>
+        <token id="266760" form="Σαλμών" citation-part="MATT 1.4" lemma="Σαλμών" part-of-speech="Ne" morphology="---------n" head-id="266758" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47596" status="reviewed" presentation-after=" ">
+        <token id="266762" form="Σαλμὼν" citation-part="MATT 1.5" lemma="Σαλμών" part-of-speech="Ne" morphology="---------n" head-id="266764" relation="sub" antecedent-id="266760" information-status="old" presentation-after=" "/>
+        <token id="266763" form="δὲ" citation-part="MATT 1.5" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266764" relation="aux" presentation-after=" "/>
+        <token id="266764" form="ἐγέννησεν" citation-part="MATT 1.5" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266765" form="τὸν" citation-part="MATT 1.5" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266766" relation="aux" presentation-after=" "/>
+        <token id="266766" form="Βόες" citation-part="MATT 1.5" lemma="Βόες" part-of-speech="Ne" morphology="---------n" head-id="266764" relation="obj" information-status="acc_gen" presentation-after=" "/>
+        <token id="266767" form="ἐκ" citation-part="MATT 1.5" lemma="ἐκ" part-of-speech="R-" morphology="---------n" head-id="266764" relation="obl" information-status="info_unannotatable" presentation-after=" "/>
+        <token id="266768" form="τῆς" citation-part="MATT 1.5" lemma="ὁ" part-of-speech="S-" morphology="-s---fg--i" head-id="266769" relation="aux" presentation-after=" "/>
+        <token id="266769" form="Ῥαχάβ" citation-part="MATT 1.5" lemma="Ῥαχάβ" part-of-speech="Ne" morphology="---------n" head-id="266767" relation="obl" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47597" status="reviewed" presentation-after=" ">
+        <token id="266771" form="Βόες" citation-part="MATT 1.5" lemma="Βόες" part-of-speech="Ne" morphology="---------n" head-id="266773" relation="sub" antecedent-id="266766" information-status="old" presentation-after=" "/>
+        <token id="266772" form="δὲ" citation-part="MATT 1.5" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266773" relation="aux" presentation-after=" "/>
+        <token id="266773" form="ἐγέννησεν" citation-part="MATT 1.5" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266774" form="τὸν" citation-part="MATT 1.5" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266775" relation="aux" presentation-after=" "/>
+        <token id="266775" form="Ἰωβὴδ" citation-part="MATT 1.5" lemma="Ἰωβήδ" part-of-speech="Ne" morphology="---------n" head-id="266773" relation="obj" information-status="acc_gen" presentation-after=" "/>
+        <token id="266776" form="ἐκ" citation-part="MATT 1.5" lemma="ἐκ" part-of-speech="R-" morphology="---------n" head-id="266773" relation="obl" information-status="info_unannotatable" presentation-after=" "/>
+        <token id="266777" form="τῆς" citation-part="MATT 1.5" lemma="ὁ" part-of-speech="S-" morphology="-s---fg--i" head-id="266778" relation="aux" presentation-after=" "/>
+        <token id="266778" form="Ῥούθ" citation-part="MATT 1.5" lemma="Ῥούθ" part-of-speech="Ne" morphology="---------n" head-id="266776" relation="obl" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47598" status="reviewed" presentation-after=" ">
+        <token id="266780" form="Ἰωβὴδ" citation-part="MATT 1.5" lemma="Ἰωβήδ" part-of-speech="Ne" morphology="---------n" head-id="266782" relation="sub" antecedent-id="266775" information-status="old" presentation-after=" "/>
+        <token id="266781" form="δὲ" citation-part="MATT 1.5" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266782" relation="aux" presentation-after=" "/>
+        <token id="266782" form="ἐγέννησεν" citation-part="MATT 1.5" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266783" form="τὸν" citation-part="MATT 1.5" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266784" relation="aux" presentation-after=" "/>
+        <token id="266784" form="Ἰεσσαί" citation-part="MATT 1.5" lemma="Ἰεσσαί" part-of-speech="Ne" morphology="---------n" head-id="266782" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47599" status="reviewed" presentation-after=" ">
+        <token id="266786" form="Ἰεσσαὶ" citation-part="MATT 1.6" lemma="Ἰεσσαί" part-of-speech="Ne" morphology="---------n" head-id="266788" relation="sub" antecedent-id="266784" information-status="old" presentation-after=" "/>
+        <token id="266787" form="δὲ" citation-part="MATT 1.6" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266788" relation="aux" presentation-after=" "/>
+        <token id="266788" form="ἐγέννησεν" citation-part="MATT 1.6" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266789" form="τὸν" citation-part="MATT 1.6" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266790" relation="aux" presentation-after=" "/>
+        <token id="266790" form="Δαυεὶδ" citation-part="MATT 1.6" lemma="Δαυίδ" part-of-speech="Ne" morphology="---------n" head-id="266788" relation="obj" information-status="old_inact" presentation-after=" "/>
+        <token id="266791" form="τὸν" citation-part="MATT 1.6" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266792" relation="aux" presentation-after=" "/>
+        <token id="266792" form="βασιλέα" citation-part="MATT 1.6" lemma="βασιλεύς" part-of-speech="Nb" morphology="-s---ma--i" head-id="266790" relation="apos" presentation-after="."/>
+      </sentence>
+      <sentence id="47600" status="reviewed" presentation-after=" ">
+        <token id="266794" form="Δαυεὶδ" citation-part="MATT 1.6" lemma="Δαυίδ" part-of-speech="Ne" morphology="---------n" head-id="266796" relation="sub" antecedent-id="266790" information-status="old" presentation-after=" "/>
+        <token id="266795" form="δὲ" citation-part="MATT 1.6" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266796" relation="aux" presentation-after=" "/>
+        <token id="266796" form="ἐγέννησεν" citation-part="MATT 1.6" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266797" form="τὸν" citation-part="MATT 1.6" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266798" relation="aux" presentation-after=" "/>
+        <token id="266798" form="Σολομῶνα" citation-part="MATT 1.6" lemma="Σολομών" part-of-speech="Ne" morphology="-s---ma--i" head-id="266796" relation="obj" information-status="acc_gen" presentation-after=" "/>
+        <token id="266799" form="ἐκ" citation-part="MATT 1.6" lemma="ἐκ" part-of-speech="R-" morphology="---------n" head-id="266796" relation="obl" information-status="info_unannotatable" presentation-after=" "/>
+        <token id="266800" form="τῆς" citation-part="MATT 1.6" lemma="ὁ" part-of-speech="S-" morphology="-s---fg--i" head-id="266802" relation="aux" presentation-after=" "/>
+        <token id="266801" form="τοῦ" citation-part="MATT 1.6" lemma="ὁ" part-of-speech="S-" morphology="-s---mg--i" head-id="266802" relation="aux" presentation-after=" "/>
+        <token id="266802" form="Οὐρίου" citation-part="MATT 1.6" lemma="Οὐρίας" part-of-speech="Ne" morphology="-s---mg--i" head-id="266799" relation="obl" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47601" status="reviewed" presentation-after=" ">
+        <token id="266804" form="Σολομὼν" citation-part="MATT 1.7" lemma="Σολομών" part-of-speech="Ne" morphology="-s---mn--i" head-id="266806" relation="sub" antecedent-id="266798" information-status="old" presentation-after=" "/>
+        <token id="266805" form="δὲ" citation-part="MATT 1.7" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266806" relation="aux" presentation-after=" "/>
+        <token id="266806" form="ἐγέννησεν" citation-part="MATT 1.7" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266807" form="τὸν" citation-part="MATT 1.7" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266808" relation="aux" presentation-after=" "/>
+        <token id="266808" form="Ῥοβοάμ" citation-part="MATT 1.7" lemma="Ῥοβοάμ" part-of-speech="Ne" morphology="---------n" head-id="266806" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47602" status="reviewed" presentation-after=" ">
+        <token id="266810" form="Ῥοβοὰμ" citation-part="MATT 1.7" lemma="Ῥοβοάμ" part-of-speech="Ne" morphology="---------n" head-id="266812" relation="sub" antecedent-id="266808" information-status="old" presentation-after=" "/>
+        <token id="266811" form="δὲ" citation-part="MATT 1.7" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266812" relation="aux" presentation-after=" "/>
+        <token id="266812" form="ἐγέννησεν" citation-part="MATT 1.7" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266813" form="τὸν" citation-part="MATT 1.7" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266814" relation="aux" presentation-after=" "/>
+        <token id="266814" form="Ἀβιά" citation-part="MATT 1.7" lemma="Ἀβιά" part-of-speech="Ne" morphology="---------n" head-id="266812" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47603" status="reviewed" presentation-after=" ">
+        <token id="266816" form="Ἀβιὰ" citation-part="MATT 1.7" lemma="Ἀβιά" part-of-speech="Ne" morphology="---------n" head-id="266818" relation="sub" antecedent-id="266814" information-status="old" presentation-after=" "/>
+        <token id="266817" form="δὲ" citation-part="MATT 1.7" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266818" relation="aux" presentation-after=" "/>
+        <token id="266818" form="ἐγέννησεν" citation-part="MATT 1.7" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266819" form="τὸν" citation-part="MATT 1.7" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266820" relation="aux" presentation-after=" "/>
+        <token id="266820" form="Ἀσάφ" citation-part="MATT 1.7" lemma="Ἀσάφ" part-of-speech="Ne" morphology="---------n" head-id="266818" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47604" status="reviewed" presentation-after=" ">
+        <token id="266822" form="Ἀσὰφ" citation-part="MATT 1.8" lemma="Ἀσάφ" part-of-speech="Ne" morphology="---------n" head-id="266824" relation="sub" antecedent-id="266820" information-status="old" presentation-after=" "/>
+        <token id="266823" form="δὲ" citation-part="MATT 1.8" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266824" relation="aux" presentation-after=" "/>
+        <token id="266824" form="ἐγέννησεν" citation-part="MATT 1.8" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266825" form="τὸν" citation-part="MATT 1.8" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266826" relation="aux" presentation-after=" "/>
+        <token id="266826" form="Ἰωσαφάτ" citation-part="MATT 1.8" lemma="Ἰωσαφάτ" part-of-speech="Ne" morphology="---------n" head-id="266824" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47605" status="reviewed" presentation-after=" ">
+        <token id="266828" form="Ἰωσαφὰτ" citation-part="MATT 1.8" lemma="Ἰωσαφάτ" part-of-speech="Ne" morphology="---------n" head-id="266830" relation="sub" antecedent-id="266826" information-status="old" presentation-after=" "/>
+        <token id="266829" form="δὲ" citation-part="MATT 1.8" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266830" relation="aux" presentation-after=" "/>
+        <token id="266830" form="ἐγέννησεν" citation-part="MATT 1.8" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266831" form="τὸν" citation-part="MATT 1.8" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266832" relation="aux" presentation-after=" "/>
+        <token id="266832" form="Ἰωράμ" citation-part="MATT 1.8" lemma="Ἰωράμ" part-of-speech="Ne" morphology="---------n" head-id="266830" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47606" status="reviewed" presentation-after=" ">
+        <token id="266834" form="Ἰωρὰμ" citation-part="MATT 1.8" lemma="Ἰωράμ" part-of-speech="Ne" morphology="---------n" head-id="266836" relation="sub" antecedent-id="266832" information-status="old" presentation-after=" "/>
+        <token id="266835" form="δὲ" citation-part="MATT 1.8" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266836" relation="aux" presentation-after=" "/>
+        <token id="266836" form="ἐγέννησεν" citation-part="MATT 1.8" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266837" form="τὸν" citation-part="MATT 1.8" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266838" relation="aux" presentation-after=" "/>
+        <token id="266838" form="Ὀζείαν" citation-part="MATT 1.8" lemma="Ὀζίας" part-of-speech="Ne" morphology="-s---ma--i" head-id="266836" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47607" status="reviewed" presentation-after=" ">
+        <token id="266840" form="Ὀζείας" citation-part="MATT 1.9" lemma="Ὀζίας" part-of-speech="Ne" morphology="-s---mn--i" head-id="266842" relation="sub" antecedent-id="266838" information-status="old" presentation-after=" "/>
+        <token id="266841" form="δὲ" citation-part="MATT 1.9" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266842" relation="aux" presentation-after=" "/>
+        <token id="266842" form="ἐγέννησεν" citation-part="MATT 1.9" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266843" form="τὸν" citation-part="MATT 1.9" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266844" relation="aux" presentation-after=" "/>
+        <token id="266844" form="Ἰωαθάμ" citation-part="MATT 1.9" lemma="Ἰωαθάμ" part-of-speech="Ne" morphology="---------n" head-id="266842" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47608" status="reviewed" presentation-after=" ">
+        <token id="266846" form="Ἰωαθὰμ" citation-part="MATT 1.9" lemma="Ἰωαθάμ" part-of-speech="Ne" morphology="---------n" head-id="266848" relation="sub" antecedent-id="266844" information-status="old" presentation-after=" "/>
+        <token id="266847" form="δὲ" citation-part="MATT 1.9" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266848" relation="aux" presentation-after=" "/>
+        <token id="266848" form="ἐγέννησεν" citation-part="MATT 1.9" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266849" form="τὸν" citation-part="MATT 1.9" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266850" relation="aux" presentation-after=" "/>
+        <token id="266850" form="Ἀχάζ" citation-part="MATT 1.9" lemma="Ἀχάζ" part-of-speech="Ne" morphology="---------n" head-id="266848" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47609" status="reviewed" presentation-after=" ">
+        <token id="266852" form="Ἀχὰζ" citation-part="MATT 1.9" lemma="Ἀχάζ" part-of-speech="Ne" morphology="---------n" head-id="266854" relation="sub" antecedent-id="266850" information-status="old" presentation-after=" "/>
+        <token id="266853" form="δὲ" citation-part="MATT 1.9" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266854" relation="aux" presentation-after=" "/>
+        <token id="266854" form="ἐγέννησεν" citation-part="MATT 1.9" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266855" form="τὸν" citation-part="MATT 1.9" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266856" relation="aux" presentation-after=" "/>
+        <token id="266856" form="Ἑζεκίαν" citation-part="MATT 1.9" lemma="Ἑζεκίας" part-of-speech="Ne" morphology="-s---ma--i" head-id="266854" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47610" status="reviewed" presentation-after=" ">
+        <token id="266858" form="Ἑζεκίας" citation-part="MATT 1.10" lemma="Ἑζεκίας" part-of-speech="Ne" morphology="-s---mn--i" head-id="266860" relation="sub" antecedent-id="266856" information-status="old" presentation-after=" "/>
+        <token id="266859" form="δὲ" citation-part="MATT 1.10" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266860" relation="aux" presentation-after=" "/>
+        <token id="266860" form="ἐγέννησεν" citation-part="MATT 1.10" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266861" form="τὸν" citation-part="MATT 1.10" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266862" relation="aux" presentation-after=" "/>
+        <token id="266862" form="Μανασσῆ" citation-part="MATT 1.10" lemma="Μανασσῆς" part-of-speech="Ne" morphology="-s---ma--i" head-id="266860" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47611" status="reviewed" presentation-after=" ">
+        <token id="266864" form="Μανασσῆς" citation-part="MATT 1.10" lemma="Μανασσῆς" part-of-speech="Ne" morphology="-s---mn--i" head-id="266866" relation="sub" antecedent-id="266862" information-status="old" presentation-after=" "/>
+        <token id="266865" form="δὲ" citation-part="MATT 1.10" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266866" relation="aux" presentation-after=" "/>
+        <token id="266866" form="ἐγέννησεν" citation-part="MATT 1.10" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266867" form="τὸν" citation-part="MATT 1.10" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266868" relation="aux" presentation-after=" "/>
+        <token id="266868" form="Ἀμώς" citation-part="MATT 1.10" lemma="Ἀμώς" part-of-speech="Ne" morphology="---------n" head-id="266866" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47612" status="reviewed" presentation-after=" ">
+        <token id="266870" form="Ἀμὼς" citation-part="MATT 1.10" lemma="Ἀμώς" part-of-speech="Ne" morphology="---------n" head-id="266872" relation="sub" antecedent-id="266868" information-status="old" presentation-after=" "/>
+        <token id="266871" form="δὲ" citation-part="MATT 1.10" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266872" relation="aux" presentation-after=" "/>
+        <token id="266872" form="ἐγέννησεν" citation-part="MATT 1.10" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266873" form="τὸν" citation-part="MATT 1.10" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266874" relation="aux" presentation-after=" "/>
+        <token id="266874" form="Ἰωσείαν" citation-part="MATT 1.10" lemma="Ἰωσίας" part-of-speech="Ne" morphology="-s---ma--i" head-id="266872" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47613" status="reviewed" presentation-after=" ">
+        <token id="266876" form="Ἰωσείας" citation-part="MATT 1.11" lemma="Ἰωσίας" part-of-speech="Ne" morphology="-s---mn--i" head-id="266878" relation="sub" antecedent-id="266874" information-status="old" presentation-after=" "/>
+        <token id="266877" form="δὲ" citation-part="MATT 1.11" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266878" relation="aux" presentation-after=" "/>
+        <token id="266878" form="ἐγέννησεν" citation-part="MATT 1.11" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266879" form="τὸν" citation-part="MATT 1.11" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266880" relation="aux" presentation-after=" "/>
+        <token id="266880" form="Ἰεχονίαν" citation-part="MATT 1.11" lemma="Ἰεχονίας" part-of-speech="Ne" morphology="-s---ma--i" head-id="266881" relation="obj" information-status="acc_gen" presentation-after=" "/>
+        <token id="266881" form="καὶ" citation-part="MATT 1.11" lemma="καί" part-of-speech="C-" morphology="---------n" head-id="266878" relation="obj" presentation-after=" "/>
+        <token id="266882" form="τοὺς" citation-part="MATT 1.11" lemma="ὁ" part-of-speech="S-" morphology="-p---ma--i" head-id="266883" relation="aux" presentation-after=" "/>
+        <token id="266883" form="ἀδελφοὺς" citation-part="MATT 1.11" lemma="ἀδελφός" part-of-speech="Nb" morphology="-p---ma--i" head-id="266881" relation="obj" information-status="new" presentation-after=" "/>
+        <token id="266884" form="αὐτοῦ" citation-part="MATT 1.11" lemma="αὐτός" part-of-speech="Pp" morphology="3s---mg--i" head-id="266883" relation="atr" antecedent-id="266880" information-status="old" presentation-after=" "/>
+        <token id="266885" form="ἐπὶ" citation-part="MATT 1.11" lemma="ἐπί" part-of-speech="R-" morphology="---------n" head-id="266878" relation="adv" presentation-after=" "/>
+        <token id="266886" form="τῆς" citation-part="MATT 1.11" lemma="ὁ" part-of-speech="S-" morphology="-s---fg--i" head-id="266887" relation="aux" presentation-after=" "/>
+        <token id="266887" form="μετοικεσίας" citation-part="MATT 1.11" lemma="μετοικεσία" part-of-speech="Nb" morphology="-s---fg--i" head-id="266885" relation="obl" information-status="acc_gen" presentation-after=" "/>
+        <token id="266888" form="Βαβυλῶνος" citation-part="MATT 1.11" lemma="Βαβυλών" part-of-speech="Ne" morphology="-s---fg--i" head-id="266887" relation="narg" information-status="acc_gen" presentation-after="."/>
+      </sentence>
+      <sentence id="47614" status="reviewed" presentation-after=" ">
+        <token id="266890" form="μετὰ" citation-part="MATT 1.12" lemma="μετά" part-of-speech="R-" morphology="---------n" head-id="266896" relation="adv" presentation-after=" "/>
+        <token id="266891" form="δὲ" citation-part="MATT 1.12" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266896" relation="aux" presentation-after=" "/>
+        <token id="266892" form="τὴν" citation-part="MATT 1.12" lemma="ὁ" part-of-speech="S-" morphology="-s---fa--i" head-id="266893" relation="aux" presentation-after=" "/>
+        <token id="266893" form="μετοικεσίαν" citation-part="MATT 1.12" lemma="μετοικεσία" part-of-speech="Nb" morphology="-s---fa--i" head-id="266890" relation="obl" antecedent-id="266887" information-status="old" presentation-after=" "/>
+        <token id="266894" form="Βαβυλῶνος" citation-part="MATT 1.12" lemma="Βαβυλών" part-of-speech="Ne" morphology="-s---fg--i" head-id="266893" relation="narg" antecedent-id="266888" information-status="old" presentation-after=" "/>
+        <token id="266895" form="Ἰεχονίας" citation-part="MATT 1.12" lemma="Ἰεχονίας" part-of-speech="Ne" morphology="-s---mn--i" head-id="266896" relation="sub" antecedent-id="266880" information-status="old" presentation-after=" "/>
+        <token id="266896" form="ἐγέννησεν" citation-part="MATT 1.12" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266897" form="τὸν" citation-part="MATT 1.12" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266898" relation="aux" presentation-after=" "/>
+        <token id="266898" form="Σαλαθιήλ" citation-part="MATT 1.12" lemma="Σαλαθιήλ" part-of-speech="Ne" morphology="---------n" head-id="266896" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47615" status="reviewed" presentation-after=" ">
+        <token id="266900" form="Σαλαθιὴλ" citation-part="MATT 1.12" lemma="Σαλαθιήλ" part-of-speech="Ne" morphology="---------n" head-id="266902" relation="sub" antecedent-id="266898" information-status="old" presentation-after=" "/>
+        <token id="266901" form="δὲ" citation-part="MATT 1.12" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266902" relation="aux" presentation-after=" "/>
+        <token id="266902" form="ἐγέννησεν" citation-part="MATT 1.12" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266903" form="τὸν" citation-part="MATT 1.12" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266904" relation="aux" presentation-after=" "/>
+        <token id="266904" form="Ζοροβάβελ" citation-part="MATT 1.12" lemma="Ζοροβαβέλ" part-of-speech="Ne" morphology="---------n" head-id="266902" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47616" status="reviewed" presentation-after=" ">
+        <token id="266906" form="Ζοροβάβελ" citation-part="MATT 1.13" lemma="Ζοροβαβέλ" part-of-speech="Ne" morphology="---------n" head-id="266908" relation="sub" antecedent-id="266904" information-status="old" presentation-after=" "/>
+        <token id="266907" form="δὲ" citation-part="MATT 1.13" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266908" relation="aux" presentation-after=" "/>
+        <token id="266908" form="ἐγέννησεν" citation-part="MATT 1.13" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266909" form="τὸν" citation-part="MATT 1.13" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266910" relation="aux" presentation-after=" "/>
+        <token id="266910" form="Ἀβιούδ" citation-part="MATT 1.13" lemma="Ἀβιούδ" part-of-speech="Ne" morphology="---------n" head-id="266908" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47617" status="reviewed" presentation-after=" ">
+        <token id="266912" form="Ἀβιοὺδ" citation-part="MATT 1.13" lemma="Ἀβιούδ" part-of-speech="Ne" morphology="---------n" head-id="266914" relation="sub" antecedent-id="266910" information-status="old" presentation-after=" "/>
+        <token id="266913" form="δὲ" citation-part="MATT 1.13" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266914" relation="aux" presentation-after=" "/>
+        <token id="266914" form="ἐγέννησεν" citation-part="MATT 1.13" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266915" form="τὸν" citation-part="MATT 1.13" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266916" relation="aux" presentation-after=" "/>
+        <token id="266916" form="Ἐλιακείμ" citation-part="MATT 1.13" lemma="Ἐλιακίμ" part-of-speech="Ne" morphology="---------n" head-id="266914" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47618" status="reviewed" presentation-after=" ">
+        <token id="266918" form="Ἐλιακεὶμ" citation-part="MATT 1.13" lemma="Ἐλιακίμ" part-of-speech="Ne" morphology="---------n" head-id="266920" relation="sub" antecedent-id="266916" information-status="old" presentation-after=" "/>
+        <token id="266919" form="δὲ" citation-part="MATT 1.13" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266920" relation="aux" presentation-after=" "/>
+        <token id="266920" form="ἐγέννησεν" citation-part="MATT 1.13" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266921" form="τὸν" citation-part="MATT 1.13" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266922" relation="aux" presentation-after=" "/>
+        <token id="266922" form="Ἀζώρ" citation-part="MATT 1.13" lemma="Ἀζώρ" part-of-speech="Ne" morphology="---------n" head-id="266920" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47619" status="reviewed" presentation-after=" ">
+        <token id="266924" form="Ἀζὼρ" citation-part="MATT 1.14" lemma="Ἀζώρ" part-of-speech="Ne" morphology="---------n" head-id="266926" relation="sub" antecedent-id="266922" information-status="old" presentation-after=" "/>
+        <token id="266925" form="δὲ" citation-part="MATT 1.14" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266926" relation="aux" presentation-after=" "/>
+        <token id="266926" form="ἐγέννησεν" citation-part="MATT 1.14" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266927" form="τὸν" citation-part="MATT 1.14" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266928" relation="aux" presentation-after=" "/>
+        <token id="266928" form="Σαδώκ" citation-part="MATT 1.14" lemma="Σαδώκ" part-of-speech="Ne" morphology="---------n" head-id="266926" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47620" status="reviewed" presentation-after=" ">
+        <token id="266930" form="Σαδὼκ" citation-part="MATT 1.14" lemma="Σαδώκ" part-of-speech="Ne" morphology="---------n" head-id="266932" relation="sub" antecedent-id="266928" information-status="old" presentation-after=" "/>
+        <token id="266931" form="δὲ" citation-part="MATT 1.14" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266932" relation="aux" presentation-after=" "/>
+        <token id="266932" form="ἐγέννησεν" citation-part="MATT 1.14" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266933" form="τὸν" citation-part="MATT 1.14" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266934" relation="aux" presentation-after=" "/>
+        <token id="266934" form="Ἀχείμ" citation-part="MATT 1.14" lemma="Ἀχίμ" part-of-speech="Ne" morphology="---------n" head-id="266932" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47621" status="reviewed" presentation-after=" ">
+        <token id="266936" form="Ἀχεὶμ" citation-part="MATT 1.14" lemma="Ἀχίμ" part-of-speech="Ne" morphology="---------n" head-id="266938" relation="sub" antecedent-id="266934" information-status="old" presentation-after=" "/>
+        <token id="266937" form="δὲ" citation-part="MATT 1.14" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266938" relation="aux" presentation-after=" "/>
+        <token id="266938" form="ἐγέννησεν" citation-part="MATT 1.14" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266939" form="τὸν" citation-part="MATT 1.14" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266940" relation="aux" presentation-after=" "/>
+        <token id="266940" form="Ἐλιούδ" citation-part="MATT 1.14" lemma="Ἐλιούδ" part-of-speech="Ne" morphology="---------n" head-id="266938" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47622" status="reviewed" presentation-after=" ">
+        <token id="266942" form="Ἐλιοὺδ" citation-part="MATT 1.15" lemma="Ἐλιούδ" part-of-speech="Ne" morphology="---------n" head-id="266944" relation="sub" antecedent-id="266940" information-status="old" presentation-after=" "/>
+        <token id="266943" form="δὲ" citation-part="MATT 1.15" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266944" relation="aux" presentation-after=" "/>
+        <token id="266944" form="ἐγέννησεν" citation-part="MATT 1.15" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266945" form="τὸν" citation-part="MATT 1.15" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266946" relation="aux" presentation-after=" "/>
+        <token id="266946" form="Ἐλεάζαρ" citation-part="MATT 1.15" lemma="Ἐλεάζαρ" part-of-speech="Ne" morphology="---------n" head-id="266944" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47623" status="reviewed" presentation-after=" ">
+        <token id="266948" form="Ἐλεάζαρ" citation-part="MATT 1.15" lemma="Ἐλεάζαρ" part-of-speech="Ne" morphology="---------n" head-id="266950" relation="sub" antecedent-id="266946" information-status="old" presentation-after=" "/>
+        <token id="266949" form="δὲ" citation-part="MATT 1.15" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266950" relation="aux" presentation-after=" "/>
+        <token id="266950" form="ἐγέννησεν" citation-part="MATT 1.15" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266951" form="τὸν" citation-part="MATT 1.15" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266952" relation="aux" presentation-after=" "/>
+        <token id="266952" form="Μαθθάν" citation-part="MATT 1.15" lemma="Ματθάν" part-of-speech="Ne" morphology="---------n" head-id="266950" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47624" status="reviewed" presentation-after=" ">
+        <token id="266954" form="Μαθθὰν" citation-part="MATT 1.15" lemma="Ματθάν" part-of-speech="Ne" morphology="---------n" head-id="266956" relation="sub" antecedent-id="266952" information-status="old" presentation-after=" "/>
+        <token id="266955" form="δὲ" citation-part="MATT 1.15" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266956" relation="aux" presentation-after=" "/>
+        <token id="266956" form="ἐγέννησεν" citation-part="MATT 1.15" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266957" form="τὸν" citation-part="MATT 1.15" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266958" relation="aux" presentation-after=" "/>
+        <token id="266958" form="Ἰακώβ" citation-part="MATT 1.15" lemma="Ἰακώβ" part-of-speech="Ne" morphology="---------n" head-id="266956" relation="obj" information-status="acc_gen" presentation-after=","/>
+      </sentence>
+      <sentence id="47625" status="reviewed" presentation-after=" ">
+        <token id="266960" form="Ἰακὼβ" citation-part="MATT 1.16" lemma="Ἰακώβ" part-of-speech="Ne" morphology="---------n" head-id="266962" relation="sub" antecedent-id="266958" information-status="old" presentation-after=" "/>
+        <token id="266961" form="δὲ" citation-part="MATT 1.16" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="266962" relation="aux" presentation-after=" "/>
+        <token id="266962" form="ἐγέννησεν" citation-part="MATT 1.16" lemma="γεννάω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="266963" form="τὸν" citation-part="MATT 1.16" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266964" relation="aux" presentation-after=" "/>
+        <token id="266964" form="Ἰωσὴφ" citation-part="MATT 1.16" lemma="Ἰωσήφ" part-of-speech="Ne" morphology="---------n" head-id="266962" relation="obj" information-status="acc_gen" presentation-after=" "/>
+        <token id="266965" form="τὸν" citation-part="MATT 1.16" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="266966" relation="aux" presentation-after=" "/>
+        <token id="266966" form="ἄνδρα" citation-part="MATT 1.16" lemma="ἀνήρ" part-of-speech="Nb" morphology="-s---ma--i" head-id="266964" relation="apos" presentation-after=" "/>
+        <token id="266967" form="Μαρίας" citation-part="MATT 1.16" lemma="Μαρία" part-of-speech="Ne" morphology="-s---fg--i" head-id="266966" relation="atr" information-status="new" presentation-after=", "/>
+        <token id="266969" form="ἐξ" citation-part="MATT 1.16" lemma="ἐκ" part-of-speech="R-" morphology="---------n" head-id="266971" relation="obl" information-status="info_unannotatable" presentation-after=" "/>
+        <token id="266970" form="ἧς" citation-part="MATT 1.16" lemma="ὅς" part-of-speech="Pr" morphology="-s---fg--i" head-id="266969" relation="obl" presentation-after=" "/>
+        <token id="266971" form="ἐγεννήθη" citation-part="MATT 1.16" lemma="γεννάω" part-of-speech="V-" morphology="3saip----i" head-id="266967" relation="apos" presentation-after=" "/>
+        <token id="266972" form="Ἰησοῦς" citation-part="MATT 1.16" lemma="Ἰησοῦς" part-of-speech="Ne" morphology="-s---mn--i" head-id="266971" relation="sub" information-status="old_inact" presentation-after=" "/>
+        <token id="266973" form="ὁ" citation-part="MATT 1.16" lemma="ὁ" part-of-speech="S-" morphology="-s---mn--i" head-id="266974" relation="aux" presentation-after=" "/>
+        <token id="266974" form="λεγόμενος" citation-part="MATT 1.16" lemma="λέγω" part-of-speech="V-" morphology="-spppmn--i" head-id="266972" relation="apos" presentation-after=" "/>
+        <token id="266975" form="Χριστός" citation-part="MATT 1.16" lemma="Χριστός" part-of-speech="Ne" morphology="-s---mn--i" head-id="266974" relation="xobj" presentation-after=".">
+          <slash target-id="266974" relation="xsub"/>
+        </token>
+      </sentence>
+      <sentence id="14675" status="reviewed" presentation-after=" ">
+        <token id="266977" form="Πᾶσαι" citation-part="MATT 1.17" lemma="πᾶς" part-of-speech="Px" morphology="-p---fn--i" head-id="266980" relation="atr" information-status="info_unannotatable" presentation-after=" "/>
+        <token id="266978" form="οὖν" citation-part="MATT 1.17" lemma="οὖν" part-of-speech="Df" morphology="---------n" head-id="398714" relation="aux" presentation-after=" "/>
+        <token id="266979" form="αἱ" citation-part="MATT 1.17" lemma="ὁ" part-of-speech="S-" morphology="-p---fn--i" head-id="266980" relation="aux" presentation-after=" "/>
+        <token id="266980" form="γενεαὶ" citation-part="MATT 1.17" lemma="γενεά" part-of-speech="Nb" morphology="-p---fn--i" head-id="398714" relation="sub" information-status="quant" presentation-after=" "/>
+        <token id="266981" form="ἀπὸ" citation-part="MATT 1.17" lemma="ἀπό" part-of-speech="R-" morphology="---------n" head-id="398714" relation="adv" presentation-after=" "/>
+        <token id="266982" form="Ἀβραὰμ" citation-part="MATT 1.17" lemma="Ἀβραάμ" part-of-speech="Ne" morphology="---------n" head-id="266981" relation="obl" information-status="old_inact" presentation-after=" "/>
+        <token id="266983" form="ἕως" citation-part="MATT 1.17" lemma="ἕως" part-of-speech="R-" morphology="---------n" head-id="398714" relation="adv" presentation-after=" "/>
+        <token id="266984" form="Δαυεὶδ" citation-part="MATT 1.17" lemma="Δαυίδ" part-of-speech="Ne" morphology="---------n" head-id="266983" relation="obl" information-status="old_inact" presentation-after=" "/>
+        <token id="266985" form="γενεαὶ" citation-part="MATT 1.17" lemma="γενεά" part-of-speech="Nb" morphology="-p---fn--i" head-id="398714" relation="xobj" presentation-after=" ">
+          <slash target-id="266980" relation="xsub"/>
+        </token>
+        <token id="266986" form="δεκατέσσαρες" citation-part="MATT 1.17" lemma="δεκατέσσαρες" part-of-speech="Ma" morphology="-p---pn--i" head-id="266985" relation="atr" presentation-after=", "/>
+        <token id="266988" form="καὶ" citation-part="MATT 1.17" lemma="καί" part-of-speech="C-" morphology="---------n" relation="pred" presentation-after=" "/>
+        <token id="266989" form="ἀπὸ" citation-part="MATT 1.17" lemma="ἀπό" part-of-speech="R-" morphology="---------n" head-id="398712" relation="adv" presentation-after=" "/>
+        <token id="266990" form="Δαυεὶδ" citation-part="MATT 1.17" lemma="Δαυίδ" part-of-speech="Ne" morphology="---------n" head-id="266989" relation="obl" antecedent-id="266984" information-status="old" presentation-after=" "/>
+        <token id="266991" form="ἕως" citation-part="MATT 1.17" lemma="ἕως" part-of-speech="R-" morphology="---------n" head-id="398712" relation="adv" presentation-after=" "/>
+        <token id="266992" form="τῆς" citation-part="MATT 1.17" lemma="ὁ" part-of-speech="S-" morphology="-s---fg--i" head-id="266993" relation="aux" presentation-after=" "/>
+        <token id="266993" form="μετοικεσίας" citation-part="MATT 1.17" lemma="μετοικεσία" part-of-speech="Nb" morphology="-s---fg--i" head-id="266991" relation="obl" antecedent-id="266893" information-status="old" presentation-after=" "/>
+        <token id="266994" form="Βαβυλῶνος" citation-part="MATT 1.17" lemma="Βαβυλών" part-of-speech="Ne" morphology="-s---fg--i" head-id="266993" relation="narg" antecedent-id="266894" information-status="old" presentation-after=" "/>
+        <token id="266995" form="γενεαὶ" citation-part="MATT 1.17" lemma="γενεά" part-of-speech="Nb" morphology="-p---fn--i" head-id="398712" relation="xobj" presentation-after=" ">
+          <slash target-id="398712" relation="xsub"/>
+        </token>
+        <token id="266996" form="δεκατέσσαρες" citation-part="MATT 1.17" lemma="δεκατέσσαρες" part-of-speech="Ma" morphology="-p---pn--i" head-id="266995" relation="atr" presentation-after=", "/>
+        <token id="266998" form="καὶ" citation-part="MATT 1.17" lemma="καί" part-of-speech="C-" morphology="---------n" head-id="266988" relation="aux" presentation-after=" "/>
+        <token id="266999" form="ἀπὸ" citation-part="MATT 1.17" lemma="ἀπό" part-of-speech="R-" morphology="---------n" head-id="398713" relation="adv" presentation-after=" "/>
+        <token id="267000" form="τῆς" citation-part="MATT 1.17" lemma="ὁ" part-of-speech="S-" morphology="-s---fg--i" head-id="267001" relation="aux" presentation-after=" "/>
+        <token id="267001" form="μετοικεσίας" citation-part="MATT 1.17" lemma="μετοικεσία" part-of-speech="Nb" morphology="-s---fg--i" head-id="266999" relation="obl" antecedent-id="266993" information-status="old" presentation-after=" "/>
+        <token id="267002" form="Βαβυλῶνος" citation-part="MATT 1.17" lemma="Βαβυλών" part-of-speech="Ne" morphology="-s---fg--i" head-id="267001" relation="narg" antecedent-id="266994" information-status="old" presentation-after=" "/>
+        <token id="267003" form="ἕως" citation-part="MATT 1.17" lemma="ἕως" part-of-speech="R-" morphology="---------n" head-id="398713" relation="adv" presentation-after=" "/>
+        <token id="267004" form="τοῦ" citation-part="MATT 1.17" lemma="ὁ" part-of-speech="S-" morphology="-s---mg--i" head-id="267005" relation="aux" presentation-after=" "/>
+        <token id="267005" form="Χριστοῦ" citation-part="MATT 1.17" lemma="Χριστός" part-of-speech="Ne" morphology="-s---mg--i" head-id="267003" relation="obl" antecedent-id="266972" information-status="old" presentation-after=" "/>
+        <token id="267006" form="γενεαὶ" citation-part="MATT 1.17" lemma="γενεά" part-of-speech="Nb" morphology="-p---fn--i" head-id="398713" relation="xobj" presentation-after=" ">
+          <slash target-id="398713" relation="xsub"/>
+        </token>
+        <token id="267007" form="δεκατέσσαρες" citation-part="MATT 1.17" lemma="δεκατέσσαρες" part-of-speech="Ma" morphology="-p---pn--i" head-id="267006" relation="atr" presentation-after="."/>
+        <token id="398712" empty-token-sort="V" citation-part="MATT 1.17" head-id="266988" relation="pred">
+          <slash target-id="266980" relation="sub"/>
+        </token>
+        <token id="398713" empty-token-sort="V" citation-part="MATT 1.17" head-id="266988" relation="pred">
+          <slash target-id="266980" relation="sub"/>
+        </token>
+        <token id="398714" empty-token-sort="V" citation-part="MATT 1.17" head-id="266988" relation="pred"/>
+      </sentence>
+      <sentence id="14676" status="reviewed" presentation-after=" ">
+        <token id="267009" form="Τοῦ" citation-part="MATT 1.18" lemma="ὁ" part-of-speech="S-" morphology="-s---mg--i" head-id="267011" relation="aux" presentation-after=" "/>
+        <token id="267010" form="δὲ" citation-part="MATT 1.18" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="267016" relation="aux" presentation-after=" "/>
+        <token id="267011" form="Ἰησοῦ" citation-part="MATT 1.18" lemma="Ἰησοῦς" part-of-speech="Ne" morphology="-s---mg--i" head-id="267014" relation="atr" antecedent-id="267005" information-status="old" presentation-after=" "/>
+        <token id="267012" form="Χριστοῦ" citation-part="MATT 1.18" lemma="Χριστός" part-of-speech="Ne" morphology="-s---mg--i" head-id="267011" relation="apos" presentation-after=" "/>
+        <token id="267013" form="ἡ" citation-part="MATT 1.18" lemma="ὁ" part-of-speech="S-" morphology="-s---fn--i" head-id="267014" relation="aux" presentation-after=" "/>
+        <token id="267014" form="γένεσις" citation-part="MATT 1.18" lemma="γένεσις" part-of-speech="Nb" morphology="-s---fn--i" head-id="267016" relation="sub" information-status="new" presentation-after=" "/>
+        <token id="267015" form="οὕτως" citation-part="MATT 1.18" lemma="οὕτω(ς)" part-of-speech="Df" morphology="---------n" head-id="267016" relation="xobj" presentation-after=" ">
+          <slash target-id="267014" relation="xsub"/>
+        </token>
+        <token id="267016" form="ἦν" citation-part="MATT 1.18" lemma="εἰμί#1" part-of-speech="V-" morphology="3siia----i" relation="pred" presentation-after="."/>
+      </sentence>
+      <sentence id="14677" status="reviewed" presentation-after=" ">
+        <token id="267018" form="μνηστευθείσης" citation-part="MATT 1.18" lemma="μνηστεύω" part-of-speech="V-" morphology="-sappfg--i" head-id="267030" relation="adv" presentation-after=" "/>
+        <token id="267019" form="τῆς" citation-part="MATT 1.18" lemma="ὁ" part-of-speech="S-" morphology="-s---fg--i" head-id="267020" relation="aux" presentation-after=" "/>
+        <token id="267020" form="μητρὸς" citation-part="MATT 1.18" lemma="μήτηρ" part-of-speech="Nb" morphology="-s---fg--i" head-id="267018" relation="sub" antecedent-id="266967" information-status="old" presentation-after=" "/>
+        <token id="267021" form="αὐτοῦ" citation-part="MATT 1.18" lemma="αὐτός" part-of-speech="Pp" morphology="3s---mg--i" head-id="267020" relation="atr" antecedent-id="267011" information-status="old" presentation-after=" "/>
+        <token id="267022" form="Μαρίας" citation-part="MATT 1.18" lemma="Μαρία" part-of-speech="Ne" morphology="-s---fg--i" head-id="267020" relation="apos" presentation-after=" "/>
+        <token id="267023" form="τῷ" citation-part="MATT 1.18" lemma="ὁ" part-of-speech="S-" morphology="-s---md--i" head-id="267024" relation="aux" presentation-after=" "/>
+        <token id="267024" form="Ἰωσήφ" citation-part="MATT 1.18" lemma="Ἰωσήφ" part-of-speech="Ne" morphology="---------n" head-id="267018" relation="obl" antecedent-id="266964" information-status="old" presentation-after=", "/>
+        <token id="267026" form="πρὶν" citation-part="MATT 1.18" lemma="πρίν" part-of-speech="G-" morphology="---------n" head-id="267030" relation="adv" presentation-after=" "/>
+        <token id="267027" form="ἢ" citation-part="MATT 1.18" lemma="ἤ" part-of-speech="Df" morphology="---------n" head-id="267026" relation="aux" presentation-after=" "/>
+        <token id="267028" form="συνελθεῖν" citation-part="MATT 1.18" lemma="συνέρχομαι" part-of-speech="V-" morphology="--ana----i" head-id="267026" relation="pred" presentation-after=" "/>
+        <token id="267029" form="αὐτοὺς" citation-part="MATT 1.18" lemma="αὐτός" part-of-speech="Pp" morphology="3p---ma--i" head-id="267028" relation="sub" antecedent-id="267024" information-status="old" presentation-after=" "/>
+        <token id="862390" empty-token-sort="P" citation-part="MATT 1.18" head-id="267030" relation="sub" antecedent-id="267020" information-status="old"/>
+        <token id="267030" form="εὑρέθη" citation-part="MATT 1.18" lemma="εὑρίσκω" part-of-speech="V-" morphology="3saip----i" relation="pred" presentation-after=" "/>
+        <token id="267031" form="ἐν" citation-part="MATT 1.18" lemma="ἐν" part-of-speech="R-" morphology="---------n" head-id="267033" relation="adv" presentation-after=" "/>
+        <token id="267032" form="γαστρὶ" citation-part="MATT 1.18" lemma="γαστήρ" part-of-speech="Nb" morphology="-s---fd--i" head-id="267031" relation="obl" information-status="info_unannotatable" presentation-after=" "/>
+        <token id="267033" form="ἔχουσα" citation-part="MATT 1.18" lemma="ἔχω" part-of-speech="V-" morphology="-sppafn--i" head-id="267030" relation="xobj" presentation-after=" ">
+          <slash target-id="267030" relation="xsub"/>
+        </token>
+        <token id="267034" form="ἐκ" citation-part="MATT 1.18" lemma="ἐκ" part-of-speech="R-" morphology="---------n" head-id="267033" relation="adv" presentation-after=" "/>
+        <token id="267035" form="πνεύματος" citation-part="MATT 1.18" lemma="πνεῦμα" part-of-speech="Nb" morphology="-s---ng--i" head-id="267034" relation="obl" information-status="acc_gen" presentation-after=" "/>
+        <token id="267036" form="ἁγίου" citation-part="MATT 1.18" lemma="ἅγιος" part-of-speech="A-" morphology="-s---ngp-i" head-id="267035" relation="atr" presentation-after="."/>
+      </sentence>
+      <sentence id="14678" status="reviewed" presentation-after=" ">
+        <token id="267038" form="Ἰωσὴφ" citation-part="MATT 1.19" lemma="Ἰωσήφ" part-of-speech="Ne" morphology="---------n" head-id="267052" relation="sub" antecedent-id="267024" information-status="old" presentation-after=" "/>
+        <token id="267039" form="δὲ" citation-part="MATT 1.19" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="267052" relation="aux" presentation-after=" "/>
+        <token id="267040" form="ὁ" citation-part="MATT 1.19" lemma="ὁ" part-of-speech="S-" morphology="-s---mn--i" head-id="267041" relation="aux" presentation-after=" "/>
+        <token id="267041" form="ἀνὴρ" citation-part="MATT 1.19" lemma="ἀνήρ" part-of-speech="Nb" morphology="-s---mn--i" head-id="267038" relation="apos" presentation-after=" "/>
+        <token id="267042" form="αὐτῆς" citation-part="MATT 1.19" lemma="αὐτός" part-of-speech="Pp" morphology="3s---fg--i" head-id="267041" relation="atr" antecedent-id="862390" information-status="old" presentation-after=", "/>
+        <token id="267044" form="δίκαιος" citation-part="MATT 1.19" lemma="δίκαιος" part-of-speech="A-" morphology="-s---mnp-i" head-id="267045" relation="xobj" presentation-after=" ">
+          <slash target-id="267045" relation="xsub"/>
+        </token>
+        <token id="267045" form="ὢν" citation-part="MATT 1.19" lemma="εἰμί#1" part-of-speech="V-" morphology="-sppamn--i" head-id="267046" relation="xadv" presentation-after=" "/>
+        <token id="267046" form="καὶ" citation-part="MATT 1.19" lemma="καί" part-of-speech="C-" morphology="---------n" head-id="267052" relation="xadv" presentation-after=" ">
+          <slash target-id="267038" relation="xsub"/>
+        </token>
+        <token id="267047" form="μὴ" citation-part="MATT 1.19" lemma="μή" part-of-speech="Df" morphology="---------n" head-id="267048" relation="aux" presentation-after=" "/>
+        <token id="267048" form="θέλων" citation-part="MATT 1.19" lemma="ἐθέλω" part-of-speech="V-" morphology="-sppamn--i" head-id="267046" relation="xadv" presentation-after=" "/>
+        <token id="267049" form="αὐτὴν" citation-part="MATT 1.19" lemma="αὐτός" part-of-speech="Pp" morphology="3s---fa--i" head-id="267050" relation="obj" antecedent-id="267042" information-status="old" presentation-after=" "/>
+        <token id="267050" form="δειγματίσαι" citation-part="MATT 1.19" lemma="δειγματίζω" part-of-speech="V-" morphology="--ana----i" head-id="267048" relation="xobj" presentation-after=", ">
+          <slash target-id="267048" relation="xsub"/>
+        </token>
+        <token id="267052" form="ἐβουλήθη" citation-part="MATT 1.19" lemma="βούλομαι" part-of-speech="V-" morphology="3saip----i" relation="pred" presentation-after=" "/>
+        <token id="267053" form="λάθρᾳ" citation-part="MATT 1.19" lemma="λάθρᾳ" part-of-speech="Df" morphology="---------n" head-id="267054" relation="adv" presentation-after=" "/>
+        <token id="267054" form="ἀπολῦσαι" citation-part="MATT 1.19" lemma="ἀπολύω" part-of-speech="V-" morphology="--ana----i" head-id="267052" relation="xobj" presentation-after=" ">
+          <slash target-id="267038" relation="xsub"/>
+        </token>
+        <token id="267055" form="αὐτήν" citation-part="MATT 1.19" lemma="αὐτός" part-of-speech="Pp" morphology="3s---fa--i" head-id="267054" relation="obj" antecedent-id="267049" information-status="old" presentation-after="."/>
+      </sentence>
+      <sentence id="47626" status="reviewed" presentation-after=" ">
+        <token id="267057" form="ταῦτα" citation-part="MATT 1.20" lemma="οὗτος" part-of-speech="Pd" morphology="-p---na--i" head-id="267060" relation="obj" antecedent-id="267052" information-status="old" presentation-after=" "/>
+        <token id="267058" form="δὲ" citation-part="MATT 1.20" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="267060" relation="aux" presentation-after=" "/>
+        <token id="267059" form="αὐτοῦ" citation-part="MATT 1.20" lemma="αὐτός" part-of-speech="Pp" morphology="3s---mg--i" head-id="267060" relation="sub" antecedent-id="267038" information-status="old" presentation-after=" "/>
+        <token id="267060" form="ἐνθυμηθέντος" citation-part="MATT 1.20" lemma="ἐνθυμέομαι" part-of-speech="V-" morphology="-sappmg--i" head-id="267066" relation="adv" presentation-after=" "/>
+        <token id="267061" form="ἰδοὺ" citation-part="MATT 1.20" lemma="ἰδοὺ" part-of-speech="I-" morphology="---------n" relation="voc" information-status="info_unannotatable" presentation-after=" "/>
+        <token id="267062" form="ἄγγελος" citation-part="MATT 1.20" lemma="ἄγγελος" part-of-speech="Nb" morphology="-s---mn--i" head-id="267066" relation="sub" information-status="new" presentation-after=" "/>
+        <token id="267063" form="κυρίου" citation-part="MATT 1.20" lemma="κύριος" part-of-speech="Nb" morphology="-s---mg--i" head-id="267062" relation="atr" information-status="acc_gen" presentation-after=" "/>
+        <token id="267064" form="κατ’" citation-part="MATT 1.20" lemma="κατά" part-of-speech="R-" morphology="---------n" head-id="267066" relation="adv" presentation-after=" "/>
+        <token id="267065" form="ὄναρ" citation-part="MATT 1.20" lemma="ὄναρ" part-of-speech="Nb" morphology="-s---na--i" head-id="267064" relation="obl" information-status="new" presentation-after=" "/>
+        <token id="267066" form="ἐφάνη" citation-part="MATT 1.20" lemma="φαίνω" part-of-speech="V-" morphology="3saip----i" relation="pred" presentation-after=" "/>
+        <token id="267067" form="αὐτῷ" citation-part="MATT 1.20" lemma="αὐτός" part-of-speech="Pp" morphology="3s---md--i" head-id="267066" relation="obl" antecedent-id="267059" information-status="old" presentation-after=" "/>
+        <token id="267068" form="λέγων" citation-part="MATT 1.20" lemma="λέγω" part-of-speech="V-" morphology="-sppamn--i" head-id="267066" relation="xadv" presentation-after=",">
+          <slash target-id="267062" relation="xsub"/>
+        </token>
+      </sentence>
+      <sentence id="47627" status="reviewed" presentation-after=" ">
+        <token id="267070" form="Ἰωσὴφ" citation-part="MATT 1.20" lemma="Ἰωσήφ" part-of-speech="Ne" morphology="---------n" relation="voc" antecedent-id="267067" information-status="old" presentation-after=" "/>
+        <token id="267071" form="υἱὸς" citation-part="MATT 1.20" lemma="υἱός" part-of-speech="Nb" morphology="-s---mn--i" head-id="267070" relation="apos" presentation-after=" "/>
+        <token id="267072" form="Δαυείδ" citation-part="MATT 1.20" lemma="Δαυίδ" part-of-speech="Ne" morphology="---------n" head-id="267071" relation="atr" antecedent-id="266990" information-status="acc_gen" presentation-after=", "/>
+        <token id="267074" form="μὴ" citation-part="MATT 1.20" lemma="μή" part-of-speech="Df" morphology="---------n" head-id="267075" relation="aux" presentation-after=" "/>
+        <token id="863271" empty-token-sort="P" citation-part="MATT 1.20" head-id="267075" relation="sub" antecedent-id="267070" information-status="old"/>
+        <token id="267075" form="φοβηθῇς" citation-part="MATT 1.20" lemma="φοβέω" part-of-speech="V-" morphology="2sasp----i" relation="pred" presentation-after=" "/>
+        <token id="267076" form="παραλαβεῖν" citation-part="MATT 1.20" lemma="παραλαμβάνω" part-of-speech="V-" morphology="--ana----i" head-id="267075" relation="xobj" presentation-after=" ">
+          <slash target-id="267075" relation="xsub"/>
+        </token>
+        <token id="267077" form="Μαρίαμ" citation-part="MATT 1.20" lemma="Μαρία" part-of-speech="Ne" morphology="---------n" head-id="267076" relation="obj" antecedent-id="267055" information-status="acc_gen" presentation-after=" "/>
+        <token id="267078" form="τὴν" citation-part="MATT 1.20" lemma="ὁ" part-of-speech="S-" morphology="-s---fa--i" head-id="267079" relation="aux" presentation-after=" "/>
+        <token id="267079" form="γυναῖκά" citation-part="MATT 1.20" lemma="γυνή" part-of-speech="Nb" morphology="-s---fa--i" head-id="267076" relation="xobj" presentation-after=" ">
+          <slash target-id="267077" relation="xsub"/>
+        </token>
+        <token id="267080" form="σου" citation-part="MATT 1.20" lemma="σύ" part-of-speech="Pp" morphology="2s---pg--i" head-id="267079" relation="atr" antecedent-id="863271" information-status="old" presentation-after=","/>
+      </sentence>
+      <sentence id="47628" status="reviewed" presentation-after=" ">
+        <token id="267082" form="τὸ" citation-part="MATT 1.20" lemma="ὁ" part-of-speech="S-" morphology="-s---nn--i" head-id="267086" relation="aux" presentation-after=" "/>
+        <token id="267083" form="γὰρ" citation-part="MATT 1.20" lemma="γάρ" part-of-speech="Df" morphology="---------n" head-id="267089" relation="aux" presentation-after=" "/>
+        <token id="267084" form="ἐν" citation-part="MATT 1.20" lemma="ἐν" part-of-speech="R-" morphology="---------n" head-id="267086" relation="adv" presentation-after=" "/>
+        <token id="267085" form="αὐτῇ" citation-part="MATT 1.20" lemma="αὐτός" part-of-speech="Pp" morphology="3s---fd--i" head-id="267084" relation="obl" antecedent-id="267077" information-status="old" presentation-after=" "/>
+        <token id="267086" form="γεννηθὲν" citation-part="MATT 1.20" lemma="γεννάω" part-of-speech="V-" morphology="-sappnn--i" head-id="267089" relation="sub" information-status="acc_gen" presentation-after=" "/>
+        <token id="267087" form="ἐκ" citation-part="MATT 1.20" lemma="ἐκ" part-of-speech="R-" morphology="---------n" head-id="267089" relation="xobj" presentation-after=" ">
+          <slash target-id="267086" relation="xsub"/>
+        </token>
+        <token id="267088" form="πνεύματός" citation-part="MATT 1.20" lemma="πνεῦμα" part-of-speech="Nb" morphology="-s---ng--i" head-id="267087" relation="obl" antecedent-id="267035" information-status="acc_gen" presentation-after=" "/>
+        <token id="267089" form="ἐστιν" citation-part="MATT 1.20" lemma="εἰμί#1" part-of-speech="V-" morphology="3spia----i" relation="pred" presentation-after=" "/>
+        <token id="267090" form="ἁγίου" citation-part="MATT 1.20" lemma="ἅγιος" part-of-speech="A-" morphology="-s---ngp-i" head-id="267088" relation="atr" presentation-after="·"/>
+      </sentence>
+      <sentence id="14680" status="reviewed" presentation-after=" ">
+        <token id="863702" empty-token-sort="P" citation-part="MATT 1.21" head-id="267092" relation="sub" antecedent-id="267085" information-status="old"/>
+        <token id="267092" form="τέξεται" citation-part="MATT 1.21" lemma="τίκτω" part-of-speech="V-" morphology="3sfim----i" head-id="267095" relation="pred" presentation-after=" "/>
+        <token id="267093" form="δὲ" citation-part="MATT 1.21" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="267092" relation="aux" presentation-after=" "/>
+        <token id="267094" form="υἱὸν" citation-part="MATT 1.21" lemma="υἱός" part-of-speech="Nb" morphology="-s---ma--i" head-id="267092" relation="obj" antecedent-id="267086" information-status="old" presentation-after=" "/>
+        <token id="267095" form="καὶ" citation-part="MATT 1.21" lemma="καί" part-of-speech="C-" morphology="---------n" relation="pred" presentation-after=" "/>
+        <token id="861033" empty-token-sort="P" citation-part="MATT 1.21" head-id="267096" relation="sub" antecedent-id="267080" information-status="old"/>
+        <token id="267096" form="καλέσεις" citation-part="MATT 1.21" lemma="καλέω" part-of-speech="V-" morphology="2sfia----i" head-id="267095" relation="pred" presentation-after=" "/>
+        <token id="267097" form="τὸ" citation-part="MATT 1.21" lemma="ὁ" part-of-speech="S-" morphology="-s---na--i" head-id="267098" relation="aux" presentation-after=" "/>
+        <token id="267098" form="ὄνομα" citation-part="MATT 1.21" lemma="ὄνομα" part-of-speech="Nb" morphology="-s---na--i" head-id="267096" relation="obj" information-status="new" presentation-after=" "/>
+        <token id="267099" form="αὐτοῦ" citation-part="MATT 1.21" lemma="αὐτός" part-of-speech="Pp" morphology="3s---mg--i" head-id="267098" relation="atr" antecedent-id="267094" information-status="old" presentation-after=" "/>
+        <token id="267100" form="Ἰησοῦν" citation-part="MATT 1.21" lemma="Ἰησοῦς" part-of-speech="Ne" morphology="-s---ma--i" head-id="267096" relation="xobj" presentation-after=", ">
+          <slash target-id="267098" relation="xsub"/>
+        </token>
+        <token id="267102" form="αὐτὸς" citation-part="MATT 1.21" lemma="αὐτός" part-of-speech="Pp" morphology="3s---mn--i" head-id="267104" relation="sub" antecedent-id="267099" information-status="old" presentation-after=" "/>
+        <token id="267103" form="γὰρ" citation-part="MATT 1.21" lemma="γάρ" part-of-speech="Df" morphology="---------n" head-id="267104" relation="aux" presentation-after=" "/>
+        <token id="267104" form="σώσει" citation-part="MATT 1.21" lemma="σῴζω" part-of-speech="V-" morphology="3sfia----i" head-id="267095" relation="pred" presentation-after=" "/>
+        <token id="267105" form="τὸν" citation-part="MATT 1.21" lemma="ὁ" part-of-speech="S-" morphology="-s---ma--i" head-id="267106" relation="aux" presentation-after=" "/>
+        <token id="267106" form="λαὸν" citation-part="MATT 1.21" lemma="λαός" part-of-speech="Nb" morphology="-s---ma--i" head-id="267104" relation="obj" information-status="new" presentation-after=" "/>
+        <token id="267107" form="αὐτοῦ" citation-part="MATT 1.21" lemma="αὐτός" part-of-speech="Pp" morphology="3s---mg--i" head-id="267106" relation="atr" antecedent-id="267102" information-status="old" presentation-after=" "/>
+        <token id="267108" form="ἀπὸ" citation-part="MATT 1.21" lemma="ἀπό" part-of-speech="R-" morphology="---------n" head-id="267104" relation="obl" information-status="info_unannotatable" presentation-after=" "/>
+        <token id="267109" form="τῶν" citation-part="MATT 1.21" lemma="ὁ" part-of-speech="S-" morphology="-p---fg--i" head-id="267110" relation="aux" presentation-after=" "/>
+        <token id="267110" form="ἁμαρτιῶν" citation-part="MATT 1.21" lemma="ἁμαρτία" part-of-speech="Nb" morphology="-p---fg--i" head-id="267108" relation="obl" information-status="new" presentation-after=" "/>
+        <token id="267111" form="αὐτῶν" citation-part="MATT 1.21" lemma="αὐτός" part-of-speech="Pp" morphology="3p---mg--i" head-id="267110" relation="atr" antecedent-id="267106" information-status="old" presentation-after="."/>
+      </sentence>
+      <sentence id="47629" status="reviewed" presentation-after=" ">
+        <token id="267113" form="τοῦτο" citation-part="MATT 1.22" lemma="οὗτος" part-of-speech="Pd" morphology="-s---nn--i" head-id="267116" relation="sub" antecedent-id="267104" information-status="quant" presentation-after=" "/>
+        <token id="267114" form="δὲ" citation-part="MATT 1.22" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="267116" relation="aux" presentation-after=" "/>
+        <token id="267115" form="ὅλον" citation-part="MATT 1.22" lemma="ὅλος" part-of-speech="A-" morphology="-s---nnp-i" head-id="267113" relation="atr" presentation-after=" "/>
+        <token id="267116" form="γέγονεν" citation-part="MATT 1.22" lemma="γίγνομαι" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" "/>
+        <token id="267117" form="ἵνα" citation-part="MATT 1.22" lemma="ἵνα" part-of-speech="G-" morphology="---------n" head-id="267116" relation="adv" presentation-after=" "/>
+        <token id="267118" form="πληρωθῇ" citation-part="MATT 1.22" lemma="πληρόω" part-of-speech="V-" morphology="3sasp----i" head-id="267117" relation="pred" presentation-after=" "/>
+        <token id="267119" form="τὸ" citation-part="MATT 1.22" lemma="ὁ" part-of-speech="S-" morphology="-s---nn--i" head-id="267120" relation="aux" presentation-after=" "/>
+        <token id="267120" form="ῥηθὲν" citation-part="MATT 1.22" lemma="λέγω" part-of-speech="V-" morphology="-sappnn--i" head-id="267118" relation="sub" information-status="new" presentation-after=" "/>
+        <token id="267121" form="ὑπὸ" citation-part="MATT 1.22" lemma="ὑπό" part-of-speech="R-" morphology="---------n" head-id="267120" relation="ag" presentation-after=" "/>
+        <token id="267122" form="κυρίου" citation-part="MATT 1.22" lemma="κύριος" part-of-speech="Nb" morphology="-s---mg--i" head-id="267121" relation="obl" antecedent-id="267063" information-status="old" presentation-after=" "/>
+        <token id="267123" form="διὰ" citation-part="MATT 1.22" lemma="διά" part-of-speech="R-" morphology="---------n" head-id="267120" relation="adv" presentation-after=" "/>
+        <token id="267124" form="τοῦ" citation-part="MATT 1.22" lemma="ὁ" part-of-speech="S-" morphology="-s---mg--i" head-id="267125" relation="aux" presentation-after=" "/>
+        <token id="267125" form="προφήτου" citation-part="MATT 1.22" lemma="προφήτης" part-of-speech="Nb" morphology="-s---mg--i" head-id="267123" relation="obl" antecedent-id="267122" information-status="acc_inf" presentation-after=" "/>
+        <token id="267126" form="λέγοντος" citation-part="MATT 1.22" lemma="λέγω" part-of-speech="V-" morphology="-sppamg--i" head-id="267120" relation="xadv" presentation-after=",">
+          <slash target-id="267125" relation="xsub"/>
+        </token>
+      </sentence>
+      <sentence id="47630" status="reviewed" presentation-after=" ">
+        <token id="267128" form="ἰδοὺ" citation-part="MATT 1.23" lemma="ἰδοὺ" part-of-speech="I-" morphology="---------n" relation="voc" information-status="info_unannotatable" presentation-after=" "/>
+        <token id="267129" form="ἡ" citation-part="MATT 1.23" lemma="ὁ" part-of-speech="S-" morphology="-s---fn--i" head-id="267130" relation="aux" presentation-after=" "/>
+        <token id="267130" form="παρθένος" citation-part="MATT 1.23" lemma="παρθένος" part-of-speech="Nb" morphology="-s---fn--i" head-id="267133" relation="sub" information-status="old" presentation-after=" "/>
+        <token id="267131" form="ἐν" citation-part="MATT 1.23" lemma="ἐν" part-of-speech="R-" morphology="---------n" head-id="267133" relation="adv" presentation-after=" "/>
+        <token id="267132" form="γαστρὶ" citation-part="MATT 1.23" lemma="γαστήρ" part-of-speech="Nb" morphology="-s---fd--i" head-id="267131" relation="obl" information-status="info_unannotatable" presentation-after=" "/>
+        <token id="267133" form="ἕξει" citation-part="MATT 1.23" lemma="ἔχω" part-of-speech="V-" morphology="3sfia----i" head-id="267134" relation="pred" presentation-after=" ">
+          <slash target-id="267136" relation="obj"/>
+        </token>
+        <token id="267134" form="καὶ" citation-part="MATT 1.23" lemma="καί" part-of-speech="C-" morphology="---------n" relation="pred" presentation-after=" "/>
+        <token id="863703" empty-token-sort="P" citation-part="MATT 1.23" head-id="267135" relation="sub" antecedent-id="267130" information-status="old"/>
+        <token id="267135" form="τέξεται" citation-part="MATT 1.23" lemma="τίκτω" part-of-speech="V-" morphology="3sfim----i" head-id="267134" relation="pred" presentation-after=" "/>
+        <token id="267136" form="υἱόν" citation-part="MATT 1.23" lemma="υἱός" part-of-speech="Nb" morphology="-s---ma--i" head-id="267135" relation="obj" information-status="new" presentation-after=", "/>
+        <token id="267138" form="καὶ" citation-part="MATT 1.23" lemma="καί" part-of-speech="C-" morphology="---------n" head-id="267134" relation="aux" presentation-after=" "/>
+        <token id="861034" empty-token-sort="P" citation-part="MATT 1.23" head-id="267139" relation="sub" antecedent-id="267130" information-status="acc_inf"/>
+        <token id="267139" form="καλέσουσιν" citation-part="MATT 1.23" lemma="καλέω" part-of-speech="V-" morphology="3pfia----i" head-id="267134" relation="pred" presentation-after=" "/>
+        <token id="267140" form="τὸ" citation-part="MATT 1.23" lemma="ὁ" part-of-speech="S-" morphology="-s---na--i" head-id="267141" relation="aux" presentation-after=" "/>
+        <token id="267141" form="ὄνομα" citation-part="MATT 1.23" lemma="ὄνομα" part-of-speech="Nb" morphology="-s---na--i" head-id="267139" relation="obj" information-status="new" presentation-after=" "/>
+        <token id="267142" form="αὐτοῦ" citation-part="MATT 1.23" lemma="αὐτός" part-of-speech="Pp" morphology="3s---mg--i" head-id="267141" relation="atr" antecedent-id="267136" information-status="old" presentation-after=" "/>
+        <token id="267143" form="Ἐμμανουήλ" citation-part="MATT 1.23" lemma="Ἐμμανουήλ" part-of-speech="Ne" morphology="---------n" head-id="267139" relation="xobj" presentation-after=", ">
+          <slash target-id="267141" relation="xsub"/>
+        </token>
+        <token id="267145" form="ὅ" citation-part="MATT 1.23" lemma="ὅς" part-of-speech="Pr" morphology="-s---nn--i" head-id="267146" relation="sub" presentation-after=" "/>
+        <token id="267146" form="ἐστιν" citation-part="MATT 1.23" lemma="εἰμί#1" part-of-speech="V-" morphology="3spia----i" head-id="267143" relation="apos" presentation-after=" "/>
+        <token id="267147" form="μεθερμηνευόμενον" citation-part="MATT 1.23" lemma="μεθερμηνεύω" part-of-speech="V-" morphology="-spppnn--i" head-id="267146" relation="xobj" presentation-after=" ">
+          <slash target-id="267145" relation="xsub"/>
+        </token>
+        <token id="267148" form="μεθ’" citation-part="MATT 1.23" lemma="μετά" part-of-speech="R-" morphology="---------n" head-id="398718" relation="xobj" presentation-after=" ">
+          <slash target-id="267151" relation="xsub"/>
+        </token>
+        <token id="267149" form="ἡμῶν" citation-part="MATT 1.23" lemma="ἡμεῖς" part-of-speech="Pp" morphology="1p---pg--i" head-id="267148" relation="obl" information-status="old" presentation-after=" "/>
+        <token id="267150" form="ὁ" citation-part="MATT 1.23" lemma="ὁ" part-of-speech="S-" morphology="-s---mn--i" head-id="267151" relation="aux" presentation-after=" "/>
+        <token id="267151" form="θεός" citation-part="MATT 1.23" lemma="θεός" part-of-speech="Nb" morphology="-s---mn--i" head-id="398718" relation="sub" information-status="acc_gen" presentation-after="."/>
+        <token id="398718" empty-token-sort="V" citation-part="MATT 1.23" head-id="267147" relation="comp"/>
+      </sentence>
+      <sentence id="14682" status="reviewed" presentation-after=" ">
+        <token id="267153" form="ἐγερθεὶς" citation-part="MATT 1.24" lemma="ἐγείρω" part-of-speech="V-" morphology="-sappmn--i" head-id="267159" relation="xadv" presentation-after=" ">
+          <slash target-id="267155" relation="xsub"/>
+        </token>
+        <token id="267154" form="δὲ" citation-part="MATT 1.24" lemma="δέ" part-of-speech="Df" morphology="---------n" head-id="267159" relation="aux" presentation-after=" "/>
+        <token id="267155" form="Ἰωσὴφ" citation-part="MATT 1.24" lemma="Ἰωσήφ" part-of-speech="Ne" morphology="---------n" head-id="267159" relation="sub" antecedent-id="861033" information-status="old" presentation-after=" "/>
+        <token id="267156" form="ἀπὸ" citation-part="MATT 1.24" lemma="ἀπό" part-of-speech="R-" morphology="---------n" head-id="267153" relation="obl" information-status="info_unannotatable" presentation-after=" "/>
+        <token id="267157" form="τοῦ" citation-part="MATT 1.24" lemma="ὁ" part-of-speech="S-" morphology="-s---mg--i" head-id="267158" relation="aux" presentation-after=" "/>
+        <token id="267158" form="ὕπνου" citation-part="MATT 1.24" lemma="ὕπνος" part-of-speech="Nb" morphology="-s---mg--i" head-id="267156" relation="obl" antecedent-id="267065" information-status="acc_inf" presentation-after=" "/>
+        <token id="267159" form="ἐποίησεν" citation-part="MATT 1.24" lemma="ποιέω" part-of-speech="V-" morphology="3saia----i" head-id="267166" relation="pred" presentation-after=" "/>
+        <token id="267160" form="ὡς" citation-part="MATT 1.24" lemma="ὡς" part-of-speech="Dq" morphology="---------n" head-id="267161" relation="adv" presentation-after=" "/>
+        <token id="267161" form="προσέταξεν" citation-part="MATT 1.24" lemma="προστάσσω" part-of-speech="V-" morphology="3saia----i" head-id="267159" relation="adv" presentation-after=" "/>
+        <token id="267162" form="αὐτῷ" citation-part="MATT 1.24" lemma="αὐτός" part-of-speech="Pp" morphology="3s---md--i" head-id="267161" relation="obl" antecedent-id="267155" information-status="old" presentation-after=" "/>
+        <token id="267163" form="ὁ" citation-part="MATT 1.24" lemma="ὁ" part-of-speech="S-" morphology="-s---mn--i" head-id="267164" relation="aux" presentation-after=" "/>
+        <token id="267164" form="ἄγγελος" citation-part="MATT 1.24" lemma="ἄγγελος" part-of-speech="Nb" morphology="-s---mn--i" head-id="267161" relation="sub" antecedent-id="267062" information-status="old" presentation-after=" "/>
+        <token id="267165" form="κυρίου" citation-part="MATT 1.24" lemma="κύριος" part-of-speech="Nb" morphology="-s---mg--i" head-id="267164" relation="atr" antecedent-id="267122" information-status="old" presentation-after=" "/>
+        <token id="267166" form="καὶ" citation-part="MATT 1.24" lemma="καί" part-of-speech="C-" morphology="---------n" relation="pred" presentation-after=" "/>
+        <token id="863023" empty-token-sort="P" citation-part="MATT 1.24" head-id="267167" relation="sub" antecedent-id="267162" information-status="old"/>
+        <token id="267167" form="παρέλαβεν" citation-part="MATT 1.24" lemma="παραλαμβάνω" part-of-speech="V-" morphology="3saia----i" head-id="267166" relation="pred" presentation-after=" ">
+          <slash target-id="267155" relation="sub"/>
+        </token>
+        <token id="267168" form="τὴν" citation-part="MATT 1.24" lemma="ὁ" part-of-speech="S-" morphology="-s---fa--i" head-id="267169" relation="aux" presentation-after=" "/>
+        <token id="267169" form="γυναῖκα" citation-part="MATT 1.24" lemma="γυνή" part-of-speech="Nb" morphology="-s---fa--i" head-id="267167" relation="obj" antecedent-id="863702" information-status="old" presentation-after=" "/>
+        <token id="267170" form="αὐτοῦ" citation-part="MATT 1.24" lemma="αὐτός" part-of-speech="Pp" morphology="3s---mg--i" head-id="267169" relation="atr" antecedent-id="863023" information-status="old" presentation-after="·"/>
+      </sentence>
+      <sentence id="14683" status="reviewed" presentation-after=" ">
+        <token id="267172" form="καὶ" citation-part="MATT 1.25" lemma="καί" part-of-speech="C-" morphology="---------n" head-id="267174" relation="aux" presentation-after=" "/>
+        <token id="267173" form="οὐκ" citation-part="MATT 1.25" lemma="οὐ" part-of-speech="Df" morphology="---------n" head-id="267174" relation="aux" presentation-after=" "/>
+        <token id="861616" empty-token-sort="P" citation-part="MATT 1.25" head-id="267174" relation="sub" antecedent-id="267170" information-status="old"/>
+        <token id="267174" form="ἐγίνωσκεν" citation-part="MATT 1.25" lemma="γιγνώσκω" part-of-speech="V-" morphology="3siia----i" relation="pred" presentation-after=" "/>
+        <token id="267175" form="αὐτὴν" citation-part="MATT 1.25" lemma="αὐτός" part-of-speech="Pp" morphology="3s---fa--i" head-id="267174" relation="obj" antecedent-id="267169" information-status="old" presentation-after=" "/>
+        <token id="267176" form="ἕως" citation-part="MATT 1.25" lemma="ἕως" part-of-speech="G-" morphology="---------n" head-id="267174" relation="adv" presentation-after=" "/>
+        <token id="267177" form="οὗ" citation-part="MATT 1.25" lemma="ὅς" part-of-speech="Pr" morphology="-s---ng--i" head-id="267176" relation="aux" presentation-after=" "/>
+        <token id="863704" empty-token-sort="P" citation-part="MATT 1.25" head-id="267178" relation="sub" antecedent-id="267175" information-status="old"/>
+        <token id="267178" form="ἔτεκεν" citation-part="MATT 1.25" lemma="τίκτω" part-of-speech="V-" morphology="3saia----i" head-id="267176" relation="pred" presentation-after=" "/>
+        <token id="267179" form="υἱόν" citation-part="MATT 1.25" lemma="υἱός" part-of-speech="Nb" morphology="-s---ma--i" head-id="267178" relation="obj" antecedent-id="267094" information-status="old" presentation-after="·"/>
+      </sentence>
+      <sentence id="14684" status="reviewed">
+        <token id="267181" form="καὶ" citation-part="MATT 1.25" lemma="καί" part-of-speech="C-" morphology="---------n" head-id="267182" relation="aux" presentation-after=" "/>
+        <token id="861035" empty-token-sort="P" citation-part="MATT 1.25" head-id="267182" relation="sub" antecedent-id="861616" information-status="old"/>
+        <token id="267182" form="ἐκάλεσεν" citation-part="MATT 1.25" lemma="καλέω" part-of-speech="V-" morphology="3saia----i" relation="pred" presentation-after=" "/>
+        <token id="267183" form="τὸ" citation-part="MATT 1.25" lemma="ὁ" part-of-speech="S-" morphology="-s---na--i" head-id="267184" relation="aux" presentation-after=" "/>
+        <token id="267184" form="ὄνομα" citation-part="MATT 1.25" lemma="ὄνομα" part-of-speech="Nb" morphology="-s---na--i" head-id="267182" relation="obj" information-status="new" presentation-after=" "/>
+        <token id="267185" form="αὐτοῦ" citation-part="MATT 1.25" lemma="αὐτός" part-of-speech="Pp" morphology="3s---mg--i" head-id="267184" relation="atr" antecedent-id="267179" information-status="old" presentation-after=" "/>
+        <token id="267186" form="Ἰησοῦν" citation-part="MATT 1.25" lemma="Ἰησοῦς" part-of-speech="Ne" morphology="-s---ma--i" head-id="267182" relation="xobj" presentation-after=".">
+          <slash target-id="267184" relation="xsub"/>
+        </token>
+      </sentence>
+    </div>
+  </source>
+</proiel>

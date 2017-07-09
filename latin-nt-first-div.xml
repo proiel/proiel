@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proiel export-time="2017-07-08T15:29:15+01:00" schema-version="2.1">
+  <annotation>
+    <relations>
+      <value tag="adnom" summary="adnominal" primary="true" secondary="true"/>
+      <value tag="adv" summary="adverbial" primary="true" secondary="true"/>
+      <value tag="ag" summary="agens" primary="true" secondary="true"/>
+      <value tag="apos" summary="apposition" primary="true" secondary="true"/>
+      <value tag="arg" summary="argument (object or oblique)" primary="true" secondary="true"/>
+      <value tag="atr" summary="attribute" primary="true" secondary="true"/>
+      <value tag="aux" summary="auxiliary" primary="true" secondary="true"/>
+      <value tag="comp" summary="complement" primary="true" secondary="true"/>
+      <value tag="expl" summary="expletive" primary="true" secondary="true"/>
+      <value tag="narg" summary="adnominal argument" primary="true" secondary="true"/>
+      <value tag="nonsub" summary="non-subject (object, oblique or adverbial)" primary="true" secondary="true"/>
+      <value tag="obj" summary="object" primary="true" secondary="true"/>
+      <value tag="obl" summary="oblique" primary="true" secondary="true"/>
+      <value tag="parpred" summary="parenthetical predication" primary="true" secondary="true"/>
+      <value tag="part" summary="partitive" primary="true" secondary="true"/>
+      <value tag="per" summary="peripheral (oblique or adverbial)" primary="true" secondary="true"/>
+      <value tag="pid" summary="Predicate identity" primary="false" secondary="true"/>
+      <value tag="pred" summary="predicate" primary="true" secondary="true"/>
+      <value tag="rel" summary="apposition or attribute" primary="true" secondary="true"/>
+      <value tag="sub" summary="subject" primary="true" secondary="true"/>
+      <value tag="voc" summary="vocative" primary="true" secondary="true"/>
+      <value tag="xadv" summary="open adverbial complement" primary="true" secondary="true"/>
+      <value tag="xobj" summary="open objective complement" primary="true" secondary="true"/>
+      <value tag="xsub" summary="external subject" primary="false" secondary="true"/>
+    </relations>
+    <parts-of-speech>
+      <value tag="A-" summary="adjective"/>
+      <value tag="Df" summary="adverb"/>
+      <value tag="S-" summary="article"/>
+      <value tag="Ma" summary="cardinal numeral"/>
+      <value tag="Nb" summary="common noun"/>
+      <value tag="C-" summary="conjunction"/>
+      <value tag="Pd" summary="demonstrative pronoun"/>
+      <value tag="F-" summary="foreign word"/>
+      <value tag="Px" summary="indefinite pronoun"/>
+      <value tag="N-" summary="infinitive marker"/>
+      <value tag="I-" summary="interjection"/>
+      <value tag="Du" summary="interrogative adverb"/>
+      <value tag="Pi" summary="interrogative pronoun"/>
+      <value tag="Mo" summary="ordinal numeral"/>
+      <value tag="Pp" summary="personal pronoun"/>
+      <value tag="Pk" summary="personal reflexive pronoun"/>
+      <value tag="Ps" summary="possessive pronoun"/>
+      <value tag="Pt" summary="possessive reflexive pronoun"/>
+      <value tag="R-" summary="preposition"/>
+      <value tag="Ne" summary="proper noun"/>
+      <value tag="Py" summary="quantifier"/>
+      <value tag="Pc" summary="reciprocal pronoun"/>
+      <value tag="Dq" summary="relative adverb"/>
+      <value tag="Pr" summary="relative pronoun"/>
+      <value tag="G-" summary="subjunction"/>
+      <value tag="V-" summary="verb"/>
+      <value tag="X-" summary="unassigned"/>
+    </parts-of-speech>
+    <morphology>
+      <field tag="person">
+        <value tag="1" summary="first person"/>
+        <value tag="2" summary="second person"/>
+        <value tag="3" summary="third person"/>
+        <value tag="x" summary="uncertain person"/>
+      </field>
+      <field tag="number">
+        <value tag="s" summary="singular"/>
+        <value tag="d" summary="dual"/>
+        <value tag="p" summary="plural"/>
+        <value tag="x" summary="uncertain number"/>
+      </field>
+      <field tag="tense">
+        <value tag="p" summary="present"/>
+        <value tag="i" summary="imperfect"/>
+        <value tag="r" summary="perfect"/>
+        <value tag="s" summary="resultative"/>
+        <value tag="a" summary="aorist"/>
+        <value tag="u" summary="past"/>
+        <value tag="l" summary="pluperfect"/>
+        <value tag="f" summary="future"/>
+        <value tag="t" summary="future perfect"/>
+        <value tag="x" summary="uncertain tense"/>
+      </field>
+      <field tag="mood">
+        <value tag="i" summary="indicative"/>
+        <value tag="s" summary="subjunctive"/>
+        <value tag="m" summary="imperative"/>
+        <value tag="o" summary="optative"/>
+        <value tag="n" summary="infinitive"/>
+        <value tag="p" summary="participle"/>
+        <value tag="d" summary="gerund"/>
+        <value tag="g" summary="gerundive"/>
+        <value tag="u" summary="supine"/>
+        <value tag="x" summary="uncertain mood"/>
+        <value tag="y" summary="finiteness unspecified"/>
+        <value tag="e" summary="indicative or subjunctive"/>
+        <value tag="f" summary="indicative or imperative"/>
+        <value tag="h" summary="subjunctive or imperative"/>
+        <value tag="t" summary="finite"/>
+      </field>
+      <field tag="voice">
+        <value tag="a" summary="active"/>
+        <value tag="m" summary="middle"/>
+        <value tag="p" summary="passive"/>
+        <value tag="e" summary="middle or passive"/>
+        <value tag="x" summary="unspecified"/>
+      </field>
+      <field tag="gender">
+        <value tag="m" summary="masculine"/>
+        <value tag="f" summary="feminine"/>
+        <value tag="n" summary="neuter"/>
+        <value tag="p" summary="masculine or feminine"/>
+        <value tag="o" summary="masculine or neuter"/>
+        <value tag="r" summary="feminine or neuter"/>
+        <value tag="q" summary="masculine, feminine or neuter"/>
+        <value tag="x" summary="uncertain gender"/>
+      </field>
+      <field tag="case">
+        <value tag="n" summary="nominative"/>
+        <value tag="a" summary="accusative"/>
+        <value tag="o" summary="oblique"/>
+        <value tag="g" summary="genitive"/>
+        <value tag="c" summary="genitive or dative"/>
+        <value tag="e" summary="accusative or dative"/>
+        <value tag="d" summary="dative"/>
+        <value tag="b" summary="ablative"/>
+        <value tag="i" summary="instrumental"/>
+        <value tag="l" summary="locative"/>
+        <value tag="v" summary="vocative"/>
+        <value tag="x" summary="uncertain case"/>
+        <value tag="z" summary="no case"/>
+      </field>
+      <field tag="degree">
+        <value tag="p" summary="positive"/>
+        <value tag="c" summary="comparative"/>
+        <value tag="s" summary="superlative"/>
+        <value tag="x" summary="uncertain degree"/>
+        <value tag="z" summary="no degree"/>
+      </field>
+      <field tag="strength">
+        <value tag="w" summary="weak"/>
+        <value tag="s" summary="strong"/>
+        <value tag="t" summary="weak or strong"/>
+      </field>
+      <field tag="inflection">
+        <value tag="n" summary="non-inflecting"/>
+        <value tag="i" summary="inflecting"/>
+      </field>
+    </morphology>
+    <information-statuses>
+      <value tag="new" summary="new"/>
+      <value tag="kind" summary="kind"/>
+      <value tag="acc_gen" summary="acc-gen"/>
+      <value tag="acc_sit" summary="acc-sit"/>
+      <value tag="acc_inf" summary="acc-inf"/>
+      <value tag="old" summary="old"/>
+      <value tag="old_inact" summary="old-inact"/>
+      <value tag="no_info_status" summary="annotatable (undecided)"/>
+      <value tag="info_unannotatable" summary="unannotatable"/>
+      <value tag="quant" summary="quantifier restriction"/>
+      <value tag="non_spec" summary="non-specific"/>
+      <value tag="non_spec_inf" summary="inferred from non-specific"/>
+      <value tag="non_spec_old" summary="non-specific old"/>
+    </information-statuses>
+  </annotation>
+  <source id="latin-nt" language="lat" alignment-id="greek-nt">
+    <title>Jerome's Vulgate</title>
+    <citation-part>Vulg.</citation-part>
+    <principal>Dag Trygve Truslew Haug</principal>
+    <funder>Research Council of Norway</funder>
+    <distributor>Department of Philosophy, Classics, History of Arts and Ideas</distributor>
+    <distributor-address>PO Box 1020 Blindern, N-0315 Oslo</distributor-address>
+    <date>06 July 2017</date>
+    <license>CC BY-NC-SA 3.0</license>
+    <license-url>http://creativecommons.org/licenses/by-nc-sa/3.0/us/</license-url>
+    <reference-system>Standard Bible reference system</reference-system>
+    <editor>Dag Trygve Truslew Haug</editor>
+    <editorial-note>The original text had no punctuation or sentence divisions. Marius Jøhndal transferred sentence divisions from the Greek PROIEL text and added punctuation from the Clementine Text Project, http://vulsearch.sourceforge.net</editorial-note>
+    <annotator>Øyvind Strand (4148 sentences), Sean Scully (2848 sentences), Mari Johanne Hertzenberg (2471 sentences), Knut Olav Sandvik (1094 sentences), Dag Haug (992 sentences), Marek Majer (435 sentences), Þorsteinn Vilhjálmsson (348 sentences), Eirikur Kristjansson (326 sentences), Eirik Welo (129 sentences), Bergthora Aegisdottir (109 sentences), Hanne Eckhoff (37 sentences), and Marius Larsen Jøhndal (1 sentence)</annotator>
+    <reviewer>Dag Haug (5579 sentences), Marek Majer (2051 sentences), Þorsteinn Vilhjálmsson (1654 sentences), Eirikur Kristjansson (1307 sentences), Eirik Welo (1259 sentences), Øyvind Strand (1 sentence), and Hanne Eckhoff (1 sentence)</reviewer>
+    <electronic-text-editor>Perseus Project</electronic-text-editor>
+    <electronic-text-title>Vulgate</electronic-text-title>
+    <electronic-text-version>Perseus_text_1999.02.0060.xml</electronic-text-version>
+    <electronic-text-publisher>Text provided by Perseus Digital Library, with funding from Fund for the Improvement of Postsecondary Education.</electronic-text-publisher>
+    <electronic-text-place>Tufts University, Medford MA</electronic-text-place>
+    <electronic-text-date>14 March 2014</electronic-text-date>
+    <electronic-text-original-url>Original version was available for viewing and download at http://www.perseus.tufts.edu/hopper/.</electronic-text-original-url>
+    <electronic-text-license>free</electronic-text-license>
+    <div id="336" alignment-id="76">
+      <title>Matthew 1</title>
+      <sentence id="12667" status="reviewed" presentation-after=" ">
+        <token id="250021" form="liber" citation-part="MATT 1.1" lemma="liber" part-of-speech="Nb" morphology="-s---mn--i" head-id="851355" relation="xobj" presentation-after=" " alignment-id="266690">
+          <slash target-id="851355" relation="xsub"/>
+        </token>
+        <token id="250022" form="generationis" citation-part="MATT 1.1" lemma="generatio" part-of-speech="Nb" morphology="-s---fg--i" head-id="250021" relation="atr" presentation-after=" " alignment-id="266691"/>
+        <token id="250023" form="Iesu" citation-part="MATT 1.1" lemma="Iesus" part-of-speech="Ne" morphology="-s---mg--i" head-id="250022" relation="atr" presentation-after=" " alignment-id="266692"/>
+        <token id="250024" form="Christi" citation-part="MATT 1.1" lemma="Christus" part-of-speech="Ne" morphology="-s---mg--i" head-id="250023" relation="apos" presentation-after=" " alignment-id="266693"/>
+        <token id="250025" form="filii" citation-part="MATT 1.1" lemma="filius" part-of-speech="Nb" morphology="-s---mg--i" head-id="250023" relation="apos" presentation-after=" " alignment-id="266694"/>
+        <token id="250026" form="David" citation-part="MATT 1.1" lemma="David" part-of-speech="Ne" morphology="---------n" head-id="250025" relation="atr" presentation-after=" " alignment-id="266695"/>
+        <token id="250027" form="filii" citation-part="MATT 1.1" lemma="filius" part-of-speech="Nb" morphology="-s---mg--i" head-id="250025" relation="apos" presentation-after=" " alignment-id="266696"/>
+        <token id="250028" form="Abraham" citation-part="MATT 1.1" lemma="Abraham" part-of-speech="Ne" morphology="---------n" head-id="250027" relation="atr" alignment-id="266697"/>
+        <token id="851355" empty-token-sort="V" citation-part="MATT 1.1" relation="pred"/>
+      </sentence>
+      <sentence id="12668" status="reviewed" presentation-after=" ">
+        <token id="250029" form="Abraham" citation-part="MATT 1.2" lemma="Abraham" part-of-speech="Ne" morphology="---------n" head-id="250030" relation="sub" presentation-after=" " alignment-id="266699"/>
+        <token id="250030" form="genuit" citation-part="MATT 1.2" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266700"/>
+        <token id="250031" form="Isaac" citation-part="MATT 1.2" lemma="Isaac" part-of-speech="Ne" morphology="---------n" head-id="250030" relation="obj" alignment-id="266702"/>
+      </sentence>
+      <sentence id="12669" status="reviewed" presentation-after=" ">
+        <token id="250032" form="Isaac" citation-part="MATT 1.2" lemma="Isaac" part-of-speech="Ne" morphology="---------n" head-id="250034" relation="sub" presentation-after=" " alignment-id="266704"/>
+        <token id="250033" form="autem" citation-part="MATT 1.2" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250034" relation="aux" presentation-after=" " alignment-id="266705"/>
+        <token id="250034" form="genuit" citation-part="MATT 1.2" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266706"/>
+        <token id="250035" form="Iacob" citation-part="MATT 1.2" lemma="Iacob" part-of-speech="Ne" morphology="---------n" head-id="250034" relation="obj" alignment-id="266708"/>
+      </sentence>
+      <sentence id="12670" status="reviewed" presentation-after=" ">
+        <token id="250036" form="Iacob" citation-part="MATT 1.2" lemma="Iacob" part-of-speech="Ne" morphology="---------n" head-id="250038" relation="sub" presentation-after=" " alignment-id="266710"/>
+        <token id="250037" form="autem" citation-part="MATT 1.2" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250038" relation="aux" presentation-after=" " alignment-id="266711"/>
+        <token id="250038" form="genuit" citation-part="MATT 1.2" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266712"/>
+        <token id="250039" form="Iudam" citation-part="MATT 1.2" lemma="Iudas" part-of-speech="Ne" morphology="-s---ma--i" head-id="250040" relation="obj" presentation-after=" " alignment-id="266714"/>
+        <token id="250040" form="et" citation-part="MATT 1.2" lemma="et" part-of-speech="C-" morphology="---------n" head-id="250038" relation="obj" presentation-after=" " alignment-id="266715"/>
+        <token id="250041" form="fratres" citation-part="MATT 1.2" lemma="frater" part-of-speech="Nb" morphology="-p---ma--i" head-id="250040" relation="obj" presentation-after=" " alignment-id="266717"/>
+        <token id="250042" form="eius" citation-part="MATT 1.2" lemma="is" part-of-speech="Pp" morphology="3s---mg--i" head-id="250041" relation="atr" alignment-id="266718"/>
+      </sentence>
+      <sentence id="12671" status="reviewed" presentation-after=" ">
+        <token id="250043" form="Iudas" citation-part="MATT 1.3" lemma="Iudas" part-of-speech="Ne" morphology="-s---mn--i" head-id="250045" relation="sub" presentation-after=" " alignment-id="266720"/>
+        <token id="250044" form="autem" citation-part="MATT 1.3" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250045" relation="aux" presentation-after=" " alignment-id="266721"/>
+        <token id="250045" form="genuit" citation-part="MATT 1.3" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266722"/>
+        <token id="250046" form="Phares" citation-part="MATT 1.3" lemma="Phares" part-of-speech="Ne" morphology="---------n" head-id="250047" relation="obj" presentation-after=" " alignment-id="266724"/>
+        <token id="250047" form="et" citation-part="MATT 1.3" lemma="et" part-of-speech="C-" morphology="---------n" head-id="250045" relation="obj" presentation-after=" " alignment-id="266725"/>
+        <token id="250048" form="Zara" citation-part="MATT 1.3" lemma="Zara" part-of-speech="Ne" morphology="---------n" head-id="250047" relation="obj" presentation-after=" " alignment-id="266727"/>
+        <token id="250049" form="de" citation-part="MATT 1.3" lemma="de" part-of-speech="R-" morphology="---------n" head-id="250045" relation="obl" presentation-after=" " alignment-id="266728"/>
+        <token id="250050" form="Thamar" citation-part="MATT 1.3" lemma="Thamar" part-of-speech="Ne" morphology="---------n" head-id="250049" relation="obl" alignment-id="266730"/>
+      </sentence>
+      <sentence id="12672" status="reviewed" presentation-after=" ">
+        <token id="250051" form="Phares" citation-part="MATT 1.3" lemma="Phares" part-of-speech="Ne" morphology="---------n" head-id="250053" relation="sub" presentation-after=" " alignment-id="266732"/>
+        <token id="250052" form="autem" citation-part="MATT 1.3" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250053" relation="aux" presentation-after=" " alignment-id="266733"/>
+        <token id="250053" form="genuit" citation-part="MATT 1.3" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266734"/>
+        <token id="250054" form="Esrom" citation-part="MATT 1.3" lemma="Esrom" part-of-speech="Ne" morphology="---------n" head-id="250053" relation="obj" alignment-id="266736"/>
+      </sentence>
+      <sentence id="12673" status="reviewed" presentation-after=" ">
+        <token id="250055" form="Esrom" citation-part="MATT 1.3" lemma="Esrom" part-of-speech="Ne" morphology="---------n" head-id="250057" relation="sub" presentation-after=" " alignment-id="266738"/>
+        <token id="250056" form="autem" citation-part="MATT 1.3" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250057" relation="aux" presentation-after=" " alignment-id="266739"/>
+        <token id="250057" form="genuit" citation-part="MATT 1.3" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266740"/>
+        <token id="250058" form="Aram" citation-part="MATT 1.3" lemma="Aram" part-of-speech="Ne" morphology="---------n" head-id="250057" relation="obj" alignment-id="266742"/>
+      </sentence>
+      <sentence id="12674" status="reviewed" presentation-after=" ">
+        <token id="250059" form="Aram" citation-part="MATT 1.4" lemma="Aram" part-of-speech="Ne" morphology="---------n" head-id="250061" relation="sub" presentation-after=" " alignment-id="266744"/>
+        <token id="250060" form="autem" citation-part="MATT 1.4" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250061" relation="aux" presentation-after=" " alignment-id="266745"/>
+        <token id="250061" form="genuit" citation-part="MATT 1.4" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266746"/>
+        <token id="250062" form="Aminadab" citation-part="MATT 1.4" lemma="Aminadab" part-of-speech="Ne" morphology="---------n" head-id="250061" relation="obj" alignment-id="266748"/>
+      </sentence>
+      <sentence id="12675" status="reviewed" presentation-after=" ">
+        <token id="250063" form="Aminadab" citation-part="MATT 1.4" lemma="Aminadab" part-of-speech="Ne" morphology="---------n" head-id="250065" relation="sub" presentation-after=" " alignment-id="266750"/>
+        <token id="250064" form="autem" citation-part="MATT 1.4" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250065" relation="aux" presentation-after=" " alignment-id="266751"/>
+        <token id="250065" form="genuit" citation-part="MATT 1.4" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266752"/>
+        <token id="250066" form="Naasson" citation-part="MATT 1.4" lemma="Naasson" part-of-speech="Ne" morphology="---------n" head-id="250065" relation="obj" alignment-id="266754"/>
+      </sentence>
+      <sentence id="12676" status="reviewed" presentation-after=" ">
+        <token id="250067" form="Naasson" citation-part="MATT 1.4" lemma="Naasson" part-of-speech="Ne" morphology="---------n" head-id="250069" relation="sub" presentation-after=" " alignment-id="266756"/>
+        <token id="250068" form="autem" citation-part="MATT 1.4" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250069" relation="aux" presentation-after=" " alignment-id="266757"/>
+        <token id="250069" form="genuit" citation-part="MATT 1.4" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266758"/>
+        <token id="250070" form="Salmon" citation-part="MATT 1.4" lemma="Salmon" part-of-speech="Ne" morphology="---------n" head-id="250069" relation="obj" alignment-id="266760"/>
+      </sentence>
+      <sentence id="12677" status="reviewed" presentation-after=" ">
+        <token id="250071" form="Salmon" citation-part="MATT 1.5" lemma="Salmon" part-of-speech="Ne" morphology="---------n" head-id="250073" relation="sub" presentation-after=" " alignment-id="266762"/>
+        <token id="250072" form="autem" citation-part="MATT 1.5" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250073" relation="aux" presentation-after=" " alignment-id="266763"/>
+        <token id="250073" form="genuit" citation-part="MATT 1.5" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266764"/>
+        <token id="250074" form="Booz" citation-part="MATT 1.5" lemma="Booz" part-of-speech="Ne" morphology="---------n" head-id="250073" relation="obj" presentation-after=" " alignment-id="266766"/>
+        <token id="250075" form="de" citation-part="MATT 1.5" lemma="de" part-of-speech="R-" morphology="---------n" head-id="250073" relation="obl" presentation-after=" " alignment-id="266767"/>
+        <token id="250076" form="Rachab" citation-part="MATT 1.5" lemma="Rachab" part-of-speech="Ne" morphology="---------n" head-id="250075" relation="obl" alignment-id="266769"/>
+      </sentence>
+      <sentence id="12678" status="reviewed" presentation-after=" ">
+        <token id="250077" form="Booz" citation-part="MATT 1.5" lemma="Booz" part-of-speech="Ne" morphology="---------n" head-id="250079" relation="sub" presentation-after=" " alignment-id="266771"/>
+        <token id="250078" form="autem" citation-part="MATT 1.5" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250079" relation="aux" presentation-after=" " alignment-id="266772"/>
+        <token id="250079" form="genuit" citation-part="MATT 1.5" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266773"/>
+        <token id="250080" form="Obed" citation-part="MATT 1.5" lemma="Obed" part-of-speech="Ne" morphology="---------n" head-id="250079" relation="obj" presentation-after=" " alignment-id="266775"/>
+        <token id="250081" form="ex" citation-part="MATT 1.5" lemma="ex" part-of-speech="R-" morphology="---------n" head-id="250079" relation="obl" presentation-after=" " alignment-id="266776"/>
+        <token id="250082" form="Ruth" citation-part="MATT 1.5" lemma="Ruth" part-of-speech="Ne" morphology="---------n" head-id="250081" relation="obl" alignment-id="266778"/>
+      </sentence>
+      <sentence id="12679" status="reviewed" presentation-after=" ">
+        <token id="250083" form="Obed" citation-part="MATT 1.5" lemma="Obed" part-of-speech="Ne" morphology="---------n" head-id="250085" relation="sub" presentation-after=" " alignment-id="266780"/>
+        <token id="250084" form="autem" citation-part="MATT 1.5" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250085" relation="aux" presentation-after=" "/>
+        <token id="250085" form="genuit" citation-part="MATT 1.5" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" "/>
+        <token id="250086" form="Iesse" citation-part="MATT 1.5" lemma="Iesse" part-of-speech="Ne" morphology="---------n" head-id="250085" relation="obj"/>
+      </sentence>
+      <sentence id="12680" status="reviewed" presentation-after=" ">
+        <token id="250087" form="Iesse" citation-part="MATT 1.5" lemma="Iesse" part-of-speech="Ne" morphology="---------n" head-id="250089" relation="sub" presentation-after=" "/>
+        <token id="250088" form="autem" citation-part="MATT 1.5" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250089" relation="aux" presentation-after=" " alignment-id="266781"/>
+        <token id="250089" form="genuit" citation-part="MATT 1.5" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266782"/>
+        <token id="250090" form="David" citation-part="MATT 1.5" lemma="David" part-of-speech="Ne" morphology="---------n" head-id="250089" relation="obj" presentation-after=" " alignment-id="266784"/>
+        <token id="250091" form="regem" citation-part="MATT 1.5" lemma="rex" part-of-speech="Nb" morphology="-s---ma--i" head-id="250090" relation="apos"/>
+      </sentence>
+      <sentence id="12681" status="reviewed" presentation-after=" ">
+        <token id="250092" form="David" citation-part="MATT 1.6" lemma="David" part-of-speech="Ne" morphology="---------n" head-id="250095" relation="sub" presentation-after=" " alignment-id="266786"/>
+        <token id="250093" form="autem" citation-part="MATT 1.6" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250095" relation="aux" presentation-after=" " alignment-id="266787"/>
+        <token id="250094" form="rex" citation-part="MATT 1.6" lemma="rex" part-of-speech="Nb" morphology="-s---mn--i" head-id="250092" relation="apos" presentation-after=" " alignment-id="266792"/>
+        <token id="250095" form="genuit" citation-part="MATT 1.6" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266796"/>
+        <token id="250096" form="Salomonem" citation-part="MATT 1.6" lemma="Salomon" part-of-speech="Ne" morphology="-s---ma--i" head-id="250095" relation="obj" presentation-after=" " alignment-id="266798"/>
+        <token id="250097" form="ex" citation-part="MATT 1.6" lemma="ex" part-of-speech="R-" morphology="---------n" head-id="250096" relation="atr" presentation-after=" " alignment-id="266799"/>
+        <token id="250098" form="ea" citation-part="MATT 1.6" lemma="is" part-of-speech="Pp" morphology="3s---fb--i" head-id="250097" relation="obl" presentation-after=" "/>
+        <token id="250099" form="quae" citation-part="MATT 1.6" lemma="qui" part-of-speech="Pr" morphology="-s---fn--i" head-id="250100" relation="sub" presentation-after=" "/>
+        <token id="250100" form="fuit" citation-part="MATT 1.6" lemma="sum" part-of-speech="V-" morphology="3sria----i" head-id="250098" relation="atr" presentation-after=" "/>
+        <token id="250101" form="Uriae" citation-part="MATT 1.6" lemma="Urias" part-of-speech="Ne" morphology="-s---mg--i" head-id="250100" relation="xobj" alignment-id="266802">
+          <slash target-id="250099" relation="xsub"/>
+        </token>
+      </sentence>
+      <sentence id="12682" status="reviewed" presentation-after=" ">
+        <token id="250102" form="Salomon" citation-part="MATT 1.7" lemma="Salomon" part-of-speech="Ne" morphology="-s---mn--i" head-id="250104" relation="sub" presentation-after=" " alignment-id="266804"/>
+        <token id="250103" form="autem" citation-part="MATT 1.7" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250104" relation="aux" presentation-after=" " alignment-id="266805"/>
+        <token id="250104" form="genuit" citation-part="MATT 1.7" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266806"/>
+        <token id="250105" form="Roboam" citation-part="MATT 1.7" lemma="Roboam" part-of-speech="Ne" morphology="---------n" head-id="250104" relation="obj" alignment-id="266808"/>
+      </sentence>
+      <sentence id="12683" status="reviewed" presentation-after=" ">
+        <token id="250106" form="Roboam" citation-part="MATT 1.7" lemma="Roboam" part-of-speech="Ne" morphology="---------n" head-id="250108" relation="sub" presentation-after=" " alignment-id="266810"/>
+        <token id="250107" form="autem" citation-part="MATT 1.7" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250108" relation="aux" presentation-after=" " alignment-id="266811"/>
+        <token id="250108" form="genuit" citation-part="MATT 1.7" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266812"/>
+        <token id="250109" form="Abiam" citation-part="MATT 1.7" lemma="Abia" part-of-speech="Ne" morphology="-s---ma--i" head-id="250108" relation="obj" alignment-id="266814"/>
+      </sentence>
+      <sentence id="12684" status="reviewed" presentation-after=" ">
+        <token id="250110" form="Abia" citation-part="MATT 1.7" lemma="Abia" part-of-speech="Ne" morphology="-s---mn--i" head-id="250112" relation="sub" presentation-after=" " alignment-id="266816"/>
+        <token id="250111" form="autem" citation-part="MATT 1.7" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250112" relation="aux" presentation-after=" " alignment-id="266817"/>
+        <token id="250112" form="genuit" citation-part="MATT 1.7" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266818"/>
+        <token id="250113" form="Asa" citation-part="MATT 1.7" lemma="Asa" part-of-speech="Ne" morphology="---------n" head-id="250112" relation="obl" alignment-id="266820"/>
+      </sentence>
+      <sentence id="12685" status="reviewed" presentation-after=" ">
+        <token id="250114" form="Asa" citation-part="MATT 1.8" lemma="Asa" part-of-speech="Ne" morphology="---------n" head-id="250116" relation="sub" presentation-after=" " alignment-id="266822"/>
+        <token id="250115" form="autem" citation-part="MATT 1.8" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250116" relation="aux" presentation-after=" " alignment-id="266823"/>
+        <token id="250116" form="genuit" citation-part="MATT 1.8" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266824"/>
+        <token id="250117" form="Iosaphat" citation-part="MATT 1.8" lemma="Iosaphat" part-of-speech="Ne" morphology="---------n" head-id="250116" relation="obj" alignment-id="266826"/>
+      </sentence>
+      <sentence id="12686" status="reviewed" presentation-after=" ">
+        <token id="250118" form="Iosaphat" citation-part="MATT 1.8" lemma="Iosaphat" part-of-speech="Ne" morphology="---------n" head-id="250120" relation="sub" presentation-after=" " alignment-id="266828"/>
+        <token id="250119" form="autem" citation-part="MATT 1.8" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250120" relation="aux" presentation-after=" " alignment-id="266829"/>
+        <token id="250120" form="genuit" citation-part="MATT 1.8" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266830"/>
+        <token id="250121" form="Ioram" citation-part="MATT 1.8" lemma="Ioram" part-of-speech="Ne" morphology="---------n" head-id="250120" relation="obj" alignment-id="266832"/>
+      </sentence>
+      <sentence id="12687" status="reviewed" presentation-after=" ">
+        <token id="250122" form="Ioram" citation-part="MATT 1.8" lemma="Ioram" part-of-speech="Ne" morphology="---------n" head-id="250124" relation="sub" presentation-after=" " alignment-id="266834"/>
+        <token id="250123" form="autem" citation-part="MATT 1.8" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250124" relation="aux" presentation-after=" " alignment-id="266835"/>
+        <token id="250124" form="genuit" citation-part="MATT 1.8" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266836"/>
+        <token id="250125" form="Oziam" citation-part="MATT 1.8" lemma="Ozias" part-of-speech="Ne" morphology="-s---ma--i" head-id="250124" relation="obj" alignment-id="266838"/>
+      </sentence>
+      <sentence id="12688" status="reviewed" presentation-after=" ">
+        <token id="250126" form="Ozias" citation-part="MATT 1.9" lemma="Ozias" part-of-speech="Ne" morphology="-s---mn--i" head-id="250128" relation="sub" presentation-after=" " alignment-id="266840"/>
+        <token id="250127" form="autem" citation-part="MATT 1.9" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250128" relation="aux" presentation-after=" " alignment-id="266841"/>
+        <token id="250128" form="genuit" citation-part="MATT 1.9" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266842"/>
+        <token id="250129" form="Ioatham" citation-part="MATT 1.9" lemma="Ioatham" part-of-speech="Ne" morphology="---------n" head-id="250128" relation="obj" alignment-id="266844"/>
+      </sentence>
+      <sentence id="12689" status="reviewed" presentation-after=" ">
+        <token id="250130" form="Ioatham" citation-part="MATT 1.9" lemma="Ioatham" part-of-speech="Ne" morphology="---------n" head-id="250132" relation="sub" presentation-after=" " alignment-id="266846"/>
+        <token id="250131" form="autem" citation-part="MATT 1.9" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250132" relation="aux" presentation-after=" " alignment-id="266847"/>
+        <token id="250132" form="genuit" citation-part="MATT 1.9" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266848"/>
+        <token id="250133" form="Achaz" citation-part="MATT 1.9" lemma="Achaz" part-of-speech="Ne" morphology="---------n" head-id="250132" relation="obj" alignment-id="266850"/>
+      </sentence>
+      <sentence id="12690" status="reviewed" presentation-after=" ">
+        <token id="250134" form="Achaz" citation-part="MATT 1.9" lemma="Achaz" part-of-speech="Ne" morphology="---------n" head-id="250136" relation="sub" presentation-after=" " alignment-id="266852"/>
+        <token id="250135" form="autem" citation-part="MATT 1.9" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250136" relation="aux" presentation-after=" " alignment-id="266853"/>
+        <token id="250136" form="genuit" citation-part="MATT 1.9" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266854"/>
+        <token id="250137" form="Ezechiam" citation-part="MATT 1.9" lemma="Ezechias" part-of-speech="Ne" morphology="-s---ma--i" head-id="250136" relation="obj" alignment-id="266856"/>
+      </sentence>
+      <sentence id="12691" status="reviewed" presentation-after=" ">
+        <token id="250138" form="Ezechias" citation-part="MATT 1.10" lemma="Ezechias" part-of-speech="Ne" morphology="-s---mn--i" head-id="250140" relation="sub" presentation-after=" " alignment-id="266858"/>
+        <token id="250139" form="autem" citation-part="MATT 1.10" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250140" relation="aux" presentation-after=" " alignment-id="266859"/>
+        <token id="250140" form="genuit" citation-part="MATT 1.10" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266860"/>
+        <token id="250141" form="Manassen" citation-part="MATT 1.10" lemma="Manasses" part-of-speech="Ne" morphology="-s---ma--i" head-id="250140" relation="obj" alignment-id="266862"/>
+      </sentence>
+      <sentence id="12692" status="reviewed" presentation-after=" ">
+        <token id="250142" form="Manasses" citation-part="MATT 1.10" lemma="Manasses" part-of-speech="Ne" morphology="-s---mn--i" head-id="250144" relation="sub" presentation-after=" " alignment-id="266864"/>
+        <token id="250143" form="autem" citation-part="MATT 1.10" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250144" relation="aux" presentation-after=" " alignment-id="266865"/>
+        <token id="250144" form="genuit" citation-part="MATT 1.10" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266866"/>
+        <token id="250145" form="Amon" citation-part="MATT 1.10" lemma="Amon" part-of-speech="Ne" morphology="---------n" head-id="250144" relation="obj" alignment-id="266868"/>
+      </sentence>
+      <sentence id="12693" status="reviewed" presentation-after=" ">
+        <token id="250146" form="Amon" citation-part="MATT 1.10" lemma="Amon" part-of-speech="Ne" morphology="---------n" head-id="250148" relation="sub" presentation-after=" " alignment-id="266870"/>
+        <token id="250147" form="autem" citation-part="MATT 1.10" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250148" relation="aux" presentation-after=" " alignment-id="266871"/>
+        <token id="250148" form="genuit" citation-part="MATT 1.10" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266872"/>
+        <token id="250149" form="Iosiam" citation-part="MATT 1.10" lemma="Iosias" part-of-speech="Ne" morphology="-s---ma--i" head-id="250148" relation="obj" alignment-id="266874"/>
+      </sentence>
+      <sentence id="12694" status="reviewed" presentation-after=" ">
+        <token id="250150" form="Iosias" citation-part="MATT 1.11" lemma="Iosias" part-of-speech="Ne" morphology="-s---mn--i" head-id="250152" relation="sub" presentation-after=" " alignment-id="266876"/>
+        <token id="250151" form="autem" citation-part="MATT 1.11" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250152" relation="aux" presentation-after=" " alignment-id="266877"/>
+        <token id="250152" form="genuit" citation-part="MATT 1.11" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266878"/>
+        <token id="250153" form="Iechoniam" citation-part="MATT 1.11" lemma="Iechonias" part-of-speech="Ne" morphology="-s---ma--i" head-id="250154" relation="obj" presentation-after=" " alignment-id="266880"/>
+        <token id="250154" form="et" citation-part="MATT 1.11" lemma="et" part-of-speech="C-" morphology="---------n" head-id="250152" relation="obj" presentation-after=" " alignment-id="266881"/>
+        <token id="250155" form="fratres" citation-part="MATT 1.11" lemma="frater" part-of-speech="Nb" morphology="-p---ma--i" head-id="250154" relation="obj" presentation-after=" " alignment-id="266883"/>
+        <token id="250156" form="eius" citation-part="MATT 1.11" lemma="is" part-of-speech="Pp" morphology="3s---mg--i" head-id="250155" relation="atr" presentation-after=" " alignment-id="266884"/>
+        <token id="250157" form="in" citation-part="MATT 1.11" lemma="in" part-of-speech="R-" morphology="---------n" head-id="250152" relation="adv" presentation-after=" " alignment-id="266885"/>
+        <token id="250158" form="transmigratione" citation-part="MATT 1.11" lemma="transmigratio" part-of-speech="Nb" morphology="-s---fb--i" head-id="250157" relation="obl" presentation-after=" " alignment-id="266887"/>
+        <token id="250159" form="Babylonis" citation-part="MATT 1.11" lemma="Babylon" part-of-speech="Ne" morphology="-s---fg--i" head-id="250158" relation="narg" alignment-id="266888"/>
+      </sentence>
+      <sentence id="12695" status="reviewed" presentation-after=" ">
+        <token id="250160" form="et" citation-part="MATT 1.12" lemma="et" part-of-speech="C-" morphology="---------n" head-id="250165" relation="aux" presentation-after=" " alignment-id="266891"/>
+        <token id="250161" form="post" citation-part="MATT 1.12" lemma="post" part-of-speech="R-" morphology="---------n" head-id="250165" relation="adv" presentation-after=" " alignment-id="266890"/>
+        <token id="250162" form="transmigrationem" citation-part="MATT 1.12" lemma="transmigratio" part-of-speech="Nb" morphology="-s---fa--i" head-id="250161" relation="obl" presentation-after=" " alignment-id="266893"/>
+        <token id="250163" form="Babylonis" citation-part="MATT 1.12" lemma="Babylon" part-of-speech="Ne" morphology="-s---fg--i" head-id="250162" relation="atr" presentation-after=" " alignment-id="266894"/>
+        <token id="250164" form="Iechonias" citation-part="MATT 1.12" lemma="Iechonias" part-of-speech="Ne" morphology="-s---mn--i" head-id="250165" relation="sub" presentation-after=" " alignment-id="266895"/>
+        <token id="250165" form="genuit" citation-part="MATT 1.12" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266896"/>
+        <token id="250166" form="Salathihel" citation-part="MATT 1.12" lemma="Salathihel" part-of-speech="Ne" morphology="---------n" head-id="250165" relation="obj" alignment-id="266898"/>
+      </sentence>
+      <sentence id="12697" status="reviewed" presentation-after=" ">
+        <token id="250167" form="Salathihel" citation-part="MATT 1.12" lemma="Salathihel" part-of-speech="Ne" morphology="---------n" head-id="250169" relation="sub" presentation-after=" " alignment-id="266900"/>
+        <token id="250168" form="autem" citation-part="MATT 1.12" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250169" relation="aux" presentation-after=" " alignment-id="266901"/>
+        <token id="250169" form="genuit" citation-part="MATT 1.12" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266902"/>
+        <token id="250170" form="Zorobabel" citation-part="MATT 1.12" lemma="Zorobabel" part-of-speech="Ne" morphology="---------n" head-id="250169" relation="obj" alignment-id="266904"/>
+      </sentence>
+      <sentence id="12698" status="reviewed" presentation-after=" ">
+        <token id="250171" form="Zorobabel" citation-part="MATT 1.13" lemma="Zorobabel" part-of-speech="Ne" morphology="---------n" head-id="250173" relation="sub" presentation-after=" " alignment-id="266906"/>
+        <token id="250172" form="autem" citation-part="MATT 1.13" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250173" relation="aux" presentation-after=" " alignment-id="266907"/>
+        <token id="250173" form="genuit" citation-part="MATT 1.13" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266908"/>
+        <token id="250174" form="Abiud" citation-part="MATT 1.13" lemma="Abiud" part-of-speech="Ne" morphology="---------n" head-id="250173" relation="obj" alignment-id="266910"/>
+      </sentence>
+      <sentence id="12699" status="reviewed" presentation-after=" ">
+        <token id="250175" form="Abiud" citation-part="MATT 1.13" lemma="Abiud" part-of-speech="Ne" morphology="---------n" head-id="250177" relation="sub" presentation-after=" " alignment-id="266912"/>
+        <token id="250176" form="autem" citation-part="MATT 1.13" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250177" relation="aux" presentation-after=" " alignment-id="266913"/>
+        <token id="250177" form="genuit" citation-part="MATT 1.13" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266914"/>
+        <token id="250178" form="Eliachim" citation-part="MATT 1.13" lemma="Eliachim" part-of-speech="Ne" morphology="---------n" head-id="250177" relation="obj" alignment-id="266916"/>
+      </sentence>
+      <sentence id="12700" status="reviewed" presentation-after=" ">
+        <token id="250179" form="Eliachim" citation-part="MATT 1.13" lemma="Eliachim" part-of-speech="Ne" morphology="---------n" head-id="250181" relation="sub" presentation-after=" " alignment-id="266918"/>
+        <token id="250180" form="autem" citation-part="MATT 1.13" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250181" relation="aux" presentation-after=" " alignment-id="266919"/>
+        <token id="250181" form="genuit" citation-part="MATT 1.13" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266920"/>
+        <token id="250182" form="Azor" citation-part="MATT 1.13" lemma="Azor" part-of-speech="Ne" morphology="---------n" head-id="250181" relation="obj" alignment-id="266922"/>
+      </sentence>
+      <sentence id="12701" status="reviewed" presentation-after=" ">
+        <token id="250183" form="Azor" citation-part="MATT 1.14" lemma="Azor" part-of-speech="Ne" morphology="---------n" head-id="250185" relation="sub" presentation-after=" " alignment-id="266924"/>
+        <token id="250184" form="autem" citation-part="MATT 1.14" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250185" relation="aux" presentation-after=" " alignment-id="266925"/>
+        <token id="250185" form="genuit" citation-part="MATT 1.14" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266926"/>
+        <token id="250186" form="Saddoc" citation-part="MATT 1.14" lemma="Saddoc" part-of-speech="Ne" morphology="---------n" head-id="250185" relation="obj" alignment-id="266928"/>
+      </sentence>
+      <sentence id="12702" status="reviewed" presentation-after=" ">
+        <token id="250187" form="Saddoc" citation-part="MATT 1.14" lemma="Saddoc" part-of-speech="Ne" morphology="---------n" head-id="250189" relation="sub" presentation-after=" " alignment-id="266930"/>
+        <token id="250188" form="autem" citation-part="MATT 1.14" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250189" relation="aux" presentation-after=" " alignment-id="266931"/>
+        <token id="250189" form="genuit" citation-part="MATT 1.14" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266932"/>
+        <token id="250190" form="Achim" citation-part="MATT 1.14" lemma="Achim" part-of-speech="Ne" morphology="---------n" head-id="250189" relation="obj" alignment-id="266934"/>
+      </sentence>
+      <sentence id="12703" status="reviewed" presentation-after=" ">
+        <token id="250191" form="Achim" citation-part="MATT 1.14" lemma="Achim" part-of-speech="Ne" morphology="---------n" head-id="250193" relation="sub" presentation-after=" " alignment-id="266936"/>
+        <token id="250192" form="autem" citation-part="MATT 1.14" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250193" relation="aux" presentation-after=" " alignment-id="266937"/>
+        <token id="250193" form="genuit" citation-part="MATT 1.14" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266938"/>
+        <token id="250194" form="Eliud" citation-part="MATT 1.14" lemma="Eliud" part-of-speech="Ne" morphology="---------n" head-id="250193" relation="obj" alignment-id="266940"/>
+      </sentence>
+      <sentence id="12704" status="reviewed" presentation-after=" ">
+        <token id="250195" form="Eliud" citation-part="MATT 1.15" lemma="Eliud" part-of-speech="Ne" morphology="---------n" head-id="250197" relation="sub" presentation-after=" " alignment-id="266942"/>
+        <token id="250196" form="autem" citation-part="MATT 1.15" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250197" relation="aux" presentation-after=" " alignment-id="266943"/>
+        <token id="250197" form="genuit" citation-part="MATT 1.15" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266944"/>
+        <token id="250198" form="Eleazar" citation-part="MATT 1.15" lemma="Eleazar" part-of-speech="Ne" morphology="---------n" head-id="250197" relation="obj" alignment-id="266946"/>
+      </sentence>
+      <sentence id="12705" status="reviewed" presentation-after=" ">
+        <token id="250199" form="Eleazar" citation-part="MATT 1.15" lemma="Eleazar" part-of-speech="Ne" morphology="---------n" head-id="250201" relation="sub" presentation-after=" " alignment-id="266948"/>
+        <token id="250200" form="autem" citation-part="MATT 1.15" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250201" relation="aux" presentation-after=" " alignment-id="266949"/>
+        <token id="250201" form="genuit" citation-part="MATT 1.15" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266950"/>
+        <token id="250202" form="Matthan" citation-part="MATT 1.15" lemma="Matthan" part-of-speech="Ne" morphology="---------n" head-id="250201" relation="obj" alignment-id="266952"/>
+      </sentence>
+      <sentence id="12706" status="reviewed" presentation-after=" ">
+        <token id="250203" form="Matthan" citation-part="MATT 1.15" lemma="Matthan" part-of-speech="Ne" morphology="---------n" head-id="250205" relation="sub" presentation-after=" " alignment-id="266954"/>
+        <token id="250204" form="autem" citation-part="MATT 1.15" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250205" relation="aux" presentation-after=" " alignment-id="266955"/>
+        <token id="250205" form="genuit" citation-part="MATT 1.15" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266956"/>
+        <token id="250206" form="Iacob" citation-part="MATT 1.15" lemma="Iacob" part-of-speech="Ne" morphology="---------n" head-id="250205" relation="obj" alignment-id="266958"/>
+      </sentence>
+      <sentence id="12707" status="reviewed" presentation-after=" ">
+        <token id="250207" form="Iacob" citation-part="MATT 1.16" lemma="Iacob" part-of-speech="Ne" morphology="---------n" head-id="250209" relation="sub" presentation-after=" " alignment-id="266960"/>
+        <token id="250208" form="autem" citation-part="MATT 1.16" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250209" relation="aux" presentation-after=" " alignment-id="266961"/>
+        <token id="250209" form="genuit" citation-part="MATT 1.16" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="266962"/>
+        <token id="250210" form="Ioseph" citation-part="MATT 1.16" lemma="Ioseph" part-of-speech="Ne" morphology="---------n" head-id="250209" relation="obj" presentation-after=" " alignment-id="266964"/>
+        <token id="250211" form="virum" citation-part="MATT 1.16" lemma="vir" part-of-speech="Nb" morphology="-s---ma--i" head-id="250210" relation="apos" presentation-after=" " alignment-id="266966"/>
+        <token id="250212" form="Mariae" citation-part="MATT 1.16" lemma="Maria" part-of-speech="Ne" morphology="-s---fg--i" head-id="250211" relation="atr" presentation-after=" " alignment-id="266967"/>
+        <token id="250213" form="de" citation-part="MATT 1.16" lemma="de" part-of-speech="R-" morphology="---------n" head-id="250215" relation="obl" presentation-after=" " alignment-id="266969"/>
+        <token id="250214" form="qua" citation-part="MATT 1.16" lemma="qui" part-of-speech="Pr" morphology="-s---fb--i" head-id="250213" relation="obl" presentation-after=" " alignment-id="266970"/>
+        <token id="250215" form="natus" citation-part="MATT 1.16" lemma="nascor" part-of-speech="V-" morphology="-srppmn--i" head-id="250212" relation="atr" presentation-after=" " alignment-id="266971"/>
+        <token id="250216" form="est" citation-part="MATT 1.16" lemma="sum" part-of-speech="V-" morphology="3spia----i" head-id="250215" relation="aux" presentation-after=" "/>
+        <token id="250217" form="Iesus" citation-part="MATT 1.16" lemma="Iesus" part-of-speech="Ne" morphology="-s---mn--i" head-id="250215" relation="sub" presentation-after=" " alignment-id="266972"/>
+        <token id="250218" form="qui" citation-part="MATT 1.16" lemma="qui" part-of-speech="Pr" morphology="-s---mn--i" head-id="250219" relation="sub" presentation-after=" "/>
+        <token id="250219" form="vocatur" citation-part="MATT 1.16" lemma="voco" part-of-speech="V-" morphology="3spip----i" head-id="250217" relation="apos" presentation-after=" " alignment-id="266974"/>
+        <token id="250220" form="Christus" citation-part="MATT 1.16" lemma="Christus" part-of-speech="Ne" morphology="-s---mn--i" head-id="250219" relation="xobj" alignment-id="266975">
+          <slash target-id="250218" relation="xsub"/>
+        </token>
+      </sentence>
+      <sentence id="12708" status="reviewed" presentation-after=" ">
+        <token id="250221" form="omnes" citation-part="MATT 1.17" lemma="omnis" part-of-speech="Px" morphology="-p---fn--i" head-id="250223" relation="atr" presentation-after=" " alignment-id="266977"/>
+        <token id="250222" form="ergo" citation-part="MATT 1.17" lemma="ergo" part-of-speech="Df" morphology="---------n" head-id="266537" relation="aux" presentation-after=" " alignment-id="266978"/>
+        <token id="250223" form="generationes" citation-part="MATT 1.17" lemma="generatio" part-of-speech="Nb" morphology="-p---fn--i" head-id="266537" relation="sub" presentation-after=" " alignment-id="266980"/>
+        <token id="250224" form="ab" citation-part="MATT 1.17" lemma="ab" part-of-speech="R-" morphology="---------n" head-id="250223" relation="atr" presentation-after=" " alignment-id="266981"/>
+        <token id="250225" form="Abraham" citation-part="MATT 1.17" lemma="Abraham" part-of-speech="Ne" morphology="---------n" head-id="250224" relation="obl" presentation-after=" " alignment-id="266982"/>
+        <token id="250226" form="usque" citation-part="MATT 1.17" lemma="usque" part-of-speech="Df" morphology="---------n" head-id="250227" relation="adv" presentation-after=" "/>
+        <token id="250227" form="ad" citation-part="MATT 1.17" lemma="ad" part-of-speech="R-" morphology="---------n" head-id="250223" relation="atr" presentation-after=" " alignment-id="266983"/>
+        <token id="250228" form="David" citation-part="MATT 1.17" lemma="David" part-of-speech="Ne" morphology="---------n" head-id="250227" relation="obl" presentation-after=" " alignment-id="266984"/>
+        <token id="250229" form="generationes" citation-part="MATT 1.17" lemma="generatio" part-of-speech="Nb" morphology="-p---fn--i" head-id="266537" relation="xobj" presentation-after=" " alignment-id="266985">
+          <slash target-id="250223" relation="xsub"/>
+        </token>
+        <token id="250230" form="quattuordecim" citation-part="MATT 1.17" lemma="quattuordecim" part-of-speech="Ma" morphology="---------n" head-id="250229" relation="atr" alignment-id="266986"/>
+        <token id="266537" empty-token-sort="V" citation-part="MATT 1.17" relation="pred"/>
+      </sentence>
+      <sentence id="12709" status="reviewed" presentation-after=" ">
+        <token id="250231" form="et" citation-part="MATT 1.17" lemma="et" part-of-speech="C-" morphology="---------n" head-id="398770" relation="aux" presentation-after=" " alignment-id="266988"/>
+        <token id="250232" form="a" citation-part="MATT 1.17" lemma="ab" part-of-speech="R-" morphology="---------n" head-id="398770" relation="adv" presentation-after=" " alignment-id="266989"/>
+        <token id="250233" form="David" citation-part="MATT 1.17" lemma="David" part-of-speech="Ne" morphology="---------n" head-id="250232" relation="obl" presentation-after=" " alignment-id="266990"/>
+        <token id="250234" form="usque" citation-part="MATT 1.17" lemma="usque" part-of-speech="Df" morphology="---------n" head-id="250235" relation="adv" presentation-after=" "/>
+        <token id="250235" form="ad" citation-part="MATT 1.17" lemma="ad" part-of-speech="R-" morphology="---------n" head-id="398770" relation="adv" presentation-after=" " alignment-id="266991"/>
+        <token id="250236" form="transmigrationem" citation-part="MATT 1.17" lemma="transmigratio" part-of-speech="Nb" morphology="-s---fa--i" head-id="250235" relation="obl" presentation-after=" " alignment-id="266993"/>
+        <token id="250237" form="Babylonis" citation-part="MATT 1.17" lemma="Babylon" part-of-speech="Ne" morphology="-s---fg--i" head-id="250236" relation="narg" presentation-after=" " alignment-id="266994"/>
+        <token id="250238" form="generationes" citation-part="MATT 1.17" lemma="generatio" part-of-speech="Nb" morphology="-p---fn--i" head-id="398770" relation="xobj" presentation-after=" " alignment-id="266995">
+          <slash target-id="398770" relation="xsub"/>
+        </token>
+        <token id="250239" form="quattuordecim" citation-part="MATT 1.17" lemma="quattuordecim" part-of-speech="Ma" morphology="---------n" head-id="250238" relation="atr" alignment-id="266996"/>
+        <token id="398770" empty-token-sort="V" citation-part="MATT 1.17" relation="pred"/>
+      </sentence>
+      <sentence id="12710" status="reviewed" presentation-after=" ">
+        <token id="250240" form="et" citation-part="MATT 1.17" lemma="et" part-of-speech="C-" morphology="---------n" head-id="398771" relation="aux" presentation-after=" " alignment-id="266998"/>
+        <token id="250241" form="a" citation-part="MATT 1.17" lemma="ab" part-of-speech="R-" morphology="---------n" head-id="398771" relation="adv" presentation-after=" " alignment-id="266999"/>
+        <token id="250242" form="transmigratione" citation-part="MATT 1.17" lemma="transmigratio" part-of-speech="Nb" morphology="-s---fb--i" head-id="250241" relation="obl" presentation-after=" " alignment-id="267001"/>
+        <token id="250243" form="Babylonis" citation-part="MATT 1.17" lemma="Babylon" part-of-speech="Ne" morphology="-s---fg--i" head-id="250242" relation="narg" presentation-after=" " alignment-id="267002"/>
+        <token id="250244" form="usque" citation-part="MATT 1.17" lemma="usque" part-of-speech="Df" morphology="---------n" head-id="250245" relation="adv" presentation-after=" "/>
+        <token id="250245" form="ad" citation-part="MATT 1.17" lemma="ad" part-of-speech="R-" morphology="---------n" head-id="398771" relation="adv" presentation-after=" " alignment-id="267003"/>
+        <token id="250246" form="Christum" citation-part="MATT 1.17" lemma="Christus" part-of-speech="Ne" morphology="-s---ma--i" head-id="250245" relation="obl" presentation-after=" " alignment-id="267005"/>
+        <token id="250247" form="generationes" citation-part="MATT 1.17" lemma="generatio" part-of-speech="Nb" morphology="-p---fn--i" head-id="398771" relation="xobj" presentation-after=" " alignment-id="267006">
+          <slash target-id="398771" relation="xsub"/>
+        </token>
+        <token id="250248" form="quattuordecim" citation-part="MATT 1.17" lemma="quattuordecim" part-of-speech="Ma" morphology="---------n" head-id="250247" relation="atr" alignment-id="267007"/>
+        <token id="398771" empty-token-sort="V" citation-part="MATT 1.17" relation="pred"/>
+      </sentence>
+      <sentence id="12711" status="reviewed" presentation-after=" ">
+        <token id="250249" form="Christi" citation-part="MATT 1.18" lemma="Christus" part-of-speech="Ne" morphology="-s---mg--i" head-id="250251" relation="atr" presentation-after=" " alignment-id="267011"/>
+        <token id="250250" form="autem" citation-part="MATT 1.18" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250253" relation="aux" presentation-after=" " alignment-id="267010"/>
+        <token id="250251" form="generatio" citation-part="MATT 1.18" lemma="generatio" part-of-speech="Nb" morphology="-s---fn--i" head-id="250253" relation="sub" presentation-after=" " alignment-id="267014"/>
+        <token id="250252" form="sic" citation-part="MATT 1.18" lemma="sic" part-of-speech="Df" morphology="---------n" head-id="250253" relation="xobj" presentation-after=" " alignment-id="267015">
+          <slash target-id="250251" relation="xsub"/>
+        </token>
+        <token id="250253" form="erat" citation-part="MATT 1.18" lemma="sum" part-of-speech="V-" morphology="3siia----i" relation="pred" alignment-id="267016"/>
+      </sentence>
+      <sentence id="12712" status="reviewed" presentation-after=" ">
+        <token id="250254" form="cum" citation-part="MATT 1.18" lemma="cum" part-of-speech="G-" morphology="---------n" head-id="250263" relation="adv" presentation-after=" "/>
+        <token id="250255" form="esset" citation-part="MATT 1.18" lemma="sum" part-of-speech="V-" morphology="3sisa----i" head-id="250256" relation="aux" presentation-after=" "/>
+        <token id="250256" form="desponsata" citation-part="MATT 1.18" lemma="desponsor" part-of-speech="V-" morphology="-srppfn--i" head-id="250254" relation="pred" presentation-after=" " alignment-id="267018"/>
+        <token id="250257" form="mater" citation-part="MATT 1.18" lemma="mater" part-of-speech="Nb" morphology="-s---fn--i" head-id="250256" relation="sub" presentation-after=" " alignment-id="267020"/>
+        <token id="250258" form="eius" citation-part="MATT 1.18" lemma="is" part-of-speech="Pp" morphology="3s---mg--i" head-id="250257" relation="atr" presentation-after=" " alignment-id="267021"/>
+        <token id="250259" form="Maria" citation-part="MATT 1.18" lemma="Maria" part-of-speech="Ne" morphology="-s---fn--i" head-id="250257" relation="apos" presentation-after=" " alignment-id="267022"/>
+        <token id="250260" form="Ioseph" citation-part="MATT 1.18" lemma="Ioseph" part-of-speech="Ne" morphology="---------n" head-id="250256" relation="obl" presentation-after=" " alignment-id="267024"/>
+        <token id="250261" form="antequam" citation-part="MATT 1.18" lemma="antequam" part-of-speech="G-" morphology="---------n" head-id="250263" relation="adv" presentation-after=" " alignment-id="267026"/>
+        <token id="250262" form="convenirent" citation-part="MATT 1.18" lemma="convenio" part-of-speech="V-" morphology="3pisa----i" head-id="250261" relation="pred" presentation-after=" " alignment-id="267028"/>
+        <token id="250263" form="inventa" citation-part="MATT 1.18" lemma="invenio" part-of-speech="V-" morphology="-srppfn--i" relation="pred" presentation-after=" " alignment-id="267030">
+          <slash target-id="250257" relation="sub"/>
+        </token>
+        <token id="250264" form="est" citation-part="MATT 1.18" lemma="sum" part-of-speech="V-" morphology="3spia----i" head-id="250263" relation="aux" presentation-after=" "/>
+        <token id="250265" form="in" citation-part="MATT 1.18" lemma="in" part-of-speech="R-" morphology="---------n" head-id="250267" relation="adv" presentation-after=" " alignment-id="267031"/>
+        <token id="250266" form="utero" citation-part="MATT 1.18" lemma="uterus" part-of-speech="Nb" morphology="-s---mb--i" head-id="250265" relation="obl" presentation-after=" " alignment-id="267032"/>
+        <token id="250267" form="habens" citation-part="MATT 1.18" lemma="habeo" part-of-speech="V-" morphology="-sppafn--i" head-id="250263" relation="xobj" presentation-after=" " alignment-id="267033">
+          <slash target-id="250263" relation="xsub"/>
+        </token>
+        <token id="250268" form="de" citation-part="MATT 1.18" lemma="de" part-of-speech="R-" morphology="---------n" head-id="250267" relation="obl" presentation-after=" " alignment-id="267034"/>
+        <token id="250269" form="Spiritu" citation-part="MATT 1.18" lemma="spiritus" part-of-speech="Nb" morphology="-s---mb--i" head-id="250268" relation="obl" presentation-after=" " alignment-id="267035"/>
+        <token id="250270" form="Sancto" citation-part="MATT 1.18" lemma="sanctus" part-of-speech="A-" morphology="-s---mbp-i" head-id="250269" relation="atr" alignment-id="267036"/>
+      </sentence>
+      <sentence id="12713" status="reviewed" presentation-after=" ">
+        <token id="250271" form="Ioseph" citation-part="MATT 1.19" lemma="Ioseph" part-of-speech="Ne" morphology="---------n" head-id="250282" relation="sub" presentation-after=" " alignment-id="267038"/>
+        <token id="250272" form="autem" citation-part="MATT 1.19" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250282" relation="aux" presentation-after=" " alignment-id="267039"/>
+        <token id="250273" form="vir" citation-part="MATT 1.19" lemma="vir" part-of-speech="Nb" morphology="-s---mn--i" head-id="250271" relation="apos" presentation-after=" " alignment-id="267041"/>
+        <token id="250274" form="eius" citation-part="MATT 1.19" lemma="is" part-of-speech="Pp" morphology="3s---fg--i" head-id="250273" relation="atr" presentation-after=" " alignment-id="267042"/>
+        <token id="250275" form="cum" citation-part="MATT 1.19" lemma="cum" part-of-speech="G-" morphology="---------n" head-id="250282" relation="adv" presentation-after=" "/>
+        <token id="250276" form="esset" citation-part="MATT 1.19" lemma="sum" part-of-speech="V-" morphology="3sisa----i" head-id="250278" relation="pred" presentation-after=" " alignment-id="267045">
+          <slash target-id="250271" relation="sub"/>
+        </token>
+        <token id="250277" form="iustus" citation-part="MATT 1.19" lemma="iustus" part-of-speech="A-" morphology="-s---mnp-i" head-id="250276" relation="xobj" presentation-after=" " alignment-id="267044">
+          <slash target-id="250276" relation="xsub"/>
+        </token>
+        <token id="250278" form="et" citation-part="MATT 1.19" lemma="et" part-of-speech="C-" morphology="---------n" head-id="250275" relation="pred" presentation-after=" " alignment-id="267046"/>
+        <token id="250279" form="nollet" citation-part="MATT 1.19" lemma="nolo" part-of-speech="V-" morphology="3sisa----i" head-id="250278" relation="pred" presentation-after=" " alignment-id="267048">
+          <slash target-id="250271" relation="sub"/>
+        </token>
+        <token id="250280" form="eam" citation-part="MATT 1.19" lemma="is" part-of-speech="Pp" morphology="3s---fa--i" head-id="250281" relation="obj" presentation-after=" " alignment-id="267049"/>
+        <token id="250281" form="traducere" citation-part="MATT 1.19" lemma="traduco" part-of-speech="V-" morphology="--pna----i" head-id="250279" relation="xobj" presentation-after=" " alignment-id="267050">
+          <slash target-id="250279" relation="xsub"/>
+        </token>
+        <token id="250282" form="voluit" citation-part="MATT 1.19" lemma="volo#1" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="267052"/>
+        <token id="250283" form="occulte" citation-part="MATT 1.19" lemma="occulte" part-of-speech="Df" morphology="-------p-i" head-id="250284" relation="adv" presentation-after=" " alignment-id="267053"/>
+        <token id="250284" form="dimittere" citation-part="MATT 1.19" lemma="dimitto" part-of-speech="V-" morphology="--pna----i" head-id="250282" relation="xobj" presentation-after=" " alignment-id="267054">
+          <slash target-id="250271" relation="xsub"/>
+        </token>
+        <token id="250285" form="eam" citation-part="MATT 1.19" lemma="is" part-of-speech="Pp" morphology="3s---fa--i" head-id="250284" relation="obj" alignment-id="267055"/>
+      </sentence>
+      <sentence id="12714" status="reviewed" presentation-after=" ">
+        <token id="250286" form="haec" citation-part="MATT 1.20" lemma="hic" part-of-speech="Pd" morphology="-p---na--i" head-id="250289" relation="obj" presentation-after=" " alignment-id="267057"/>
+        <token id="250287" form="autem" citation-part="MATT 1.20" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250295" relation="aux" presentation-after=" " alignment-id="267058"/>
+        <token id="250288" form="eo" citation-part="MATT 1.20" lemma="is" part-of-speech="Pp" morphology="3s---mb--i" head-id="250289" relation="sub" presentation-after=" " alignment-id="267059"/>
+        <token id="250289" form="cogitante" citation-part="MATT 1.20" lemma="cogito" part-of-speech="V-" morphology="-sppamb--i" head-id="250295" relation="adv" presentation-after=" " alignment-id="267060"/>
+        <token id="250290" form="ecce" citation-part="MATT 1.20" lemma="ecce" part-of-speech="I-" morphology="---------n" head-id="250295" relation="aux" presentation-after=" " alignment-id="267061"/>
+        <token id="250291" form="angelus" citation-part="MATT 1.20" lemma="angelus" part-of-speech="Nb" morphology="-s---mn--i" head-id="250295" relation="sub" presentation-after=" " alignment-id="267062"/>
+        <token id="250292" form="Domini" citation-part="MATT 1.20" lemma="dominus" part-of-speech="Nb" morphology="-s---mg--i" head-id="250291" relation="atr" presentation-after=" " alignment-id="267063"/>
+        <token id="250293" form="in" citation-part="MATT 1.20" lemma="in" part-of-speech="R-" morphology="---------n" head-id="250295" relation="adv" presentation-after=" " alignment-id="267064"/>
+        <token id="250294" form="somnis" citation-part="MATT 1.20" lemma="somnus" part-of-speech="Nb" morphology="-p---mb--i" head-id="250293" relation="obl" presentation-after=" " alignment-id="267065"/>
+        <token id="250295" form="apparuit" citation-part="MATT 1.20" lemma="appareo" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="267066">
+          <slash target-id="250296" relation="obl"/>
+        </token>
+        <token id="250296" form="ei" citation-part="MATT 1.20" lemma="is" part-of-speech="Pp" morphology="3s---md--i" head-id="250297" relation="obl" presentation-after=" " alignment-id="267067"/>
+        <token id="250297" form="dicens" citation-part="MATT 1.20" lemma="dico" part-of-speech="V-" morphology="-sppamn--i" head-id="250295" relation="xadv" alignment-id="267068">
+          <slash target-id="250291" relation="xsub"/>
+        </token>
+      </sentence>
+      <sentence id="12715" status="reviewed" presentation-after=" ">
+        <token id="250298" form="Ioseph" citation-part="MATT 1.20" lemma="Ioseph" part-of-speech="Ne" morphology="---------n" relation="voc" presentation-after=" " alignment-id="267070"/>
+        <token id="250299" form="fili" citation-part="MATT 1.20" lemma="filius" part-of-speech="Nb" morphology="-s---mg--i" head-id="250298" relation="apos" presentation-after=" " alignment-id="267071"/>
+        <token id="250300" form="David" citation-part="MATT 1.20" lemma="David" part-of-speech="Ne" morphology="---------n" head-id="250299" relation="atr" presentation-after=" " alignment-id="267072"/>
+        <token id="250301" form="noli" citation-part="MATT 1.20" lemma="nolo" part-of-speech="V-" morphology="2spma----i" relation="pred" presentation-after=" " alignment-id="267075"/>
+        <token id="250302" form="timere" citation-part="MATT 1.20" lemma="timeo" part-of-speech="V-" morphology="--pna----i" head-id="250301" relation="xobj" presentation-after=" ">
+          <slash target-id="250301" relation="xsub"/>
+        </token>
+        <token id="250303" form="accipere" citation-part="MATT 1.20" lemma="accipio" part-of-speech="V-" morphology="--pna----i" head-id="250302" relation="xobj" presentation-after=" " alignment-id="267076">
+          <slash target-id="250302" relation="xsub"/>
+        </token>
+        <token id="250304" form="Mariam" citation-part="MATT 1.20" lemma="Maria" part-of-speech="Ne" morphology="-s---fa--i" head-id="250303" relation="obj" presentation-after=" " alignment-id="267077"/>
+        <token id="250305" form="coniugem" citation-part="MATT 1.20" lemma="coniunx" part-of-speech="Nb" morphology="-s---fa--i" head-id="250303" relation="xobj" presentation-after=" " alignment-id="267079">
+          <slash target-id="250304" relation="xsub"/>
+        </token>
+        <token id="250306" form="tuam" citation-part="MATT 1.20" lemma="tuus" part-of-speech="Ps" morphology="2s---fa--i" head-id="250305" relation="atr" alignment-id="267080"/>
+      </sentence>
+      <sentence id="12716" status="reviewed" presentation-after=" ">
+        <token id="250307" form="quod" citation-part="MATT 1.20" lemma="qui" part-of-speech="Pr" morphology="-s---nn--i" head-id="250311" relation="sub" presentation-after=" "/>
+        <token id="250308" form="enim" citation-part="MATT 1.20" lemma="enim" part-of-speech="Df" morphology="---------n" head-id="250316" relation="aux" presentation-after=" " alignment-id="267083"/>
+        <token id="250309" form="in" citation-part="MATT 1.20" lemma="in" part-of-speech="R-" morphology="---------n" head-id="250311" relation="adv" presentation-after=" " alignment-id="267084"/>
+        <token id="250310" form="ea" citation-part="MATT 1.20" lemma="is" part-of-speech="Pp" morphology="3p---na--i" head-id="250309" relation="obl" presentation-after=" " alignment-id="267085"/>
+        <token id="250311" form="natum" citation-part="MATT 1.20" lemma="nascor" part-of-speech="V-" morphology="-srppnn--i" head-id="250316" relation="sub" presentation-after=" " alignment-id="267086"/>
+        <token id="250312" form="est" citation-part="MATT 1.20" lemma="sum" part-of-speech="V-" morphology="3spia----i" head-id="250311" relation="aux" presentation-after=" "/>
+        <token id="250313" form="de" citation-part="MATT 1.20" lemma="de" part-of-speech="R-" morphology="---------n" head-id="250316" relation="xobj" presentation-after=" " alignment-id="267087">
+          <slash target-id="250311" relation="xsub"/>
+        </token>
+        <token id="250314" form="Spiritu" citation-part="MATT 1.20" lemma="spiritus" part-of-speech="Nb" morphology="-s---mb--i" head-id="250313" relation="obl" presentation-after=" " alignment-id="267088"/>
+        <token id="250315" form="Sancto" citation-part="MATT 1.20" lemma="sanctus" part-of-speech="A-" morphology="-s---mbp-i" head-id="250314" relation="atr" presentation-after=" " alignment-id="267090"/>
+        <token id="250316" form="est" citation-part="MATT 1.20" lemma="sum" part-of-speech="V-" morphology="3spia----i" relation="pred" alignment-id="267089"/>
+      </sentence>
+      <sentence id="12717" status="reviewed" presentation-after=" ">
+        <token id="250317" form="pariet" citation-part="MATT 1.21" lemma="pario" part-of-speech="V-" morphology="3sfia----i" relation="pred" presentation-after=" " alignment-id="267092"/>
+        <token id="250318" form="autem" citation-part="MATT 1.21" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250317" relation="aux" presentation-after=" " alignment-id="267093"/>
+        <token id="250319" form="filium" citation-part="MATT 1.21" lemma="filius" part-of-speech="Nb" morphology="-s---ma--i" head-id="250317" relation="obj" alignment-id="267094"/>
+      </sentence>
+      <sentence id="12718" status="reviewed" presentation-after=" ">
+        <token id="250320" form="et" citation-part="MATT 1.21" lemma="et" part-of-speech="C-" morphology="---------n" head-id="250321" relation="aux" presentation-after=" " alignment-id="267095"/>
+        <token id="250321" form="vocabis" citation-part="MATT 1.21" lemma="voco" part-of-speech="V-" morphology="2sfia----i" relation="pred" presentation-after=" " alignment-id="267096"/>
+        <token id="250322" form="nomen" citation-part="MATT 1.21" lemma="nomen" part-of-speech="Nb" morphology="-s---na--i" head-id="250321" relation="obj" presentation-after=" " alignment-id="267098"/>
+        <token id="250323" form="eius" citation-part="MATT 1.21" lemma="is" part-of-speech="Pp" morphology="3s---mg--i" head-id="250322" relation="atr" presentation-after=" " alignment-id="267099"/>
+        <token id="250324" form="Iesum" citation-part="MATT 1.21" lemma="Iesus" part-of-speech="Ne" morphology="-s---ma--i" head-id="250321" relation="xobj" alignment-id="267100">
+          <slash target-id="250322" relation="xsub"/>
+        </token>
+      </sentence>
+      <sentence id="12719" status="reviewed" presentation-after=" ">
+        <token id="250325" form="ipse" citation-part="MATT 1.21" lemma="ipse" part-of-speech="Pp" morphology="3s---mn--i" head-id="250328" relation="sub" presentation-after=" " alignment-id="267102"/>
+        <token id="250326" form="enim" citation-part="MATT 1.21" lemma="enim" part-of-speech="Df" morphology="---------n" head-id="250328" relation="aux" presentation-after=" " alignment-id="267103"/>
+        <token id="250327" form="salvum" citation-part="MATT 1.21" lemma="salvus" part-of-speech="A-" morphology="-s---map-i" head-id="250328" relation="xobj" presentation-after=" " alignment-id="267104">
+          <slash target-id="250329" relation="xsub"/>
+        </token>
+        <token id="250328" form="faciet" citation-part="MATT 1.21" lemma="facio" part-of-speech="V-" morphology="3sfia----i" relation="pred" presentation-after=" "/>
+        <token id="250329" form="populum" citation-part="MATT 1.21" lemma="populus" part-of-speech="Nb" morphology="-s---ma--i" head-id="250328" relation="obj" presentation-after=" " alignment-id="267106"/>
+        <token id="250330" form="suum" citation-part="MATT 1.21" lemma="suus" part-of-speech="Pt" morphology="3s---ma--i" head-id="250329" relation="atr" presentation-after=" " alignment-id="267107"/>
+        <token id="250331" form="a" citation-part="MATT 1.21" lemma="ab" part-of-speech="R-" morphology="---------n" head-id="250327" relation="obl" presentation-after=" " alignment-id="267108"/>
+        <token id="250332" form="peccatis" citation-part="MATT 1.21" lemma="peccatum" part-of-speech="Nb" morphology="-p---nb--i" head-id="250331" relation="obl" presentation-after=" " alignment-id="267110"/>
+        <token id="250333" form="eorum" citation-part="MATT 1.21" lemma="is" part-of-speech="Pp" morphology="3p---mg--i" head-id="250332" relation="atr" alignment-id="267111"/>
+      </sentence>
+      <sentence id="12720" status="reviewed" presentation-after=" ">
+        <token id="250334" form="hoc" citation-part="MATT 1.22" lemma="hic" part-of-speech="Pd" morphology="-s---nn--i" head-id="250337" relation="sub" presentation-after=" " alignment-id="267113"/>
+        <token id="250335" form="autem" citation-part="MATT 1.22" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250337" relation="aux" presentation-after=" " alignment-id="267114"/>
+        <token id="250336" form="totum" citation-part="MATT 1.22" lemma="totus" part-of-speech="A-" morphology="-s---nnp-i" head-id="250334" relation="atr" presentation-after=" " alignment-id="267115"/>
+        <token id="250337" form="factum" citation-part="MATT 1.22" lemma="facio" part-of-speech="V-" morphology="-srppnn--i" relation="pred" presentation-after=" " alignment-id="267116"/>
+        <token id="250338" form="est" citation-part="MATT 1.22" lemma="sum" part-of-speech="V-" morphology="3spia----i" head-id="250337" relation="aux" presentation-after=" "/>
+        <token id="250339" form="ut" citation-part="MATT 1.22" lemma="ut" part-of-speech="G-" morphology="---------n" head-id="250337" relation="adv" presentation-after=" " alignment-id="267117"/>
+        <token id="250340" form="adimpleretur" citation-part="MATT 1.22" lemma="adimpleo" part-of-speech="V-" morphology="3sisp----i" head-id="250339" relation="pred" presentation-after=" " alignment-id="267118"/>
+        <token id="250341" form="id" citation-part="MATT 1.22" lemma="is" part-of-speech="Pp" morphology="3s---nn--i" head-id="250340" relation="sub" presentation-after=" "/>
+        <token id="250342" form="quod" citation-part="MATT 1.22" lemma="qui" part-of-speech="Pr" morphology="-s---nn--i" head-id="250343" relation="sub" presentation-after=" "/>
+        <token id="250343" form="dictum" citation-part="MATT 1.22" lemma="dico" part-of-speech="V-" morphology="-srppnn--i" head-id="250341" relation="atr" presentation-after=" " alignment-id="267120"/>
+        <token id="250344" form="est" citation-part="MATT 1.22" lemma="sum" part-of-speech="V-" morphology="3spia----i" head-id="250343" relation="aux" presentation-after=" "/>
+        <token id="250345" form="a" citation-part="MATT 1.22" lemma="ab" part-of-speech="R-" morphology="---------n" head-id="250343" relation="ag" presentation-after=" " alignment-id="267121"/>
+        <token id="250346" form="Domino" citation-part="MATT 1.22" lemma="dominus" part-of-speech="Nb" morphology="-s---mb--i" head-id="250345" relation="obl" presentation-after=" " alignment-id="267122"/>
+        <token id="250347" form="per" citation-part="MATT 1.22" lemma="per" part-of-speech="R-" morphology="---------n" head-id="250343" relation="adv" presentation-after=" " alignment-id="267123"/>
+        <token id="250348" form="prophetam" citation-part="MATT 1.22" lemma="propheta" part-of-speech="Nb" morphology="-s---ma--i" head-id="250347" relation="obl" presentation-after=" " alignment-id="267125"/>
+        <token id="250349" form="dicentem" citation-part="MATT 1.22" lemma="dico" part-of-speech="V-" morphology="-sppama--i" head-id="250343" relation="xadv" alignment-id="267126">
+          <slash target-id="250348" relation="xsub"/>
+        </token>
+      </sentence>
+      <sentence id="12721" status="reviewed" presentation-after=" ">
+        <token id="250350" form="ecce" citation-part="MATT 1.23" lemma="ecce" part-of-speech="I-" morphology="---------n" head-id="250354" relation="aux" presentation-after=" " alignment-id="267128"/>
+        <token id="250351" form="virgo" citation-part="MATT 1.23" lemma="virgo" part-of-speech="Nb" morphology="-s---fn--i" head-id="250354" relation="sub" presentation-after=" " alignment-id="267130"/>
+        <token id="250352" form="in" citation-part="MATT 1.23" lemma="in" part-of-speech="R-" morphology="---------n" head-id="250354" relation="adv" presentation-after=" " alignment-id="267131"/>
+        <token id="250353" form="utero" citation-part="MATT 1.23" lemma="uterus" part-of-speech="Nb" morphology="-s---mb--i" head-id="250352" relation="obl" presentation-after=" " alignment-id="267132"/>
+        <token id="250354" form="habebit" citation-part="MATT 1.23" lemma="habeo" part-of-speech="V-" morphology="3sfia----i" head-id="250355" relation="pred" presentation-after=" " alignment-id="267133"/>
+        <token id="250355" form="et" citation-part="MATT 1.23" lemma="et" part-of-speech="C-" morphology="---------n" relation="pred" presentation-after=" " alignment-id="267134"/>
+        <token id="250356" form="pariet" citation-part="MATT 1.23" lemma="pario" part-of-speech="V-" morphology="3sfia----i" head-id="250355" relation="pred" presentation-after=" " alignment-id="267135">
+          <slash target-id="250351" relation="sub"/>
+        </token>
+        <token id="250357" form="filium" citation-part="MATT 1.23" lemma="filius" part-of-speech="Nb" morphology="-s---ma--i" head-id="250356" relation="obj" alignment-id="267136"/>
+      </sentence>
+      <sentence id="12722" status="reviewed" presentation-after=" ">
+        <token id="250358" form="et" citation-part="MATT 1.23" lemma="et" part-of-speech="C-" morphology="---------n" head-id="250359" relation="aux" presentation-after=" " alignment-id="267138"/>
+        <token id="250359" form="vocabunt" citation-part="MATT 1.23" lemma="voco" part-of-speech="V-" morphology="3pfia----i" relation="pred" presentation-after=" " alignment-id="267139"/>
+        <token id="250360" form="nomen" citation-part="MATT 1.23" lemma="nomen" part-of-speech="Nb" morphology="-s---na--i" head-id="250359" relation="obj" presentation-after=" " alignment-id="267141"/>
+        <token id="250361" form="eius" citation-part="MATT 1.23" lemma="is" part-of-speech="Pp" morphology="3s---mg--i" head-id="250360" relation="atr" presentation-after=" " alignment-id="267142"/>
+        <token id="250362" form="Emmanuhel" citation-part="MATT 1.23" lemma="Emmanuhel" part-of-speech="Ne" morphology="---------n" head-id="250359" relation="xobj" presentation-after=" " alignment-id="267143">
+          <slash target-id="250360" relation="xsub"/>
+        </token>
+        <token id="250363" form="quod" citation-part="MATT 1.23" lemma="qui" part-of-speech="Pr" morphology="-s---nn--i" head-id="250365" relation="sub" presentation-after=" " alignment-id="267145"/>
+        <token id="250364" form="est" citation-part="MATT 1.23" lemma="sum" part-of-speech="V-" morphology="3spia----i" head-id="250365" relation="aux" presentation-after=" " alignment-id="267146"/>
+        <token id="250365" form="interpretatum" citation-part="MATT 1.23" lemma="interpretor" part-of-speech="V-" morphology="-srppnn--i" head-id="250362" relation="apos" presentation-after=" " alignment-id="267147"/>
+        <token id="250367" form="Nobis" citation-part="MATT 1.23" lemma="nos" part-of-speech="Pp" morphology="1p---pb--i" head-id="250366" relation="obl" alignment-id="267149"/>
+        <token id="250366" form="cum" citation-part="MATT 1.23" lemma="cum" part-of-speech="R-" morphology="---------n" head-id="398622" relation="xobj" presentation-after=" " alignment-id="267148">
+          <slash target-id="250368" relation="xsub"/>
+        </token>
+        <token id="250368" form="Deus" citation-part="MATT 1.23" lemma="deus" part-of-speech="Nb" morphology="-s---mn--i" head-id="398622" relation="sub" alignment-id="267151">
+          <slash target-id="250363" relation="sub"/>
+        </token>
+        <token id="398622" empty-token-sort="V" citation-part="MATT 1.23" head-id="250365" relation="xobj">
+          <slash target-id="250363" relation="xsub"/>
+        </token>
+      </sentence>
+      <sentence id="12723" status="reviewed" presentation-after=" ">
+        <token id="250369" form="exsurgens" citation-part="MATT 1.24" lemma="ex(s)urgo" part-of-speech="V-" morphology="-sppamn--i" head-id="250374" relation="xadv" presentation-after=" " alignment-id="267153">
+          <slash target-id="250371" relation="xsub"/>
+        </token>
+        <token id="250370" form="autem" citation-part="MATT 1.24" lemma="autem" part-of-speech="Df" morphology="---------n" head-id="250374" relation="aux" presentation-after=" " alignment-id="267154"/>
+        <token id="250371" form="Ioseph" citation-part="MATT 1.24" lemma="Ioseph" part-of-speech="Ne" morphology="---------n" head-id="250374" relation="sub" presentation-after=" " alignment-id="267155"/>
+        <token id="250372" form="a" citation-part="MATT 1.24" lemma="ab" part-of-speech="R-" morphology="---------n" head-id="250369" relation="obl" presentation-after=" " alignment-id="267156"/>
+        <token id="250373" form="somno" citation-part="MATT 1.24" lemma="somnus" part-of-speech="Nb" morphology="-s---mb--i" head-id="250372" relation="obl" presentation-after=" " alignment-id="267158"/>
+        <token id="250374" form="fecit" citation-part="MATT 1.24" lemma="facio" part-of-speech="V-" morphology="3sria----i" head-id="250380" relation="pred" presentation-after=" " alignment-id="267159"/>
+        <token id="250375" form="sicut" citation-part="MATT 1.24" lemma="sicut" part-of-speech="Dq" morphology="---------n" head-id="250376" relation="adv" presentation-after=" " alignment-id="267160"/>
+        <token id="250376" form="praecepit" citation-part="MATT 1.24" lemma="praecipio" part-of-speech="V-" morphology="3sria----i" head-id="250374" relation="adv" presentation-after=" " alignment-id="267161"/>
+        <token id="250377" form="ei" citation-part="MATT 1.24" lemma="is" part-of-speech="Pp" morphology="3s---md--i" head-id="250376" relation="obl" presentation-after=" " alignment-id="267162"/>
+        <token id="250378" form="angelus" citation-part="MATT 1.24" lemma="angelus" part-of-speech="Nb" morphology="-s---mn--i" head-id="250376" relation="sub" presentation-after=" " alignment-id="267164"/>
+        <token id="250379" form="Domini" citation-part="MATT 1.24" lemma="dominus" part-of-speech="Nb" morphology="-s---mg--i" head-id="250378" relation="atr" presentation-after=" " alignment-id="267165"/>
+        <token id="250380" form="et" citation-part="MATT 1.24" lemma="et" part-of-speech="C-" morphology="---------n" relation="pred" presentation-after=" " alignment-id="267166"/>
+        <token id="250381" form="accepit" citation-part="MATT 1.24" lemma="accipio" part-of-speech="V-" morphology="3sria----i" head-id="250380" relation="pred" presentation-after=" " alignment-id="267167">
+          <slash target-id="250371" relation="sub"/>
+        </token>
+        <token id="250382" form="coniugem" citation-part="MATT 1.24" lemma="coniunx" part-of-speech="Nb" morphology="-s---ma--i" head-id="250381" relation="obj" presentation-after=" " alignment-id="267169"/>
+        <token id="250383" form="suam" citation-part="MATT 1.24" lemma="suus" part-of-speech="Pt" morphology="3s---fa--i" head-id="250382" relation="atr" alignment-id="267170"/>
+      </sentence>
+      <sentence id="12724" status="reviewed" presentation-after=" ">
+        <token id="250384" form="et" citation-part="MATT 1.25" lemma="et" part-of-speech="C-" morphology="---------n" head-id="250386" relation="aux" presentation-after=" " alignment-id="267172"/>
+        <token id="250385" form="non" citation-part="MATT 1.25" lemma="non" part-of-speech="Df" morphology="---------n" head-id="250386" relation="aux" presentation-after=" " alignment-id="267173"/>
+        <token id="250386" form="cognoscebat" citation-part="MATT 1.25" lemma="cognosco" part-of-speech="V-" morphology="3siia----i" relation="pred" presentation-after=" " alignment-id="267174"/>
+        <token id="250387" form="eam" citation-part="MATT 1.25" lemma="is" part-of-speech="Pp" morphology="3s---fa--i" head-id="250386" relation="obj" presentation-after=" " alignment-id="267175"/>
+        <token id="250388" form="donec" citation-part="MATT 1.25" lemma="donec" part-of-speech="G-" morphology="---------n" head-id="250386" relation="adv" presentation-after=" " alignment-id="267176"/>
+        <token id="250389" form="peperit" citation-part="MATT 1.25" lemma="pario" part-of-speech="V-" morphology="3sria----i" head-id="250388" relation="pred" presentation-after=" " alignment-id="267178"/>
+        <token id="250390" form="filium" citation-part="MATT 1.25" lemma="filius" part-of-speech="Nb" morphology="-s---ma--i" head-id="250389" relation="obj" presentation-after=" " alignment-id="267179"/>
+        <token id="250391" form="suum" citation-part="MATT 1.25" lemma="suus" part-of-speech="Pt" morphology="3s---ma--i" head-id="250390" relation="atr" presentation-after=" "/>
+        <token id="250392" form="primogenitum" citation-part="MATT 1.25" lemma="primogenitus" part-of-speech="A-" morphology="-s---map-i" head-id="250390" relation="atr"/>
+      </sentence>
+      <sentence id="12725" status="reviewed" presentation-after=" ">
+        <token id="250393" form="et" citation-part="MATT 1.25" lemma="et" part-of-speech="C-" morphology="---------n" head-id="250394" relation="aux" presentation-after=" " alignment-id="267181"/>
+        <token id="250394" form="vocavit" citation-part="MATT 1.25" lemma="voco" part-of-speech="V-" morphology="3sria----i" relation="pred" presentation-after=" " alignment-id="267182"/>
+        <token id="250395" form="nomen" citation-part="MATT 1.25" lemma="nomen" part-of-speech="Nb" morphology="-s---na--i" head-id="250394" relation="obj" presentation-after=" " alignment-id="267184"/>
+        <token id="250396" form="eius" citation-part="MATT 1.25" lemma="is" part-of-speech="Pp" morphology="3s---mg--i" head-id="250395" relation="atr" presentation-after=" " alignment-id="267185"/>
+        <token id="250397" form="Iesum" citation-part="MATT 1.25" lemma="Iesus" part-of-speech="Ne" morphology="-s---ma--i" head-id="250394" relation="xobj" alignment-id="267186">
+          <slash target-id="250395" relation="xsub"/>
+        </token>
+      </sentence>
+    </div>
+  </source>
+</proiel>
