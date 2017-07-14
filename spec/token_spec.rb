@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2015-2016 Marius L. Jøhndal
+# Copyright (c) 2015-2017 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -64,6 +64,12 @@ describe PROIEL::Token do
     token = sentence.tokens.first
 
     expect(token.printable_form).to eql('Gallia ')
+
+    formatter = lambda { |token|
+      '1' + token.form + '1'
+    }
+
+    expect(token.printable_form(custom_token_formatter: formatter)).to eql('1Gallia1 ')
   end
 
   it 'provides access to the language' do
