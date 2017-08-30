@@ -116,7 +116,7 @@ module PROIEL
     # @return [String] the printable form of the sentence
     def printable_form(options = {})
       [presentation_before,
-       @children.map { |t| t.printable_form(options) },
+       @children.reject(&:is_empty?).map { |t| t.printable_form(options) },
        presentation_after].compact.join
     end
 
