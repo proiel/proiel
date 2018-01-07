@@ -1,7 +1,9 @@
 module PROIEL::Valency::Obliqueness
   # Sorts frames by obliqueness
   def self.sort_frames(frames)
-    frames.sort_by { |frame| obliqueness_of_arguments(frame[:arguments]).sort }
+    # Sort frames by obliqueness, then by inspecting them so that we get
+    # a stable, reproducible order.
+    frames.sort_by { |frame| [obliqueness_of_arguments(frame[:arguments]).sort, frame.inspect] }
   end
 
   # Sorts arguments by obliqueness
