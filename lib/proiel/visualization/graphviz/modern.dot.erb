@@ -26,5 +26,7 @@ digraph G {
     <%- @graph.tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
       <%= node "T#{token.id}", token.form, shape: :none -%>
     <%- end -%>  
+
+    <%= @graph.tokens.select { |t| t.empty_token_sort != 'P' }.map { |token| "T#{token.id}" }.join('->') -%> [style="invis"];
   }
 }
