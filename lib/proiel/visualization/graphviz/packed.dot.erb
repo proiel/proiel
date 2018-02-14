@@ -1,6 +1,8 @@
 digraph G {
   charset="UTF-8";
   graph [truecolor=true,bgcolor=transparent];
+  rankdir="<%= @direction -%>";
+
   root [label="",shape=none];
 
   <% @graph.tokens.each do |token| %>

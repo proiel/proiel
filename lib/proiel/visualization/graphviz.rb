@@ -21,7 +21,7 @@ module PROIEL
       def self.generate(template, graph, output_format, options = {})
         raise ArgumentError, 'string or symbol expected' unless template.is_a?(String) or template.is_a?(Symbol)
 
-        dot_code = generate_dot(template, graph)
+        dot_code = generate_dot(template, graph, options)
 
         if output_format.to_sym == :dot
           dot_code
@@ -58,7 +58,9 @@ module PROIEL
         result
       end
 
-      def self.generate_dot(template, graph)
+      def self.generate_dot(template, graph, options)
+        raise ArgumentError, 'invalid direction' unless options[:direction].nil? or %(TD LR).include?(options[:direction])
+
         filename = template_filename(template)
 
         content = File.read(filename)
@@ -66,12 +68,13 @@ module PROIEL
         template = ERB.new(content, nil, '-')
         template.filename = filename
 
-        TemplateContext.new(graph).generate(template)
+        TemplateContext.new(graph, options[:direction] || 'TD').generate(template)
       end
 
       class TemplateContext
-        def initialize(graph)
+        def initialize(graph, direction)
           @graph = graph
+          @direction = direction
         end
 
         def generate(template)

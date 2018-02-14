@@ -2,6 +2,7 @@ digraph G {
   charset="UTF-8";
   graph [truecolor=true,bgcolor=transparent];
   root [label="",shape=circle];
+  rankdir="<%= @direction -%>";
 
   <%- @graph.tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
     <%- if token.empty_token_sort == 'C' or token.part_of_speech == 'C-' -%>
