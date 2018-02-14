@@ -1,0 +1,30 @@
+digraph G {
+  charset="UTF-8";
+  graph [truecolor=true,bgcolor=transparent];
+  root [label="",shape=circle];
+  rankdir="<%= @direction -%>";
+
+  <%- @graph.tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
+    <%= node token.id, token.relation.to_s.upcase,                 shape: :box -%>
+
+    <%- if token.relation -%>
+      <%= edge (token.head ? token.head.id : :root), token.id, '', weight: 1.0, color: :orange -%>
+    <%- end -%>
+
+    <%- token.slashes.each do |(relation, target)| -%>
+      <%= edge token.id, target, relation.to_s.upcase, weight: 0.0, color: :blue, style: :dashed %>
+    <%- end -%>
+  <%- end -%>  
+
+  <%- @graph.tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
+    <%= edge token.id, "T#{token.id}", nil, weight: 10, arrowhead: :none -%>
+  <%- end -%>  
+
+  {
+    rank="same";
+
+    <%- @graph.tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
+      <%= node "T#{token.id}", token.form, shape: :none -%>
+    <%- end -%>  
+  }
+}
