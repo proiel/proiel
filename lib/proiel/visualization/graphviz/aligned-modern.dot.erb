@@ -3,63 +3,71 @@ digraph G {
   graph [truecolor=true,bgcolor=transparent];
   rankdir="<%= @direction -%>";
 
-  roota [label="",shape=circle];
+  <%- @graph.left.each_with_index do |tokens, i| -%>
+    <%= "rootL#{i}" -%> [label="",shape=circle];
 
-  <%- @graph.tokens1.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
-    <%= node token.id, token.relation.to_s.upcase,                 shape: :box -%>
+    <%- tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
+      <%= node token.id, token.relation.to_s.upcase,                 shape: :box -%>
 
-    <%- if token.relation -%>
-      <%= edge (token.head ? token.head.id : :root), token.id, '', weight: 1.0, color: :orange -%>
+      <%- if token.relation -%>
+        <%= edge (token.head ? token.head.id : "rootL#{i}"), token.id, '', weight: 1.0, color: :orange -%>
+      <%- end -%>
+
+      <%- token.slashes.each do |(relation, target)| -%>
+        <%= edge token.id, target, relation.to_s.upcase, weight: 0.0, color: :blue, style: :dashed %>
+      <%- end -%>
     <%- end -%>
 
-    <%- token.slashes.each do |(relation, target)| -%>
-      <%= edge token.id, target, relation.to_s.upcase, weight: 0.0, color: :blue, style: :dashed %>
+    <%- tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
+      <%= edge token.id, "T#{token.id}", nil, weight: 10, arrowhead: :none -%>
     <%- end -%>
-  <%- end -%>  
-
-  <%- @graph.tokens1.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
-    <%= edge token.id, "T#{token.id}", nil, weight: 10, arrowhead: :none -%>
-  <%- end -%>  
+  <%- end -%>
 
   {
     rank="same";
 
-    <%- @graph.tokens1.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
-      <%= node "T#{token.id}", token.form, shape: :none -%>
-    <%- end -%>  
+    <%- @graph.left.each do |tokens| -%>
+      <%- tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
+        <%= node "T#{token.id}", token.form, shape: :none -%>
+      <%- end -%>
 
-    <%= @graph.tokens1.select { |t| t.empty_token_sort != 'P' }.map { |token| "T#{token.id}" }.join('->') -%> [style="invis"];
+      <%= tokens.select { |t| t.empty_token_sort != 'P' }.map { |token| "T#{token.id}" }.join('->') -%> [style="invis"];
+    <%- end -%>
   }
 
-  rootb [label="",shape=circle];
+  <%- @graph.right.each_with_index do |tokens, i| -%>
+    <%= "rootR#{i}" -%> [label="",shape=circle];
 
-  <%- @graph.tokens2.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
-    <%= node token.id, token.relation.to_s.upcase,                 shape: :box -%>
+    <%- tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
+      <%= node token.id, token.relation.to_s.upcase,                 shape: :box -%>
 
-    <%- if token.relation -%>
-      <%= edge (token.head ? token.head.id : :root), token.id, '', weight: 1.0, color: :orange -%>
+      <%- if token.relation -%>
+        <%= edge token.id, (token.head ? token.head.id : "rootR#{i}"), '', weight: 1.0, color: :orange -%>
+      <%- end -%>
+
+      <%- token.slashes.each do |(relation, target)| -%>
+        <%= edge token.id, target, relation.to_s.upcase, weight: 0.0, color: :blue, style: :dashed %>
+      <%- end -%>
     <%- end -%>
 
-    <%- token.slashes.each do |(relation, target)| -%>
-      <%= edge token.id, target, relation.to_s.upcase, weight: 0.0, color: :blue, style: :dashed %>
+    <%- tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
+      <%= edge "T#{token.id}", token.id, nil, weight: 10, arrowhead: :none -%>
     <%- end -%>
-  <%- end -%>  
-
-  <%- @graph.tokens2.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
-    <%= edge token.id, "T#{token.id}", nil, weight: 10, arrowhead: :none -%>
-  <%- end -%>  
+  <%- end -%>
 
   {
     rank="same";
 
-    <%- @graph.tokens2.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
-      <%= node "T#{token.id}", token.form, shape: :none -%>
-    <%- end -%>  
+    <%- @graph.right.each do |tokens| -%>
+      <%- tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
+        <%= node "T#{token.id}", token.form, shape: :none -%>
+      <%- end -%>
 
-    <%= @graph.tokens2.select { |t| t.empty_token_sort != 'P' }.map { |token| "T#{token.id}" }.join('->') -%> [style="invis"];
+      <%= tokens.select { |t| t.empty_token_sort != 'P' }.map { |token| "T#{token.id}" }.join('->') -%> [style="invis"];
+    <%- end -%>
   }
 
   <%- @graph.alignments.each do |x, y| -%>
-    "T#{x}" -> "T#{y}" [style=dashed,color=blue,dir=none];
-  <%- end -%>  
+    <%= "T#{x}" -%> -> <%= "T#{y}" -%> [style=dashed,color=blue,dir=none];
+  <%- end -%>
 }
