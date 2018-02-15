@@ -46,8 +46,8 @@ digraph G {
       <%= edge "f#{t.id}", t.id, '', arrowhead: :none, color: :lightgrey %>
     <% end %>
 
-    <% t.slashes.each do |slash_edge| %>
-      <%= edge t.id, slash_edge.target_id, slash_edge.relation.to_s.upcase, color: :blue, weight: 0.0, style: :dotted, fontsize: 10 %>
+    <% t.slashes.each do |(relation, target)| %>
+      <%= edge t.id, target, relation.to_s.upcase, color: :blue, weight: 0.0, style: :dotted, fontsize: 10 %>
     <% end %>
   <% end %>
 

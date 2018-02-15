@@ -18,8 +18,8 @@ digraph G {
       <%= edge (token.head ? token.head.id : :root), token.id, token.relation.to_s.upcase, weight: 0.0, color: :purple %>
     <% end %>
 
-    <% token.slashes.each do |slash_edge| %>
-      <%= edge token.id, slash_edge.target_id, slash_edge.relation.to_s.upcase, weight: 0.0, color: :purple, style: :dashed %>
+    <% token.slashes.each do |(relation, target)| %>
+      <%= edge token.id, target, relation.to_s.upcase, weight: 0.0, color: :purple, style: :dashed %>
     <% end %>
   <% end %>
 }
