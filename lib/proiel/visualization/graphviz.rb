@@ -2,7 +2,7 @@ module PROIEL
   module Visualization
     module Graphviz
       DEFAULT_GRAPHVIZ_BINARY = 'dot'.freeze
-      DEFAULT_TEMPLATES = %i(classic linearized packed modern)
+      DEFAULT_TEMPLATES = %i(classic linearized packed modern aligned-modern)
       SUPPORTED_OUTPUT_FORMATS = %i(png svg)
 
       class GraphvizError < Exception
