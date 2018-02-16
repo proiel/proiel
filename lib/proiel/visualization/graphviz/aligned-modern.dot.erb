@@ -9,7 +9,11 @@ digraph G {
     <%= "rootL#{i}" -%> [label="",shape=point];
 
     <%- tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
-      <%= node token.id, token.relation.to_s.upcase,                 shape: :none -%>
+      <%- if token.empty_token_sort -%>
+        <%= node token.id, token.relation.to_s.upcase, shape: :none, fontcolor: :gray -%>
+      <%- else -%>
+        <%= node token.id, token.relation.to_s.upcase, shape: :none -%>
+      <%- end -%>
 
       <%- if token.relation -%>
         <%= edge (token.head ? token.head.id : "rootL#{i}"), token.id, '', weight: 1.0, color: :orange, arrowhead: :none -%>
@@ -20,7 +24,7 @@ digraph G {
       <%- end -%>
     <%- end -%>
 
-    <%- tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
+    <%- tokens.reject(&:empty_token_sort).each do |token| -%>
       <%= edge token.id, "T#{token.id}", nil, weight: 10, arrowhead: :none -%>
     <%- end -%>
   <%- end -%>
@@ -29,11 +33,11 @@ digraph G {
     rank="same";
 
     <%- @graph.left.each do |tokens| -%>
-      <%- tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
-        <%= node "T#{token.id}", token.form, shape: :none, fontcolor: :blue -%>
+      <%- tokens.reject(&:empty_token_sort).each do |token| -%>
+        <%= node "T#{token.id}", token.form, shape: :none, fontcolor: :blue, tooltip: [token.lemma, token.part_of_speech, token.morphology].join("\n") -%>
       <%- end -%>
 
-      <%= tokens.select { |t| t.empty_token_sort != 'P' }.map { |token| "T#{token.id}" }.join('->') -%> [style="invis"];
+      <%= tokens.reject(&:empty_token_sort).map { |token| "T#{token.id}" }.join('->') -%> [style="invis"];
     <%- end -%>
   }
 
@@ -41,7 +45,11 @@ digraph G {
     <%= "rootR#{i}" -%> [label="",shape=point];
 
     <%- tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
-      <%= node token.id, token.relation.to_s.upcase,                 shape: :none -%>
+      <%- if token.empty_token_sort -%>
+        <%= node token.id, token.relation.to_s.upcase, shape: :none, fontcolor: :gray -%>
+      <%- else -%>
+        <%= node token.id, token.relation.to_s.upcase, shape: :none -%>
+      <%- end -%>
 
       <%- if token.relation -%>
         <%= edge token.id, (token.head ? token.head.id : "rootR#{i}"), '', weight: 1.0, color: :orange, arrowhead: :none -%>
@@ -52,7 +60,7 @@ digraph G {
       <%- end -%>
     <%- end -%>
 
-    <%- tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
+    <%- tokens.reject(&:empty_token_sort).each do |token| -%>
       <%= edge "T#{token.id}", token.id, nil, weight: 10, arrowhead: :none -%>
     <%- end -%>
   <%- end -%>
@@ -61,11 +69,11 @@ digraph G {
     rank="same";
 
     <%- @graph.right.each do |tokens| -%>
-      <%- tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
-        <%= node "T#{token.id}", token.form, shape: :none, fontcolor: :blue -%>
+      <%- tokens.reject(&:empty_token_sort).each do |token| -%>
+        <%= node "T#{token.id}", token.form, shape: :none, fontcolor: :blue, tooltip: [token.lemma, token.part_of_speech, token.morphology].join("\n") -%>
       <%- end -%>
 
-      <%= tokens.select { |t| t.empty_token_sort != 'P' }.map { |token| "T#{token.id}" }.join('->') -%> [style="invis"];
+      <%= tokens.reject(&:empty_token_sort).map { |token| "T#{token.id}" }.join('->') -%> [style="invis"];
     <%- end -%>
   }
 

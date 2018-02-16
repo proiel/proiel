@@ -1,32 +1,39 @@
-digraph G {
+digraph "<%= @title -%>" {
   charset="UTF-8";
   graph [truecolor=true,bgcolor=transparent];
-  root [label="",shape=circle];
   rankdir="<%= @direction -%>";
+  nodesep=0.1;
+  ranksep=0.25;
+
+  root [label="",shape=point];
 
   <%- @graph.tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
-    <%= node token.id, token.relation.to_s.upcase,                 shape: :box -%>
+    <%- if token.empty_token_sort -%>
+      <%= node token.id, token.relation.to_s.upcase, shape: :none, fontcolor: :gray -%>
+    <%- else -%>
+      <%= node token.id, token.relation.to_s.upcase, shape: :none -%>
+    <%- end -%>
 
     <%- if token.relation -%>
-      <%= edge (token.head ? token.head.id : :root), token.id, '', weight: 1.0, color: :orange -%>
+      <%= edge (token.head ? token.head.id : :root), token.id, '', weight: 1.0, color: :orange, arrowhead: :none -%>
     <%- end -%>
 
     <%- token.slashes.each do |(relation, target)| -%>
-      <%= edge token.id, target, relation.to_s.upcase, weight: 0.0, color: :blue, style: :dashed %>
+      <%= edge token.id, target, relation.to_s.upcase, weight: 0.0, fontcolor: :blue,color: :blue, style: :dashed %>
     <%- end -%>
   <%- end -%>  
 
-  <%- @graph.tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
+  <%- @graph.tokens.reject(&:empty_token_sort).each do |token| -%>
     <%= edge token.id, "T#{token.id}", nil, weight: 10, arrowhead: :none -%>
   <%- end -%>  
 
   {
     rank="same";
 
-    <%- @graph.tokens.select { |t| t.empty_token_sort != 'P' }.each do |token| -%>
-      <%= node "T#{token.id}", token.form, shape: :none -%>
+    <%- @graph.tokens.reject(&:empty_token_sort).each do |token| -%>
+      <%= node "T#{token.id}", token.form, shape: :none, fontcolor: :blue, tooltip: [token.lemma, token.part_of_speech, token.morphology].join("\n") -%>
     <%- end -%>  
 
-    <%= @graph.tokens.select { |t| t.empty_token_sort != 'P' }.map { |token| "T#{token.id}" }.join('->') -%> [style="invis"];
+    <%= @graph.tokens.reject(&:empty_token_sort).map { |token| "T#{token.id}" }.join('->') -%> [style="invis"];
   }
 }
