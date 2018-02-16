@@ -72,9 +72,10 @@ module PROIEL
       end
 
       class TemplateContext
-        def initialize(graph, direction)
+        def initialize(graph, direction, title = '')
           @graph = graph
           @direction = direction
+          @title = title
         end
 
         def generate(template)
