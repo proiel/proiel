@@ -21,18 +21,18 @@ digraph "<%= @title -%>" {
     <%- token.slashes.each do |(relation, target)| -%>
       <%= edge token.id, target, relation.to_s.upcase, weight: 0.0, fontcolor: :blue,color: :blue, style: :dashed %>
     <%- end -%>
-  <%- end -%>  
+  <%- end -%>
 
   <%- @graph.tokens.reject(&:empty_token_sort).each do |token| -%>
     <%= edge token.id, "T#{token.id}", nil, weight: 10, arrowhead: :none -%>
-  <%- end -%>  
+  <%- end -%>
 
   {
     rank="same";
 
     <%- @graph.tokens.reject(&:empty_token_sort).each do |token| -%>
       <%= node "T#{token.id}", token.form, shape: :none, fontcolor: :blue, tooltip: [token.lemma, token.part_of_speech, token.morphology].join("\n") -%>
-    <%- end -%>  
+    <%- end -%>
 
     <%= @graph.tokens.reject(&:empty_token_sort).map { |token| "T#{token.id}" }.join('->') -%> [style="invis"];
   }
