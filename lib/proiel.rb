@@ -15,6 +15,7 @@ require 'erb'
 require 'open3'
 require 'set'
 require 'builder'
+require 'csv'
 
 require 'proiel/version'
 require 'proiel/utils'

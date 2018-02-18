@@ -48,7 +48,8 @@ module PROIEL::Dictionary
           end
 
           builder.lemmata(n: @lemmata.count) do
-            @lemmata.sort_by { |lemma, _| lemma.downcase }.each do |form, data|
+            @lemmata.sort_by { |lemma, _| lemma.downcase }.each do |form_and_pos, data|
+              form, _ = form_and_pos.split(',')
               lemma_to_xml(builder, form, data)
             end
           end
@@ -56,7 +57,37 @@ module PROIEL::Dictionary
       end
     end
 
+    def add_external_glosses!(filename, languages = %i(eng))
+      raise ArgumentError, 'filename expected' unless filename.is_a?(String)
+      raise ArgumentError, 'file not found' unless File.exists?(filename)
+
+      CSV.foreach(filename, headers: true, encoding: 'utf-8', col_sep: "\t", header_converters: :symbol) do |row|
+        h = row.to_h
+        data = languages.map { |l| [l, h[l]] }.to_h
+
+        lemma = initialize_lemma!(row[:lemma], row[:part_of_speech])
+        lemma[:glosses] ||= {}
+        lemma[:glosses].merge!(data)
+      end
+    end
+
     private
+
+    def initialize_lemma!(lemma, part_of_speech)
+      encoded_lemma = [lemma, part_of_speech].join(',')
+
+      @lemmata[encoded_lemma] ||= {}
+      @lemmata[encoded_lemma][:lemma] ||= lemma
+      @lemmata[encoded_lemma][:part_of_speech] ||= part_of_speech
+      @lemmata[encoded_lemma][:homographs] ||= []
+      @lemmata[encoded_lemma][:n] ||= 0
+
+      %i(distribution glosses paradigm valency).each do |k|
+        @lemmata[encoded_lemma][k] ||= {}
+      end
+
+      @lemmata[encoded_lemma]
+    end
 
     def lemma_to_xml(builder, form, data)
       builder.lemma(form: form, part_of_speech: data[:part_of_speech], n: data[:n]) do
@@ -69,17 +100,21 @@ module PROIEL::Dictionary
     end
 
     def distribution_to_xml(builder, data)
-      builder.distribution do
-        data[:distribution].sort_by(&:first).each do |source_id, n|
-          builder.source(id: source_id, n: n)
+      unless data[:distribution].empty?
+        builder.distribution do
+          data[:distribution].sort_by(&:first).each do |source_id, n|
+            builder.source(id: source_id, n: n)
+          end
         end
       end
     end
 
     def glosses_to_xml(builder, data)
-      if data[:glosses].count > 0
+      unless data[:glosses].empty?
         builder.glosses do
-          # TODO
+          data[:glosses].each do |language, value|
+            builder.gloss(language: language, value: value)
+          end
         end
       end
     end
@@ -157,20 +192,9 @@ module PROIEL::Dictionary
 
     def index_token!(token)
       if token.lemma and token.part_of_speech
-        encoded_lemma = [token.lemma, token.part_of_speech].join(',')
+        lemma = initialize_lemma!(token.lemma, token.part_of_speech)
 
-        @lemmata[encoded_lemma] ||= {
-          lemma: token.lemma,
-          part_of_speech: token.part_of_speech,
-          distribution: {},
-          glosses: {},
-          homographs: [],
-          paradigm: {},
-          n: 0,
-          valency: {},
-        }
-
-        lemma = @lemmata[encoded_lemma]
+        lemma[:n] += 1
 
         lemma[:distribution][token.source.id] ||= 0
         lemma[:distribution][token.source.id] += 1
@@ -179,7 +203,6 @@ module PROIEL::Dictionary
         lemma[:paradigm][token.morphology][token.form] ||= 0
         lemma[:paradigm][token.morphology][token.form] += 1
 
-        lemma[:n] += 1
 
         # Find verbal nodes
         if token.part_of_speech[/^V/]
