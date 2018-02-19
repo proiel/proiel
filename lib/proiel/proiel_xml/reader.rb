@@ -74,7 +74,7 @@ module PROIEL
         include SAXMachine
 
         attribute :id, required: true
-        attribute :'alignment-id', as: :alignment_id, required: false
+        attribute :'alignment-id', as: :alignment_id, class: String, required: false
         attribute :language, required: true
 
         element :title
