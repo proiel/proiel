@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2016-2017 Marius L. Jøhndal
+# Copyright (c) 2016-2018 Marius L. Jøhndal
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
@@ -43,7 +43,7 @@ module PROIEL::Dictionary
         builder.dictionary(language: @language) do
           builder.sources do
             @sources.each do |source|
-              builder.source(id: source.id, license: source.license)
+              builder.source(idref: source.id, license: source.license)
             end
           end
 
@@ -90,7 +90,7 @@ module PROIEL::Dictionary
     end
 
     def lemma_to_xml(builder, form, data)
-      builder.lemma(form: form, part_of_speech: data[:part_of_speech], n: data[:n]) do
+      builder.lemma(form: form, "part-of-speech": data[:part_of_speech], n: data[:n]) do
         distribution_to_xml(builder, data)
         glosses_to_xml(builder, data)
         homographs_to_xml(builder, data)
@@ -103,7 +103,7 @@ module PROIEL::Dictionary
       unless data[:distribution].empty?
         builder.distribution do
           data[:distribution].sort_by(&:first).each do |source_id, n|
-            builder.source(id: source_id, n: n)
+            builder.source(idref: source_id, n: n)
           end
         end
       end
@@ -113,7 +113,7 @@ module PROIEL::Dictionary
       unless data[:glosses].empty?
         builder.glosses do
           data[:glosses].each do |language, value|
-            builder.gloss(language: language, value: value)
+            builder.gloss(value, language: language)
           end
         end
       end
@@ -123,7 +123,8 @@ module PROIEL::Dictionary
       if data[:homographs].count > 0
         builder.homographs do
           data[:homographs].each do |homograph|
-            builder.lemma form: homograph
+            lemma, part_of_speech = homograph.split(',')
+            builder.homograph lemma: lemma, "part-of-speech": part_of_speech
           end
         end
       end
@@ -155,6 +156,9 @@ module PROIEL::Dictionary
             builder.frame do
               builder.arguments do
                 frame[:arguments].each do |argument|
+                  # FIXME: deal with in a better way
+                  argument[:"part-of-speech"] = argument[:part_of_speech] if argument[:part_of_speech]
+                  argument.delete(:part_of_speech)
                   builder.argument argument
                 end
               end
@@ -162,7 +166,7 @@ module PROIEL::Dictionary
               if frame[:tokens][:a].count > 0
                 builder.tokens flags: 'a', n: frame[:tokens][:a].count do
                   frame[:tokens][:a].each do |token_id|
-                    builder.token id: token_id
+                    builder.token(idref: token_id)
                   end
                 end
               end
@@ -170,7 +174,7 @@ module PROIEL::Dictionary
               if frame[:tokens][:r].count > 0
                 builder.tokens flags: 'r', n: frame[:tokens][:r].count do
                   frame[:tokens][:r].each do |token_id|
-                    builder.token id: token_id
+                    builder.token(idref: token_id)
                   end
                 end
               end
