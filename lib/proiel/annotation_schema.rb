@@ -22,10 +22,17 @@ module PROIEL
 
     # Creates a new annotation schema object.
     def initialize(xml_object)
-      @part_of_speech_tags = make_part_of_speech_tags(xml_object).freeze
-      @relation_tags = make_relation_tags(xml_object).freeze
-      @morphology_tags = make_morphology_tags(xml_object).freeze
-      @information_status_tags = make_information_status_tags(xml_object).freeze
+      if xml_object
+        @part_of_speech_tags = make_part_of_speech_tags(xml_object).freeze
+        @relation_tags = make_relation_tags(xml_object).freeze
+        @morphology_tags = make_morphology_tags(xml_object).freeze
+        @information_status_tags = make_information_status_tags(xml_object).freeze
+      else
+        @part_of_speech_tags = {}.freeze
+        @relation_tags = {}.freeze
+        @morphology_tags = {}.freeze
+        @information_status_tags = {}.freeze
+      end
     end
 
     # @return [Hash<String,RelationTagDefinition>] definition of primary relation tags
