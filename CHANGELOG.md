@@ -1,3 +1,4 @@
+- add alignment matrix computation functions
 - add "modern" and "aligned-modern" graph visualizations
 - bug fixes
 
