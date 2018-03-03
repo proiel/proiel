@@ -1,5 +1,7 @@
+# Version 1.3.0
 - add alignment matrix computation functions
 - add "modern" and "aligned-modern" graph visualizations
+- add support for PROIEL XML 3.0
 - bug fixes
 
 # Version 1.2.1
