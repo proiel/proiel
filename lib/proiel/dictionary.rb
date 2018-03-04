@@ -17,6 +17,15 @@ module PROIEL
     # @return [DateTime] export time for the dictionary
     attr_reader :export_time
 
+    # @return [Hash] all lemmata in the dictionary
+    attr_reader :lemmata
+
+    # @return [Integer] number of lemmata in the dictionary
+    attr_reader :n
+
+    # @return [Hash] all sources in the dictionary
+    attr_reader :sources
+
     # Creates a new dictionary object.
     def initialize(parent, export_time, language, dialect, xml = nil)
       @treebank = parent
@@ -29,6 +38,7 @@ module PROIEL
 
       @lemmata = {}
       @sources = {}
+      @n = 0
 
       from_xml(xml) if xml
     end
@@ -36,20 +46,6 @@ module PROIEL
     # FIXME
     def id
       @language
-    end
-
-    # Finds all lemmata in the dictionary.
-    #
-    # @return [Hash] lemmata in the dictionary
-    def lemmata
-      @lemmata
-    end
-
-    # Finds all sources in the dictionary.
-    #
-    # @return [Hash] sources in the dictionary
-    def sources
-      @sources
     end
 
     private
@@ -60,8 +56,9 @@ module PROIEL
       end
 
       xml.lemmata.each do |l|
-        @lemmata[l.form] ||= {}
-        @lemmata[l.form][l.part_of_speech] = Lemma.new(self, l)
+        @lemmata[l.lemma] ||= {}
+        @lemmata[l.lemma][l.part_of_speech] = Lemma.new(self, l)
+        @n += 1
       end
     end
 

@@ -47,7 +47,7 @@ module PROIEL
             end
           end
 
-          builder.lemmata(n: @lemmata.count) do
+          builder.lemmata do
             @lemmata.sort_by { |lemma, _| lemma.downcase }.each do |form_and_pos, data|
               form, _ = form_and_pos.split(',')
               lemma_to_xml(builder, form, data)
@@ -90,7 +90,7 @@ module PROIEL
     end
 
     def lemma_to_xml(builder, form, data)
-      builder.lemma(form: form, "part-of-speech": data[:part_of_speech], n: data[:n]) do
+      builder.lemma(lemma: form, "part-of-speech": data[:part_of_speech]) do
         distribution_to_xml(builder, data)
         glosses_to_xml(builder, data)
         homographs_to_xml(builder, data)
@@ -163,18 +163,14 @@ module PROIEL
                 end
               end
 
-              if frame[:tokens][:a].count > 0
-                builder.tokens flags: 'a', n: frame[:tokens][:a].count do
+              if frame[:tokens][:a].count > 0 or frame[:tokens][:r].count > 0
+                builder.tokens do
                   frame[:tokens][:a].each do |token_id|
-                    builder.token(idref: token_id)
+                    builder.token(flags: 'a', idref: token_id)
                   end
-                end
-              end
 
-              if frame[:tokens][:r].count > 0
-                builder.tokens flags: 'r', n: frame[:tokens][:r].count do
                   frame[:tokens][:r].each do |token_id|
-                    builder.token(idref: token_id)
+                    builder.token(flags: 'r', idref: token_id)
                   end
                 end
               end

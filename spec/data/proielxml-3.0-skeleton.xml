@@ -105,8 +105,8 @@
       <source idref="avv"/>
       <source idref="birchbark" license=""/>
     </sources>
-    <lemmata n="4">
-      <lemma form="а" part-of-speech="C-" n="2971">
+    <lemmata>
+      <lemma lemma="а" part-of-speech="C-">
         <tag attribute="genre" value="narrative" target-id="caes-gal" target-type="source"/>
         <note originator="someone">A note</note>
         <note originator="someone">Another note</note>
@@ -151,7 +151,7 @@
           </slot1>
         </paradigm>
       </lemma>
-      <lemma form="благодарити" part-of-speech="V-">
+      <lemma lemma="благодарити" part-of-speech="V-">
         <tag attribute="genre" value="narrative" target-id="caes-gal" target-type="source"/>
         <note originator="someone">A note</note>
         <note originator="someone">Another note</note>
@@ -199,35 +199,35 @@
           <frame>
             <arguments>
             </arguments>
-            <tokens flags="a" n="3">
-              <token idref="2188272"/>
-              <token idref="2193938"/>
-              <token idref="2175703"/>
+            <tokens>
+              <token flags="a" idref="2188272"/>
+              <token flags="a" idref="2193938"/>
+              <token flags="a" idref="2175703"/>
             </tokens>
           </frame>
           <frame>
             <arguments>
               <argument relation="obj" case="a"/>
             </arguments>
-            <tokens flags="a" n="4">
-              <token idref="2185961"/>
-              <token idref="2188457"/>
-              <token idref="2217926"/>
-              <token idref="2160424"/>
+            <tokens>
+              <token flags="a" idref="2185961"/>
+              <token flags="a" idref="2188457"/>
+              <token flags="a" idref="2217926"/>
+              <token flags="a" idref="2160424"/>
             </tokens>
           </frame>
           <frame>
             <arguments>
               <argument relation="obj" case="g"/>
             </arguments>
-            <tokens flags="a" n="7">
-              <token idref="2187815"/>
-              <token idref="2188856"/>
-              <token idref="2208666"/>
-              <token idref="2216294"/>
-              <token idref="2224257"/>
-              <token idref="2282515"/>
-              <token idref="2184884"/>
+            <tokens>
+              <token flags="a" idref="2187815"/>
+              <token flags="a" idref="2188856"/>
+              <token flags="a" idref="2208666"/>
+              <token flags="a" idref="2216294"/>
+              <token flags="a" idref="2224257"/>
+              <token flags="a" idref="2282515"/>
+              <token flags="a" idref="2184884"/>
             </tokens>
           </frame>
           <frame>
@@ -235,8 +235,8 @@
               <argument relation="obj" case="g"/>
               <argument relation="obl" lemma="въ" case="l" part-of-speech="R-"/>
             </arguments>
-            <tokens flags="a" n="1">
-              <token idref="2218509"/>
+            <tokens>
+              <token flags="a" idref="2218509"/>
             </tokens>
           </frame>
           <frame>
@@ -244,8 +244,8 @@
               <argument relation="obj" case="g"/>
               <argument relation="obl" lemma="за" case="a" part-of-speech="R-"/>
             </arguments>
-            <tokens flags="a" n="1">
-              <token idref="2205964"/>
+            <tokens>
+              <token flags="a" idref="2205964"/>
             </tokens>
           </frame>
           <frame>
@@ -253,22 +253,22 @@
               <argument relation="obj" case="g"/>
               <argument relation="obl" lemma="о" case="l" part-of-speech="R-"/>
             </arguments>
-            <tokens flags="a" n="2">
-              <token idref="2205995"/>
-              <token idref="2216503"/>
+            <tokens>
+              <token flags="a" idref="2205995"/>
+              <token flags="a" idref="2216503"/>
             </tokens>
           </frame>
           <frame>
             <arguments>
               <argument relation="obl" lemma="о" case="l" part-of-speech="R-"/>
             </arguments>
-            <tokens flags="a" n="1">
-              <token idref="2161666"/>
+            <tokens>
+              <token flags="a" idref="2161666"/>
             </tokens>
           </frame>
         </valency>
       </lemma>
-      <lemma form="благодарьныи" part-of-speech="A-" n="4">
+      <lemma lemma="благодарьныи" part-of-speech="A-">
         <tag attribute="genre" value="narrative" target-id="caes-gal" target-type="source"/>
         <note originator="someone">A note</note>
         <note originator="someone">Another note</note>
@@ -294,7 +294,7 @@
           </slot1>
         </paradigm>
       </lemma>
-      <lemma form="болумышьти" part-of-speech="F-" n="1">
+      <lemma lemma="болумышьти" part-of-speech="F-">
         <distribution>
           <source idref="afnik" n="1"/>
         </distribution>

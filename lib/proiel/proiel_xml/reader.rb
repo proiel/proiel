@@ -58,37 +58,29 @@ module PROIEL
         include SAXMachine
 
         attribute :idref, required: true
-      end
-
-      class DictionaryTokens
-        include SAXMachine
-
-        elements :token, as: :tokens, class: DictionaryToken
-
         attribute :flags, required: false
-        attribute :n, required: false
       end
 
       class DictionaryFrame
         include SAXMachine
 
-        # We skip the intermediate grouping elements 'arguments' but not 'tokens', since it has attributes
+        # We skip the intermediate grouping elements 'arguments' and 'tokens'
         elements :argument, as: :arguments, class: DictionaryArgument
-        elements :tokens, class: DictionaryTokens
+        elements :token, as: :tokens, class: DictionaryToken
       end
 
       class DictionaryLemma
         include SAXMachine
 
-        attribute :form, required: true
+        attribute :lemma, required: true
         attribute :'part-of-speech', as: :part_of_speech, required: true
         attribute :n, required: false
 
-        # We skip the intermediate grouping elements 'distribution', 'glosses', 'homographs', 'paradigms' and 'valency'
+        # We skip the intermediate grouping elements 'distribution', 'glosses', 'homographs', 'paradigm' and 'valency'
         elements :source, as: :distribution, class: DictionarySource
         elements :gloss, as: :glosses, class: DictionaryGloss
         elements :homograph, as: :homographs, class: DictionaryHomograph
-        elements :slot1, as: :paradigms, class: DictionarySlot1
+        elements :slot1, as: :paradigm, class: DictionarySlot1
         elements :frame, as: :valency, class: DictionaryFrame
       end
 

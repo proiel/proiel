@@ -12,7 +12,7 @@ module PROIEL
     attr_reader :distribution
     attr_reader :homographs
     attr_reader :glosses
-    attr_reader :paradigms
+    attr_reader :paradigm
     attr_reader :valency
 
     # Creates a new lemma object.
@@ -24,7 +24,7 @@ module PROIEL
       @distribution = {}
       @homographs = []
       @glosses = {}
-      @paradigms = {}
+      @paradigm = {}
       @valency = []
 
       from_xml(xml) if xml
@@ -38,12 +38,12 @@ module PROIEL
       @distribution = xml.distribution.map { |h| [h.idref, nullify(h.n, :int)] }.to_h
       @glosses = xml.glosses.map { |h| [h.language.to_sym, h.gloss] }.to_h
       @homographs = xml.homographs.map { |h| [h.lemma, h.part_of_speech] }
-      @paradigms = xml.paradigms.map { |slot1| [slot1.morphology, slot1.slot2s.map { |slot2| [slot2.form, nullify(slot2.n, :int)] }.to_h] }.to_h
+      @paradigm = xml.paradigm.map { |slot1| [slot1.morphology, slot1.slot2s.map { |slot2| [slot2.form, nullify(slot2.n, :int)] }.to_h] }.to_h
       @valency =
         xml.valency.map do |frame|
           {
             arguments: frame.arguments.map { |a| { relation: a.relation, lemma: a.lemma, part_of_speech: a.part_of_speech, mood: a.mood, case: a.case } },
-            tokens: frame.tokens.map { |ts| { n: nullify(ts.n, :int), flags: ts.flags, tokens: ts.tokens.map { |t| t.idref } } },
+            tokens: frame.tokens.map { |t| { flags: t.flags, idref: t.idref  } },
           }
         end
     end
