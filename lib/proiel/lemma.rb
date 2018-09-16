@@ -9,8 +9,20 @@ module PROIEL
     attr_reader :dictionary
 
     attr_reader :n
+
+    # @return [Hash{String, Integer}] distribution of lemmata in sources. The
+    # keys are IDs of sources, the values give the frequency of the lemma per
+    # source.
     attr_reader :distribution
+
+    # @return [Array<[String, String]> identified homographs of this lemma. The
+    # array contains pairs of lemma form (which will be homographs of this
+    # lemma form under the orthographic conventions of the language) and parts
+    # of speech.
     attr_reader :homographs
+
+    # @return [Hash{Symbol, String}] glosses for the current lemma. The keys
+    # are language tags and the values the glosses.
     attr_reader :glosses
     attr_reader :paradigm
     attr_reader :valency
