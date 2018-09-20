@@ -61,7 +61,8 @@ module PROIEL
       raise ArgumentError, 'filename expected' unless filename.is_a?(String)
       raise ArgumentError, 'file not found' unless File.exists?(filename)
 
-      CSV.foreach(filename, headers: true, encoding: 'utf-8', col_sep: "\t", header_converters: :symbol) do |row|
+      CSV.foreach(filename, headers: true, encoding: 'utf-8', col_sep: "\t",
+                  header_converters: :symbol, quote_char: "\b") do |row|
         h = row.to_h
         data = languages.map { |l| [l, h[l]] }.to_h
 
