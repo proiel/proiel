@@ -3,6 +3,7 @@
 - add "modern" and "aligned-modern" graph visualizations
 - add support for PROIEL XML 3.0
 - bug fixes
+- add Language module
 
 # Version 1.2.1
 - add support for generating valency frames
