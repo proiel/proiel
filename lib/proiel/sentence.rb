@@ -113,10 +113,13 @@ module PROIEL
     # Returns the printable form of the sentence with all token forms and any
     # presentation data.
     #
+    # @param custom_token_formatter [Lambda] formatting function for tokens
+    # which is passed the token as its sole argument
+    #
     # @return [String] the printable form of the sentence
-    def printable_form(options = {})
+    def printable_form(custom_token_formatter: nil)
       [presentation_before,
-       @children.reject(&:is_empty?).map { |t| t.printable_form(options) },
+       @children.reject(&:is_empty?).map { |t| t.printable_form(custom_token_formatter: custom_token_formatter) },
        presentation_after].compact.join
     end
 

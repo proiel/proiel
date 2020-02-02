@@ -54,9 +54,12 @@ module PROIEL
     # Returns the printable form of the source with all token forms and any
     # presentation data.
     #
+    # @param custom_token_formatter [Lambda] formatting function for tokens
+    # which is passed the token as its sole argument
+    #
     # @return [String] the printable form of the source
-    def printable_form(options = {})
-      @children.map { |d| d.printable_form(options) }.compact.join
+    def printable_form(custom_token_formatter: nil)
+      @children.map { |d| d.printable_form(custom_token_formatter: custom_token_formatter) }.compact.join
     end
 
     # Accesses metadata fields.
