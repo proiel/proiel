@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.files         = Dir["{bin,examples,contrib,lib}/**/*"] + %w(README.md LICENSE)
   spec.require_paths = ["lib"]
 
-  spec.required_ruby_version = '>= 2.2'
+  spec.required_ruby_version = '>= 2.4'
 
   spec.add_dependency 'json', '~> 2.0'
   spec.add_dependency 'nokogiri', '~> 1.8'

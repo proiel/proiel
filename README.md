@@ -12,7 +12,7 @@ PROIEL annotation scheme and the PROIEL XML-based interchange format.
 
 ## Installation
 
-This library requires Ruby >= 2.2. Install as
+This library requires Ruby >= 2.4. Install as
 
 ```shell
 gem install proiel
