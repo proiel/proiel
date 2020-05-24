@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = PROIEL::VERSION
   spec.authors       = ["Marius L. Jøhndal"]
   spec.email         = ["mariuslj@ifi.uio.no"]
-  spec.summary       = %q{A library for working with treebanks using the PROIEL dependency format}
-  spec.description   = %q{This provides a library of functions for reading and manipulating treebanks using the PROIEL dependency format.}
+  spec.summary       = 'A library for working with treebanks using the PROIEL dependency format'
+  spec.description   = 'This provides a library of functions for reading and manipulating treebanks using the PROIEL dependency format.'
   spec.homepage      = "http://proiel.github.com"
   spec.license       = "MIT"
 

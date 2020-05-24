@@ -43,15 +43,13 @@ module PROIEL
       # @return [true, false]
       #
       def wellformed?
-        begin
-          Nokogiri::XML(File.read(@filename)) { |config| config.strict }
+        Nokogiri::XML(File.read(@filename)) { |config| config.strict }
 
-          true
-        rescue Nokogiri::XML::SyntaxError => _
-          @errors << 'XML file is not wellformed'
+        true
+      rescue Nokogiri::XML::SyntaxError => _
+        @errors << 'XML file is not wellformed'
 
-          false
-        end
+        false
       end
 
       # Checks if the PROIEL XML file has a valid schema version number.

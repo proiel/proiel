@@ -84,7 +84,7 @@ describe PROIEL::Sentence do
       '1' + (token.form || '') + '1'
     }
 
-    expect(sentence.printable_form(custom_token_formatter: formatter)).to eql ('1Gallia1 1est1 1omnis1 1divisa1 1in1 1partes1 1tres1, 1quarum1 1unam1 1incolunt1 1Belgae1, 1aliam1 1Aquitani1, 1tertiam1 1qui1 1ipsorum1 1lingua1 1Celtae1, 1nostra1 1Galli1 1appellantur1.  ')
+    expect(sentence.printable_form(custom_token_formatter: formatter)).to eql '1Gallia1 1est1 1omnis1 1divisa1 1in1 1partes1 1tres1, 1quarum1 1unam1 1incolunt1 1Belgae1, 1aliam1 1Aquitani1, 1tertiam1 1qui1 1ipsorum1 1lingua1 1Celtae1, 1nostra1 1Galli1 1appellantur1.  '
   end
 
   it 'generates a syntax graph' do

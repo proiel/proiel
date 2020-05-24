@@ -70,7 +70,7 @@ module PROIEL::Chronology
       a = -$1.to_i * 100
       [a, a + 99]
     when /^\s*(?:c\.\s+)?\d+(\s+BC)?\s*-\s*(c\.\s+)?\d+(\s+BC)?\s*$/
-      s.split('-').map { |i| self.parse(i) }.tap do |from, to|
+      s.split('-').map { |i| parse(i) }.tap do |from, to|
         raise ArgumentError, 'invalid range' unless from < to
       end
     else

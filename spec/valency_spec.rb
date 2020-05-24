@@ -76,7 +76,7 @@ describe PROIEL::Valency do
   end
 
   it 'identifies two coordinated nominal objects with the same case as a single object' do
-    xml = %q{
+    xml = '
       <sentence id="188060" status="reviewed">
         <token id="2150900" form="ꙇ" citation-part="42" lemma="и" part-of-speech="C-" morphology="---------n" head-id="2150903" relation="aux" presentation-after=" " foreign-ids="folio=78v"/>
         <token id="2150901" form="здѣлавъ" citation-part="42" lemma="съдѣлати" part-of-speech="V-" morphology="-supamn-si" head-id="2150903" relation="xadv" presentation-after=" " foreign-ids="folio=78v">
@@ -88,7 +88,7 @@ describe PROIEL::Valency do
         <token id="2150905" form="ꙇ" citation-part="42" lemma="и" part-of-speech="C-" morphology="---------n" head-id="2150903" relation="obj" presentation-after=" " foreign-ids="folio=78v"/>
         <token id="2150906" form="воду" citation-part="42" lemma="вода" part-of-speech="Nb" morphology="-s---fa--i" head-id="2150905" relation="obj" presentation-after=". " foreign-ids="folio=78v"/>
       </sentence>
-    }
+    '
 
     t = MockXMLIO.mock_token_in_sentence(xml, 2150903)
     frame = PROIEL::Valency::Arguments.get_argument_frame(t)
@@ -96,13 +96,13 @@ describe PROIEL::Valency do
   end
 
   it 'hoists the case of a dependent of a preposition' do
-    xml = %q{
+    xml = '
       <sentence id="1" status="annotated">
         <token id="250079" form="genuit" citation-part="MATT 1.5" lemma="gigno" part-of-speech="V-" morphology="3sria----i" relation="pred"/>
         <token id="250081" form="ex" citation-part="MATT 1.5" lemma="ex" part-of-speech="R-" morphology="---------n" head-id="250079" relation="obl"/>
         <token id="250082" form="deo" citation-part="MATT 1.5" lemma="deus" part-of-speech="Ne" morphology="-s---mb--i" head-id="250081" relation="obl"/>
       </sentence>
-    }
+    '
 
     t = MockXMLIO.mock_token_in_sentence(xml, 250079)
     frame = PROIEL::Valency::Arguments.get_argument_frame(t)
@@ -110,7 +110,7 @@ describe PROIEL::Valency do
   end
 
   it 'hoists the mood of coordinated dependents of a subjunction' do
-    xml = %q{
+    xml = '
       <sentence id="75892" status="reviewed">
         <token id="1081210" form="abs" citation-part="1.1.4" lemma="ab" part-of-speech="R-" morphology="---------n" head-id="1081212" relation="obl" information-status="info_unannotatable" presentation-after=" "/>
         <token id="1081211" form="te" citation-part="1.1.4" lemma="tu" part-of-speech="Pp" morphology="2s---mb--i" head-id="1081210" relation="obl" antecedent-id="1232225" information-status="old" presentation-after=" "/>
@@ -149,7 +149,7 @@ describe PROIEL::Valency do
         <token id="1081240" form="me" citation-part="1.1.4" lemma="ego" part-of-speech="Pp" morphology="1s---ma--i" head-id="1081239" relation="obl" antecedent-id="1232237" information-status="old" presentation-after=" "/>
         <token id="1081241" form="contulisset" citation-part="1.1.4" lemma="confero" part-of-speech="V-" morphology="3slsa----i" head-id="1081232" relation="pred" presentation-after=". "/>
       </sentence>
-    }
+    '
 
     # peto [ab te] [ut [C ignoscas existimes]]
     t = MockXMLIO.mock_token_in_sentence(xml, 1081212)

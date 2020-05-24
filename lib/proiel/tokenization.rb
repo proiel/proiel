@@ -24,7 +24,7 @@ module PROIEL
 
       patterns = JSON.parse(File.read(filename))
 
-      regexes = patterns.map { |l, p| [l, self.make_regex(p)] }.to_h
+      regexes = patterns.map { |l, p| [l, make_regex(p)] }.to_h
 
       @@regexes ||= {}
       @@regexes.merge!(regexes)

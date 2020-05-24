@@ -477,32 +477,6 @@ Style/PerlBackrefs:
 
 # Offense count: 1
 # Cop supports --auto-correct.
-Style/RedundantBegin:
-  Exclude:
-    - 'lib/proiel/proiel_xml/validator.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/RedundantParentheses:
-  Exclude:
-    - 'spec/sentence_spec.rb'
-
-# Offense count: 5
-# Cop supports --auto-correct.
-Style/RedundantPercentQ:
-  Exclude:
-    - 'proiel.gemspec'
-    - 'spec/valency_spec.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/RedundantSelf:
-  Exclude:
-    - 'lib/proiel/chronology.rb'
-    - 'lib/proiel/tokenization.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
 # Configuration parameters: ConvertCodeThatCanStartToReturnNil, AllowedMethods.
 # AllowedMethods: present?, blank?, presence, try, try!
 Style/SafeNavigation:
