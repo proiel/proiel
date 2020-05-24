@@ -59,7 +59,7 @@ module PROIEL
       form and form.length > 1
     end
 
-    WORD_PATTERN = /([^[\u{E000}-\u{F8FF}][[:word:]]]+)/
+    WORD_PATTERN = /([^[\u{E000}-\u{F8FF}][[:word:]]]+)/.freeze
 
     # Splits a token form using the tokenization patterns that apply for a
     # the specified language. Tokenization patterns must already have been

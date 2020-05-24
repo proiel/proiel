@@ -405,18 +405,18 @@ module PROIEL
 
     # FIXME: extract this from the header of the PROIEL XML file instead and
     # subclass PositionalTag
-    POS_POSITIONAL_TAG_SEQUENCE = %i(major minor)
+    POS_POSITIONAL_TAG_SEQUENCE = %i(major minor).freeze
 
     # FIXME: extract this from the header of the PROIEL XML file instead and
     # subclass PositionalTag
     MORPHOLOGY_POSITIONAL_TAG_SEQUENCE = %i(
       person number tense mood voice gender case degree strength inflection
-    )
+    ).freeze
 
     NULL_PARTS_OF_SPEECH = {
       'V' => 'V-',
       'C' => 'C-',
       'P' => 'Pp',
-    }
+    }.freeze
   end
 end

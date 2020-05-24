@@ -61,7 +61,7 @@ module PROIEL
       printed_text_date
       chronology_composition
       chronology_manuscript
-    )
+    ).freeze
 
     # Creates a new treebank object.
     def initialize

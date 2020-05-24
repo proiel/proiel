@@ -21,7 +21,7 @@ module PROIEL::Valency::Arguments
     'A' => :nominal,
     'M' => :nominal,
     'V' => :verbal,
-  }
+  }.freeze
 
   # Collapses dependents based on features
   def self.collapse_dependents(dependents)

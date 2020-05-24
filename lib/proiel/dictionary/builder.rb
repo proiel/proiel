@@ -34,7 +34,7 @@ module PROIEL
       index_homographs!
     end
 
-    CURRENT_SCHEMA_VERSION = '3.0'
+    CURRENT_SCHEMA_VERSION = '3.0'.freeze
 
     def to_xml(io)
       builder = ::Builder::XmlMarkup.new(target: io, indent: 2)
@@ -182,7 +182,7 @@ module PROIEL
     end
 
     def index_homographs!
-      @lemmata.keys.group_by { |l| l.split(/[,#]/).first }.each do |m, homographs|
+      @lemmata.keys.group_by { |l| l.split(/[,#]/).first }.each do |_, homographs|
         if homographs.count > 1
           homographs.each do |form|
             @lemmata[form][:homographs] = homographs.reject { |homograph| homograph == form }

@@ -154,13 +154,6 @@ Lint/ShadowingOuterLocalVariable:
     - 'lib/proiel/citations.rb'
     - 'spec/token_spec.rb'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoreEmptyBlocks, AllowUnusedKeywordArguments.
-Lint/UnusedBlockArgument:
-  Exclude:
-    - 'lib/proiel/dictionary/builder.rb'
-
 # Offense count: 4
 # Cop supports --auto-correct.
 # Configuration parameters: ContextCreatingMethods, MethodCreatingMethods.
@@ -399,21 +392,6 @@ Style/MultilineBlockChain:
 Style/MultipleComparison:
   Exclude:
     - 'lib/proiel/proiel_xml/schema.rb'
-
-# Offense count: 11
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: literals, strict
-Style/MutableConstant:
-  Exclude:
-    - 'lib/proiel/dictionary/builder.rb'
-    - 'lib/proiel/token.rb'
-    - 'lib/proiel/tokenization.rb'
-    - 'lib/proiel/treebank.rb'
-    - 'lib/proiel/valency/arguments.rb'
-    - 'lib/proiel/valency/obliqueness.rb'
-    - 'lib/proiel/version.rb'
-    - 'lib/proiel/visualization/graphviz.rb'
 
 # Offense count: 4
 # Cop supports --auto-correct.

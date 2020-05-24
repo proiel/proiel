@@ -23,7 +23,7 @@ module PROIEL::Valency::Obliqueness
     obliqueness_of_relation(argument[:relation]) * 2 + (argument[:lemma].nil? ? 0 : 1)
   end
 
-  OBLIQUENESS_HIERARCHY = %w(sub ag obj xobj arg obl comp narg)
+  OBLIQUENESS_HIERARCHY = %w(sub ag obj xobj arg obl comp narg).freeze
 
   def self.obliqueness_of_relation(relation)
     OBLIQUENESS_HIERARCHY.index(relation) || OBLIQUENESS_HIERARCHY.length
