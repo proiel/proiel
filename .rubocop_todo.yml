@@ -6,14 +6,6 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-# Offense count: 3
-# Cop supports --auto-correct.
-# Configuration parameters: TreatCommentsAsGroupSeparators, Include.
-# Include: **/*.gemspec
-Gemspec/OrderedDependencies:
-  Exclude:
-    - 'proiel.gemspec'
-
 # Offense count: 35
 # Cop supports --auto-correct.
 Layout/EmptyLineAfterGuardClause:
@@ -24,12 +16,6 @@ Layout/EmptyLineAfterGuardClause:
     - 'lib/proiel/sentence.rb'
     - 'lib/proiel/source.rb'
     - 'lib/proiel/token.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Layout/EmptyLineAfterMagicComment:
-  Exclude:
-    - 'proiel.gemspec'
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -350,19 +336,6 @@ Style/EmptyLiteral:
   Exclude:
     - 'lib/proiel/positional_tag.rb'
     - 'lib/proiel/sentence.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/Encoding:
-  Exclude:
-    - 'proiel.gemspec'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/ExpandPathArguments:
-  Exclude:
-    - 'proiel.gemspec'
-    - 'spec/spec_helper.rb'
 
 # Offense count: 54
 # Cop supports --auto-correct.

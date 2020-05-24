@@ -3,7 +3,7 @@
 #
 # See LICENSE in the top-level source directory for licensing terms.
 #++
-$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
 
 require 'simplecov'
 SimpleCov.start
