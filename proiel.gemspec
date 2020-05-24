@@ -18,17 +18,17 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 2.4'
 
-  spec.add_dependency 'json', '~> 2.0'
-  spec.add_dependency 'nokogiri', '~> 1.8'
-  spec.add_dependency 'sax-machine', '~> 1.3'
-  spec.add_dependency 'memoist', '~> 0.16'
-  spec.add_dependency 'builder', '~> 3.2'
+  spec.add_dependency 'json', '~> 2.3.0'
+  spec.add_dependency 'nokogiri', '~> 1.10.9'
+  spec.add_dependency 'sax-machine', '~> 1.3.2'
+  spec.add_dependency 'memoist', '~> 0.16.2'
+  spec.add_dependency 'builder', '~> 3.2.4'
 
-  spec.add_development_dependency 'bundler'
-  spec.add_development_dependency 'rake', '~> 12.0'
-  spec.add_development_dependency 'rspec', '~> 3.6'
+  spec.add_development_dependency 'bundler', '~> 2.1.4'
+  spec.add_development_dependency 'rake', '~> 13.0.1'
+  spec.add_development_dependency 'rspec', '~> 3.9.0'
   spec.add_development_dependency 'rubocop', '~> 0.84.0'
-  spec.add_development_dependency 'pry'
-  spec.add_development_dependency 'simplecov', '~> 0.14'
-  spec.add_development_dependency 'yard', '~> 0.9'
+  spec.add_development_dependency 'pry', '~> 0.13.1'
+  spec.add_development_dependency 'simplecov', '~> 0.18.5'
+  spec.add_development_dependency 'yard', '~> 0.9.25'
 end
