@@ -19,8 +19,8 @@ describe PROIEL::Citations do
   end
 
   it 'computes prefixes even when citations are unbalanced' do
-    expect(PROIEL::Citations.citation_strip_prefix('Matt 5.16', 'Matt 5'   )).to eql('')
-    expect(PROIEL::Citations.citation_strip_prefix('Matt 5.16', ''         )).to eql('')
+    expect(PROIEL::Citations.citation_strip_prefix('Matt 5.16', 'Matt 5')).to eql('')
+    expect(PROIEL::Citations.citation_strip_prefix('Matt 5.16', '')).to eql('')
     expect(PROIEL::Citations.citation_strip_prefix('Matt 5',    'Matt 5.16')).to eql('.16')
     expect(PROIEL::Citations.citation_strip_prefix('',          'Matt 5.16')).to eql('Matt 5.16')
   end
@@ -38,8 +38,8 @@ describe PROIEL::Citations do
   end
 
   it 'makes ranges even when citations are unbalanced' do
-    expect(PROIEL::Citations.citation_make_range('Matt 5.16', 'Matt 5'   )).to eql('Matt 5.16')
-    expect(PROIEL::Citations.citation_make_range('Matt 5.16', ''         )).to eql('Matt 5.16')
+    expect(PROIEL::Citations.citation_make_range('Matt 5.16', 'Matt 5')).to eql('Matt 5.16')
+    expect(PROIEL::Citations.citation_make_range('Matt 5.16', '')).to eql('Matt 5.16')
     expect(PROIEL::Citations.citation_make_range('Matt 5',    'Matt 5.16')).to eql('Matt 5–.16')
     expect(PROIEL::Citations.citation_make_range('',          'Matt 5.16')).to eql('Matt 5.16')
   end

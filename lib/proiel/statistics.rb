@@ -26,11 +26,11 @@ module PROIEL
 
       x_mean = x.reduce(&:+).to_f / x.size
       y_mean = y.reduce(&:+).to_f / y.size
-      x_sqsum = x.reduce(0.0) { |sum, n| sum + n ** 2 }
+      x_sqsum = x.reduce(0.0) { |sum, n| sum + n**2 }
       xy_sum = x.zip(y).reduce(0.0) { |sum, (m, n)| sum + m * n }
 
       sxy = xy_sum - x.length * x_mean * y_mean
-      sx2 = x_sqsum - x.length * (x_mean ** 2)
+      sx2 = x_sqsum - x.length * (x_mean**2)
 
       beta = sxy / sx2
       alfa = y_mean - beta * x_mean

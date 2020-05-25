@@ -282,7 +282,7 @@ module PROIEL
     #
     # @return [Array<Token>] descendents
     def descendents
-      dependents.map { |dependent| [dependent ] + dependent.descendents }.flatten
+      dependents.map { |dependent| [dependent] + dependent.descendents }.flatten
     end
 
     memoize :descendents

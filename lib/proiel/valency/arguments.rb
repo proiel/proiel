@@ -43,7 +43,7 @@ module PROIEL::Valency::Arguments
       if lemmas.length == 1
         dependents.first
       else
-        #STDERR.puts "Different lemmas R/G: #{lemmas.inspect}"
+        # STDERR.puts "Different lemmas R/G: #{lemmas.inspect}"
         nil
       end
     when :nominal
@@ -51,7 +51,7 @@ module PROIEL::Valency::Arguments
       if cases.length == 1
         dependents.first
       else
-        #STDERR.puts "Different cases N/P: #{cases.inspect}"
+        # STDERR.puts "Different cases N/P: #{cases.inspect}"
         nil
       end
     when :verbal
@@ -59,11 +59,11 @@ module PROIEL::Valency::Arguments
       if moods.length == 1
         dependents.first
       else
-        #STDERR.puts "Different moods V: #{moods.inspect}"
+        # STDERR.puts "Different moods V: #{moods.inspect}"
         nil
       end
     else
-      #STDERR.puts "Unknown combination: #{dependents.map(&:pos).inspect}"
+      # STDERR.puts "Unknown combination: #{dependents.map(&:pos).inspect}"
       nil
     end
   end
@@ -94,7 +94,9 @@ module PROIEL::Valency::Arguments
         # coordinators. All relevant dependents have the relation PRED.
         dependents = argument.dependents.select { |d| d.relation == 'pred' }.map { |a| hoist_dependents(a) }
         local_argument = collapse_dependents(dependents)
-        features[:mood] = local_argument.morphology_hash[:mood] if local_argument and local_argument.morphology_hash[:mood]
+        if local_argument and local_argument.morphology_hash[:mood]
+          features[:mood] = local_argument.morphology_hash[:mood]
+        end
       when 'R'
         features[:lemma] = argument.lemma
         features[:part_of_speech] = argument.part_of_speech
@@ -103,7 +105,9 @@ module PROIEL::Valency::Arguments
         # coordinators. All relevant dependents have the relation OBL.
         dependents = argument.dependents.select { |d| d.relation == 'obl' }.map { |a| hoist_dependents(a) }
         local_argument = collapse_dependents(dependents)
-        features[:case] = local_argument.morphology_hash[:case] if local_argument and local_argument.morphology_hash[:case]
+        if local_argument and local_argument.morphology_hash[:case]
+          features[:case] = local_argument.morphology_hash[:case]
+        end
       when 'V'
         features[:mood] = argument.morphology_hash[:mood] if argument.morphology_hash[:mood]
       when 'D'
@@ -121,7 +125,7 @@ module PROIEL::Valency::Arguments
     end
   end
 
-  # Determines the arguments of a predicate
+  #  Determines the arguments of a predicate
   def self.collect_arguments(token)
     token.dependents.select do |dependent|
       case dependent.relation

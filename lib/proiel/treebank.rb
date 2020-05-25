@@ -116,7 +116,7 @@ module PROIEL
           # FIXME: consolidate export times? This is a design flaw in PROIEL XML
           # 2.0: export time ought to be per source not per PROIEL XML file, so
           # not clear what to do here. Pass it down to the source object?
-          #@export_time = tf.proiel.export_time
+          # @export_time = tf.proiel.export_time
         else
           raise SchemaMismatch
         end

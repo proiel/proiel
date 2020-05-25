@@ -57,10 +57,14 @@ module PROIEL
       raise ArgumentError, 'integer or nil expected' unless alignment_id.nil? or alignment_id.is_a?(Integer)
       @alignment_id = alignment_id
 
-      raise ArgumentError, 'XML schema date time or nil expected' unless annotated_at.nil? or PROIEL::Utilities.xmlschema_datetime?(annotated_at)
+      unless annotated_at.nil? or PROIEL::Utilities.xmlschema_datetime?(annotated_at)
+        raise ArgumentError, 'XML schema date time or nil expected'
+      end
       @annotated_at = annotated_at ? DateTime.xmlschema(annotated_at).freeze : nil
 
-      raise ArgumentError, 'XML schema date time or nil expected' unless reviewed_at.nil? or PROIEL::Utilities.xmlschema_datetime?(reviewed_at)
+      unless reviewed_at.nil? or PROIEL::Utilities.xmlschema_datetime?(reviewed_at)
+        raise ArgumentError, 'XML schema date time or nil expected'
+      end
       @reviewed_at = reviewed_at ? DateTime.xmlschema(reviewed_at).freeze : nil
 
       raise ArgumentError, 'string or nil expected' unless annotated_by.nil? or annotated_by.is_a?(String)

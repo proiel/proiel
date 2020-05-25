@@ -86,7 +86,7 @@ describe PROIEL::Chronology do
     expect(PROIEL::Chronology.midpoint('c. 30 BC-c. 20 BC')).to eq -25
 
     # FIXME
-    #expect(PROIEL::Chronology.midpoint('c. 10 BC-c. 10')).to eq -0.5
+    # expect(PROIEL::Chronology.midpoint('c. 10 BC-c. 10')).to eq -0.5
   end
 
   it 'parses a century designation' do

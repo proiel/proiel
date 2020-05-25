@@ -5,3 +5,6 @@ Naming/MethodName:
 
 Style/StringLiterals:
   EnforcedStyle: single_quotes
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false

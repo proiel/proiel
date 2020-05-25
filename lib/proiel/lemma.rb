@@ -45,7 +45,7 @@ module PROIEL
     private
 
     def from_xml(xml)
-      @n =  nullify(xml.n, :int)
+      @n = nullify(xml.n, :int)
 
       @distribution = xml.distribution.map { |h| [h.idref, nullify(h.n, :int)] }.to_h
       @glosses = xml.glosses.map { |h| [h.language.to_sym, h.gloss] }.to_h
@@ -55,7 +55,7 @@ module PROIEL
         xml.valency.map do |frame|
           {
             arguments: frame.arguments.map { |a| { relation: a.relation, lemma: a.lemma, part_of_speech: a.part_of_speech, mood: a.mood, case: a.case } },
-            tokens: frame.tokens.map { |t| { flags: t.flags, idref: t.idref  } },
+            tokens: frame.tokens.map { |t| { flags: t.flags, idref: t.idref } },
           }
         end
     end
@@ -75,4 +75,3 @@ module PROIEL
     end
   end
 end
-

@@ -25,14 +25,14 @@ module PROIEL::Chronology
       # Handle missing Julian year 0 by shifting years after 1 BC down by 1 and then shifting the midpoint back
       # up again unless negative
       if i.first < 0 and i.last > 0
-        y = (i.first + i.last - 1)/2.0
+        y = (i.first + i.last - 1) / 2.0
         if y < 0
           y.floor
         else
           (y + 1).floor
         end
       else
-        ((i.first + i.last)/2.0).floor # a non-integer midpoint is within the year of the integer part
+        ((i.first + i.last) / 2.0).floor # a non-integer midpoint is within the year of the integer part
       end
     elsif i.is_a?(Integer)
       i

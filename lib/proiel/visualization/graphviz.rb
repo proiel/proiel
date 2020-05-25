@@ -39,7 +39,9 @@ module PROIEL
 
       def self.generate_image(dot_code, output_format, options = {})
         raise ArgumentError, 'string expected' unless dot_code.is_a?(String)
-        raise ArgumentError, 'string or symbol expected' unless output_format.is_a?(String) or output_format.is_a?(Symbol)
+        unless output_format.is_a?(String) or output_format.is_a?(Symbol)
+          raise ArgumentError, 'string or symbol expected'
+        end
         raise ArgumentError, 'invalid output format' unless SUPPORTED_OUTPUT_FORMATS.include?(output_format.to_sym)
 
         graphviz_binary = options[:graphviz_binary] || DEFAULT_GRAPHVIZ_BINARY
@@ -59,7 +61,9 @@ module PROIEL
       end
 
       def self.generate_dot(template, graph, options)
-        raise ArgumentError, 'invalid direction' unless options[:direction].nil? or %(TD LR).include?(options[:direction])
+        unless options[:direction].nil? or %(TD LR).include?(options[:direction])
+          raise ArgumentError, 'invalid direction'
+        end
 
         filename = template_filename(template)
 

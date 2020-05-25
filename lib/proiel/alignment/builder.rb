@@ -8,7 +8,7 @@ module PROIEL
       # now a reasonable approximation.
       def self.compute_matrix(alignment, source, blacklist = [], log_directory = nil)
         matrix1 = group_backwards(alignment, source, blacklist)
-        raise unless matrix1.map { |r| r[:original]    }.flatten.compact == alignment.sentences.map(&:id)
+        raise unless matrix1.map { |r| r[:original] }.flatten.compact == alignment.sentences.map(&:id)
 
         matrix2 = group_forwards(alignment, source, blacklist)
         raise unless matrix2.map { |r| r[:translation] }.flatten.compact == source.sentences.map(&:id)

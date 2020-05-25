@@ -62,7 +62,7 @@ module PROIEL
       raise ArgumentError, 'file not found' unless File.exists?(filename)
 
       CSV.foreach(filename, headers: true, encoding: 'utf-8', col_sep: "\t",
-                  header_converters: :symbol, quote_char: "\b") do |row|
+                            header_converters: :symbol, quote_char: "\b") do |row|
         h = row.to_h
         data = languages.map { |l| [l, h[l]] }.to_h
 
@@ -203,7 +203,6 @@ module PROIEL
         lemma[:paradigm][token.morphology] ||= {}
         lemma[:paradigm][token.morphology][token.form] ||= 0
         lemma[:paradigm][token.morphology][token.form] += 1
-
 
         # Find verbal nodes
         if token.part_of_speech[/^V/]

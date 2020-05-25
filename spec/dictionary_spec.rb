@@ -131,8 +131,8 @@ describe PROIEL::Dictionary do
 
     expect(l.valency.count).to eql(7)
     expect(l.valency[1][:arguments].count).to eql(1)
-    expect(l.valency[1][:arguments][0]).to eql({:relation=>"obj", :lemma=>nil, :part_of_speech=>nil, :mood=>nil, :case=>"a"})
+    expect(l.valency[1][:arguments][0]).to eql({ :relation => "obj", :lemma => nil, :part_of_speech => nil, :mood => nil, :case => "a" })
     expect(l.valency[1][:tokens].count).to eql(4)
-    expect(l.valency[1][:tokens]).to eql([{:flags=>"a", :idref=>"2185961"}, {:flags=>"a", :idref=>"2188457"}, {:flags=>"a", :idref=>"2217926"}, {:flags=>"a", :idref=>"2160424"}])
+    expect(l.valency[1][:tokens]).to eql([{ :flags => "a", :idref => "2185961" }, { :flags => "a", :idref => "2188457" }, { :flags => "a", :idref => "2217926" }, { :flags => "a", :idref => "2160424" }])
   end
 end
