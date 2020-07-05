@@ -1,13 +1,7 @@
-#--
-# Copyright (c) 2015 Marius L. Jøhndal
-#
-# See LICENSE in the top-level source directory for licensing terms.
-#++
-$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
-
 require 'simplecov'
 SimpleCov.start
 
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
 require 'proiel'
 
 def open_test_file(filename)
