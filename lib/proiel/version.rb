@@ -4,6 +4,5 @@
 # See LICENSE in the top-level source directory for licensing terms.
 #++
 module PROIEL
-  # Gem version
-  VERSION = '1.3.0'.freeze
+  VERSION = '1.3.1'.freeze
 end
