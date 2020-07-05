@@ -8,3 +8,12 @@ Style/StringLiterals:
 
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
+
+# FIXME: Temporarily disabled because of conflict with line length settings
+Style/IfUnlessModifier:
+  Enabled: false
+
+# FIXME: This is hard to fix without making the test data less dependent on
+# hashes in the test files.
+Layout/LineLength:
+  Max: 2425
