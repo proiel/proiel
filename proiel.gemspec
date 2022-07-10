@@ -15,12 +15,12 @@ Gem::Specification.new do |spec|
   spec.files         = Dir["{bin,examples,contrib,lib}/**/*"] + %w(README.md LICENSE)
   spec.require_paths = ['lib']
 
-  spec.required_ruby_version = '>= 2.4'
+  spec.required_ruby_version = '>= 2.7'
 
   spec.add_dependency 'builder', '~> 3.2.4'
   spec.add_dependency 'json', '~> 2.3.0'
   spec.add_dependency 'memoist', '~> 0.16.2'
-  spec.add_dependency 'nokogiri', '~> 1.10.9'
+  spec.add_dependency 'nokogiri', '~> 1.13.6'
   spec.add_dependency 'sax-machine', '~> 1.3.2'
 
   spec.add_development_dependency 'bundler', '~> 2.1.4'
