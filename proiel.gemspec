@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'nokogiri', '~> 1.14.4'
   spec.add_dependency 'sax-machine', '~> 1.3.2'
 
-  spec.add_development_dependency 'bundler', '~> 2.1.4'
+  spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake', '~> 13.0.1'
   spec.add_development_dependency 'rspec', '~> 3.9.0'
   spec.add_development_dependency 'simplecov', '~> 0.18.5'
