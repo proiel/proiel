@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'builder', '~> 3.2.4'
   spec.add_dependency 'json', '~> 2.3.0'
   spec.add_dependency 'memoist', '~> 0.16.2'
-  spec.add_dependency 'nokogiri', '~> 1.13.6'
+  spec.add_dependency 'nokogiri', '~> 1.14.4'
   spec.add_dependency 'sax-machine', '~> 1.3.2'
 
   spec.add_development_dependency 'bundler', '~> 2.1.4'
