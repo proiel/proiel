@@ -3,7 +3,6 @@
 ## Status
 
 [![Gem Version](https://badge.fury.io/rb/proiel.svg)](http://badge.fury.io/rb/proiel)
-[![Build Status](https://secure.travis-ci.org/proiel/proiel.svg?branch=master)](http://travis-ci.org/proiel/proiel?branch=master)
 
 ## Description
 
