@@ -11,7 +11,9 @@ PROIEL annotation scheme and the PROIEL XML-based interchange format.
 
 ## Installation
 
-This library requires Ruby >= 2.4. Install as
+This library requires Ruby >= 2.7 (as this is what Nokogiri 1.14.x requires).
+
+Install as
 
 ```shell
 gem install proiel
