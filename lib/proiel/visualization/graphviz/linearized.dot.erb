@@ -7,7 +7,7 @@ digraph "<%= @title -%>" {
 
   node [shape=none]; {
     depthR ->
-    <% (0..@sentence.max_depth).each do |depth| %>
+    <% (0..@graph.max_depth).each do |depth| %>
       depth<%= depth %> ->
     <% end %>
     WORDS [style=invis];
@@ -51,7 +51,7 @@ digraph "<%= @title -%>" {
     <% end %>
   <% end %>
 
-  <% @graph.tokens.select { |t| t.empty_token_sort.blank? }.sort_by(&:token_number).each_cons(2) do |n1, n2| %>
+  <% @graph.tokens.select { |t| t.has_content? }.sort_by(&:token_number).each_cons(2) do |n1, n2| %>
     <%= edge "f#{n1.id}", "f#{n2.id}", '', weight: 10.0, style: :invis %>
   <% end %>
 }

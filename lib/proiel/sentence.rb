@@ -240,5 +240,14 @@ module PROIEL
         token.alignment(aligned_source)
       end.flatten.compact.map(&:sentence).uniq
     end
+
+    # Computes the maximum depth of the dependency tree of the sentence.
+    #
+    # @return [Integer] maximum depth
+    def max_depth
+      tokens.map(&:depth).max || 0
+    end
+
+    memoize :max_depth
   end
 end

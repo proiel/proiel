@@ -401,6 +401,33 @@ module PROIEL
       alignment_id ? aligned_source.treebank.find_token(alignment_id) : nil
     end
 
+    # Checks if the token is a conjunction.
+    #
+    # @return [true, false]
+    def conjunction?
+      part_of_speech == 'C-' or empty_token_sort == 'C'
+    end
+
+    # Computes the depth of the token in the dependency tree.
+    #
+    # @return [Integer] depth
+    def depth
+      if is_root?
+        0
+      else
+        head.depth + 1
+      end
+    end
+
+    # Computes the 1-based index of the token in the sentence.
+    #
+    # @return [Integer] token number
+    def token_number
+      sentence.tokens.find_index(self) + 1
+    end
+
+    memoize :depth, :token_number
+
     private
 
     # FIXME: extract this from the header of the PROIEL XML file instead and
