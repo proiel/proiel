@@ -4,5 +4,5 @@
 # See LICENSE in the top-level source directory for licensing terms.
 #++
 module PROIEL
-  VERSION = '1.3.2'.freeze
+  VERSION = '1.3.3'.freeze
 end
