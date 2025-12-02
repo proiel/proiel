@@ -85,10 +85,8 @@ spec.add_dependency 'proiel', '~> 1.0'
 
 ## Development
 
-Check out the git repository from GitHub and run `bin/setup` to install
-all development dependencies. Then run `rake` to run the tests.
-
-You can also run `bin/console` for an interactive prompt to experiment with.
+Check out the git repository from GitHub and run `bundle install` to install
+all development dependencies. Then run `bundle exec rake` to run the tests.
 
 To install a development version of this gem, run `bundle exec rake install`.
 
