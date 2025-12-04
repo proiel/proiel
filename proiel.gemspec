@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["mariuslj@ifi.uio.no"]
   spec.summary       = 'A library for working with treebanks using the PROIEL dependency format'
   spec.description   = 'This provides a library of functions for reading and manipulating treebanks using the PROIEL dependency format.'
-  spec.homepage      = 'http://proiel.github.com'
+  spec.homepage      = 'https://github.com/syntacticus/proiel'
   spec.license       = 'MIT'
 
   spec.files         = Dir["{bin,examples,contrib,lib}/**/*"] + %w(README.md LICENSE)

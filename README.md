@@ -110,4 +110,4 @@ yard
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/proiel/proiel.
+Bug reports and pull requests are welcome on GitHub at https://github.com/syntacticus/proiel.
