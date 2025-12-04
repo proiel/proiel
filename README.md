@@ -73,8 +73,6 @@ You can now run this as:
 bundle exec ruby myproject.rb
 ```
 
-See the [wiki](https://github.com/proiel/proiel/wiki) for more information.
-
 ## Versioning
 
 `proiel` aims to adhere to [Semantic Versioning 2.0.0](http://semver.org/spec/v2.0.0.html). This means that a patch version or minor version should not break backward compatibility of a public API, and that breaking changes should only be introduced with new major versions. When specifying a dependency on this gem it is best practice to use a pessimistic version constraint with two digits of precision:
